@@ -1,0 +1,22 @@
+uuid: 0af2200e-6851-4591-9e97-369351af0ea5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.downloadable_file
+  module:
+    - text
+id: paragraph.downloadable_file.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: downloadable_file
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

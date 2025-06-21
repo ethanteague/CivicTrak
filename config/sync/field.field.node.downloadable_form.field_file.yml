@@ -1,0 +1,31 @@
+uuid: 188cbde0-55dd-450f-b020-a6dfc5a62703
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.downloadable_form
+    - paragraphs.paragraphs_type.downloadable_file
+  module:
+    - entity_reference_revisions
+id: node.downloadable_form.field_file
+field_name: field_file
+entity_type: node
+bundle: downloadable_form
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      downloadable_file: downloadable_file
+    negate: 0
+    target_bundles_drag_drop:
+      downloadable_file:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

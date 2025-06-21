@@ -1,0 +1,36 @@
+uuid: ada3ebdd-8ae7-4fda-a651-6b4ca6d764bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.service_type.layout_builder__layout
+    - taxonomy.vocabulary.service_type
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+id: taxonomy_term.service_type.default
+targetEntityType: taxonomy_term
+bundle: service_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  layout_builder__layout: true

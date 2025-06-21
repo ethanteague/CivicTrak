@@ -1,0 +1,79 @@
+uuid: 2baa05d7-25e4-4288-8acc-43e6f14783c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.job_listing.body
+    - field.field.node.job_listing.field_job_category
+    - node.type.job_listing
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          2cc2d928-251a-48bd-bfb7-e29ec1439804:
+            uuid: 2cc2d928-251a-48bd-bfb7-e29ec1439804
+            region: content
+            configuration:
+              id: 'field_block:node:job_listing:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          77747648-0751-43c2-bf86-f0b6cf3bfbe1:
+            uuid: 77747648-0751-43c2-bf86-f0b6cf3bfbe1
+            region: content
+            configuration:
+              id: 'field_block:node:job_listing:field_job_category'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: udEcn1ONV3xjW7ynrRzMtNp22w7ZtxqLW5llCEKAVPE
+id: node.job_listing.default
+targetEntityType: node
+bundle: job_listing
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_job_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  links: true

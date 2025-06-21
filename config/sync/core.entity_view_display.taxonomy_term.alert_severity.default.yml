@@ -1,0 +1,35 @@
+uuid: e796d738-bb66-4d0d-b3c8-83cbbdd082a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.alert_severity.field_color
+    - taxonomy.vocabulary.alert_severity
+  module:
+    - color_field
+    - text
+_core:
+  default_config_hash: BwYFVVZmoq65rY8VUqUvl0igLMdO_sNcEA4eY2ogbQQ
+id: taxonomy_term.alert_severity.default
+targetEntityType: taxonomy_term
+bundle: alert_severity
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_color:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

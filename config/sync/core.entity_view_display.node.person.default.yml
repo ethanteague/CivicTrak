@@ -1,0 +1,216 @@
+uuid: ebeb9fba-3d07-4506-8c17-719ff985bdb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.body
+    - field.field.node.person.field_department
+    - field.field.node.person.field_email
+    - field.field.node.person.field_first_name
+    - field.field.node.person.field_image
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_last_name
+    - field.field.node.person.field_phone_number
+    - field.field.node.person.layout_builder__layout
+    - node.type.person
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          e2e7f5e8-fd2f-4312-9320-18faef9defa1:
+            uuid: e2e7f5e8-fd2f-4312-9320-18faef9defa1
+            region: content
+            configuration:
+              id: 'field_block:node:person:field_job_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 67-33
+          custom_id: ''
+          custom_classes: ''
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            first:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: pe-3
+              region_styles: ''
+              region_data: ''
+            second:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+        components:
+          cc07bee0-22e3-4133-94fa-868f592978d8:
+            uuid: cc07bee0-22e3-4133-94fa-868f592978d8
+            region: second
+            configuration:
+              id: 'field_block:node:person:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: media_library
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          37a41c34-eb6d-46b4-a268-fd9b72e9f19b:
+            uuid: 37a41c34-eb6d-46b4-a268-fd9b72e9f19b
+            region: first
+            configuration:
+              id: 'field_block:node:person:body'
+              label: Bio
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          81f1526f-ed84-4126-99eb-673f3609ce98:
+            uuid: 81f1526f-ed84-4126-99eb-673f3609ce98
+            region: second
+            configuration:
+              id: 'field_block:node:person:field_phone_number'
+              label: Phone
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: telephone_link
+                label: inline
+                settings:
+                  title: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          c6270519-444e-46f2-ad21-c93458af17be:
+            uuid: c6270519-444e-46f2-ad21-c93458af17be
+            region: second
+            configuration:
+              id: 'field_block:node:person:field_email'
+              label: Email
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          acb45495-3b98-4689-8a0b-091b44c655cc:
+            uuid: acb45495-3b98-4689-8a0b-091b44c655cc
+            region: second
+            configuration:
+              id: 'field_block:node:person:field_department'
+              label: Department
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: pZ_uavQKvDKdpR5vTP5HZRLKqcp4jptQoQtdvqo2kBI
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_job_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_department: true
+  field_email: true
+  field_first_name: true
+  field_last_name: true
+  field_phone_number: true
+  layout_builder__layout: true
+  search_api_excerpt: true

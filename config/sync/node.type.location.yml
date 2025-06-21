@@ -1,0 +1,18 @@
+uuid: ddf223a7-2f43-46b1-a01b-a173b5e4dcde
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Location
+type: location
+description: 'A place of interest.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

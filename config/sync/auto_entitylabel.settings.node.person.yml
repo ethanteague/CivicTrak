@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: yEfBCAzBo4npjSRysH79wMvXULq5raBHPZCcEsgxfUA
+status: 1
+pattern: '[node:field_first_name] [node:field_last_name]'
+escape: false
+preserve_titles: false
+save: 1
+chunk: '50'
+dependencies:
+  config:
+    - node.type.person

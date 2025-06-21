@@ -1,0 +1,27 @@
+uuid: bf5e8d67-266c-4ba1-98f7-2ee4cf70fd50
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - gov
+_core:
+  default_config_hash: BX9POOEqxiOsMOBOc8c6rYeBtpIizQQBEMN3_oXHCd0
+id: gov_main_menu
+theme: gov
+region: primary_menu
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

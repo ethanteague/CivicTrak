@@ -1,0 +1,36 @@
+uuid: 2a5a3ded-3ac5-4c05-8b00-67f36b6ce96c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.meeting_minute_agenda.body
+    - field.field.node.meeting_minute_agenda.field_date
+    - field.field.node.meeting_minute_agenda.field_type
+    - field.field.node.meeting_minute_agenda.field_upload_document
+    - node.type.meeting_minute_agenda
+  module:
+    - text
+    - user
+id: node.meeting_minute_agenda.teaser
+targetEntityType: node
+bundle: meeting_minute_agenda
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_date: true
+  field_type: true
+  field_upload_document: true

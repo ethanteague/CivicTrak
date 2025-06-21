@@ -1,0 +1,21 @@
+uuid: de69e826-ec7c-4022-9b1e-11314681c402
+langcode: en
+status: true
+dependencies: {  }
+id: main
+label: Main
+selector: '#views-exposed-form-content-search-search-block-with-autocomplete #edit-title-for-autocomplete'
+minChar: 2
+autoSubmit: true
+autoRedirect: true
+maxSuggestions: 10
+noResultLabel: 'No results found for [search-phrase]. Click to perform full search.'
+noResultValue: '[search-phrase]'
+noResultLink: /content-search
+moreResultsLabel: 'View all results for [search-phrase].'
+moreResultsValue: '[search-phrase]'
+moreResultsLink: /content-search
+source: /callback-autocomplete
+theme: basic.css
+editable: true
+deletable: true

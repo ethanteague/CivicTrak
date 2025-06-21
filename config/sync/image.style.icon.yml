@@ -1,0 +1,15 @@
+uuid: c1de5424-a82d-4523-8d13-fdae25f386b5
+langcode: en
+status: true
+dependencies: {  }
+name: icon
+label: icon
+effects:
+  86a1e273-708f-4d0c-a76d-da19bc1761b2:
+    uuid: 86a1e273-708f-4d0c-a76d-da19bc1761b2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 75
+      height: 50
+      anchor: center-top

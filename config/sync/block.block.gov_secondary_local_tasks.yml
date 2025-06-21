@@ -1,0 +1,22 @@
+uuid: dcbd0040-aaab-4191-b79c-0e779f44bc3b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gov
+_core:
+  default_config_hash: ZiZHsGFISRAhbz0_08_kxo0WtNYhW5TIDEe1QfYOzI4
+id: gov_secondary_local_tasks
+theme: gov
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: da9cd2d4-d8b8-4fe9-82c0-ec7d2c4a2baf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job_listing.body
+    - field.field.node.job_listing.field_job_category
+    - node.type.job_listing
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: NyCICjfgBAIkP_0PL1CnSOjp4JTEueUajzqHFLlyqdU
+id: node.job_listing.teaser
+targetEntityType: node
+bundle: job_listing
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_job_category: true
+  links: true

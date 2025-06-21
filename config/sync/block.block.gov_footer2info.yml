@@ -1,0 +1,25 @@
+uuid: ef1969c7-8e45-4b90-99dc-4236ce0c9691
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:67b2df6f-e4c4-449b-a97c-fcd47e5a38a4'
+  module:
+    - block_content
+  theme:
+    - gov
+id: gov_footer2info
+theme: gov
+region: footer_first
+weight: -6
+provider: null
+plugin: 'block_content:67b2df6f-e4c4-449b-a97c-fcd47e5a38a4'
+settings:
+  id: 'block_content:67b2df6f-e4c4-449b-a97c-fcd47e5a38a4'
+  label: 'Happyville Town Hall'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

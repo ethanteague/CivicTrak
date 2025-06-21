@@ -1,0 +1,25 @@
+uuid: b3a1fcd1-2172-45cc-9817-585552ef74a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gov
+_core:
+  default_config_hash: b_FvNq5ywK6D5UhBWEF86b3mFn0IMf5Ej3CFOnmwC1k
+id: gov_site_branding
+theme: gov
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

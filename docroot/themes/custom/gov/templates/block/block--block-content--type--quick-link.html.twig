@@ -1,0 +1,14 @@
+{#
+  Custom template for Quick Link block.
+  Assumes a single link field: field_link
+#}
+
+{% set url = content.field_link.0['#url'] ?? null %}
+{% set title = content.field_link.0['#title'] ?? content.field_link.0['#markup'] ?? '' %}
+
+{% if url %}
+  <a href="{{ url }}" class="d-flex flex-column align-items-center justify-content-center mx-3 p-4 border h-100 text-decoration-none text-dark quicklink">
+    <div class="bi bi-box-arrow-up-right fs-2 mb-2"></div>
+    <strong>{{ title }}</strong>
+  </a>
+{% endif %}

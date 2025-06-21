@@ -1,0 +1,27 @@
+uuid: f9861183-12ac-43a7-aa80-7f558d45a7ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_upload_document
+    - node.type.meeting_minute_agenda
+  module:
+    - file
+id: node.meeting_minute_agenda.field_upload_document
+field_name: field_upload_document
+entity_type: node
+bundle: meeting_minute_agenda
+label: Document
+description: 'Upload a minute or an agenda.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc docx xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file
