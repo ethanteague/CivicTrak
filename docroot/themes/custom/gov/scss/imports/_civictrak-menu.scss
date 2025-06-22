@@ -1,0 +1,132 @@
+// ------------------------------
+// Prominent Full-Width Top Nav
+// ------------------------------
+
+#navbar-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: var(--bs-primary);
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    font-size: 1.75rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+
+    img {
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  nav#block-gov-main-menu {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: flex;
+    background-color: transparent;
+
+    ul.navbar-nav {
+      all: unset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+
+      >li {
+        flex: 1 1 auto;
+        text-align: center;
+        position: relative;
+
+        >a {
+          display: block;
+          color: #fff !important;
+          font-weight: 700;
+          font-size: 1.25rem;
+          padding: 1rem;
+          text-transform: uppercase;
+          text-decoration: none;
+          white-space: nowrap;
+
+          &:hover,
+          &.is-active {
+           // background-color: darken(var(--bs-primary), 10%);
+            color: #fff;
+          }
+        }
+
+        &.dropdown:hover > .dropdown-menu {
+          display: block;
+        }
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        background: #fff;
+        min-width: 200px;
+        z-index: 999;
+        padding: 0.5rem 0;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+        li a {
+          padding: 0.5rem 1rem;
+          display: block;
+          color: #333;
+
+          &:hover {
+            background: #f8f8f8;
+            color: var(--bs-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------
+// Mobile Handling
+// ------------------------------
+
+@media (max-width: 991.98px) {
+  #navbar-top {
+    flex-direction: column;
+    align-items: center;
+
+    .navbar-brand {
+      margin: 0 0 1rem 0;
+    }
+
+    nav#block-gov-main-menu {
+      width: 100%;
+
+      ul.navbar-nav {
+        flex-direction: column;
+
+        >li {
+          width: 100%;
+          text-align: center;
+
+          >a {
+            padding: 1rem;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}

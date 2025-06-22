@@ -1,8 +1,18 @@
+/* Sidebar cleanup */
 .sidebar {
   .block {
     border: 0;
   }
 }
+
+/* Form styling */
 .form-control {
   border-radius: 0;
+}
+
+
+nav.navbar {
+  .navbar-brand {
+    max-width: 200px !important;
+  }
 }
