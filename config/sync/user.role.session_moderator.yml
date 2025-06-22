@@ -1,0 +1,31 @@
+uuid: 63f04ca2-c2a8-437c-aad6-14816cede524
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.session_acceptance
+  module:
+    - content_moderation
+    - node
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: 4QkHyXo1STxBIIMeGpUjMolV6br4XMLKRW9cMvziOjQ
+id: session_moderator
+label: 'Session moderator'
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'use session_acceptance transition accept_session'
+  - 'use session_acceptance transition reject_session'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view the administration theme'
+  - 'view user email addresses'

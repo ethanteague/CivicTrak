@@ -1,0 +1,18 @@
+uuid: 033009aa-1428-4c52-8fe9-4bd073051080
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Service
+type: service
+description: 'Info about a service or utility.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

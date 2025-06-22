@@ -1,0 +1,21 @@
+uuid: 7ed396a3-9d9d-4968-bd76-8f528017ee46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map_marker
+    - node.type.location
+  module:
+    - leaflet_more_markers
+id: node.location.field_map_marker
+field_name: field_map_marker
+entity_type: node
+bundle: location
+label: 'Map marker'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map_marker

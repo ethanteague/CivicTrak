@@ -1,0 +1,22 @@
+uuid: cd078ee1-2724-4278-aae9-3fff5ff68267
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gov
+_core:
+  default_config_hash: nUXTPWhbysTLmNvI7D6iFwAJ2iqMKT8b9VvLer6RIuk
+id: gov_breadcrumbs
+theme: gov
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 63c50c44-a783-4fe9-b78b-cc2199977caf
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - gov
+_core:
+  default_config_hash: C-vpeNznA_xOvzygwrMM_Rjp00401_T3jRzvAS2SSkg
+id: gov_search_form_wide
+theme: gov
+region: header_form
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

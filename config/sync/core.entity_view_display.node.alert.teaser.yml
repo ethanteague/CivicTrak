@@ -1,0 +1,42 @@
+uuid: bbc420a5-f3e1-4331-b055-981a47b0554d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.alert.body
+    - field.field.node.alert.field_severity
+    - node.type.alert
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: JKB4lSNxvgp4BPLQ0IyXGuRn3pnIU2B19goxT78-xY8
+id: node.alert.teaser
+targetEntityType: node
+bundle: alert
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_severity:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

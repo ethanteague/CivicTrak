@@ -1,0 +1,38 @@
+uuid: 68cd35d0-67b3-4027-b263-6011ee6e03d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ordinances.body
+    - field.field.node.ordinances.field_ordinance_document
+    - node.type.ordinances
+  module:
+    - file
+    - text
+    - user
+id: node.ordinances.default
+targetEntityType: node
+bundle: ordinances
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ordinance_document:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,40 @@
+uuid: d16b75cd-17dd-4ecd-9395-823b8e92ae63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.alert.body
+    - field.field.node.alert.field_severity
+    - node.type.alert
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: uTs9swh1jPJNdDJdz8PM_m5bRhQOKmmiz2NPnjBECBk
+id: node.alert.default
+targetEntityType: node
+bundle: alert
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_severity:
+    weight: 1
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true
