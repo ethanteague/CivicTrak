@@ -66,6 +66,7 @@ module:
   person: 0
   registration_role: 0
   search: 0
+  search_autocomplete: 0
   shortcut: 0
   smart_date: 0
   smart_date_recur: 0

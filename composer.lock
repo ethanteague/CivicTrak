@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7827e5ef9e65a00381cdc9613957a908",
+    "content-hash": "b9519221a775052e6ad81ece16461382",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -940,6 +940,54 @@
                 "source": "https://github.com/consolidation/site-process/tree/5.4.2"
             },
             "time": "2024-12-13T19:25:56+00:00"
+        },
+        {
+            "name": "cweagans/composer-patches",
+            "version": "1.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweagans/composer-patches.git",
+                "reference": "e190d4466fe2b103a55467dfa83fc2fecfcaf2db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/e190d4466fe2b103a55467dfa83fc2fecfcaf2db",
+                "reference": "e190d4466fe2b103a55467dfa83fc2fecfcaf2db",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0 || ~2.0",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "cweagans\\Composer\\Patches"
+            },
+            "autoload": {
+                "psr-4": {
+                    "cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a way to patch Composer packages.",
+            "support": {
+                "issues": "https://github.com/cweagans/composer-patches/issues",
+                "source": "https://github.com/cweagans/composer-patches/tree/1.7.3"
+            },
+            "time": "2022-12-20T22:53:13+00:00"
         },
         {
             "name": "davedevelopment/stiphle",
@@ -1984,6 +2032,65 @@
             "homepage": "https://www.drupal.org/project/bootstrap",
             "support": {
                 "source": "https://git.drupalcode.org/project/bootstrap"
+            }
+        },
+        {
+            "name": "drupal/bootstrap_styles",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bootstrap_styles.git",
+                "reference": "1.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_styles-1.2.1.zip",
+                "reference": "1.2.1",
+                "shasum": "d7c3b7c81f057edd821d128ce2addd8158ac114b"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/media_library_form_element": "^2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.1",
+                    "datestamp": "1726504417",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Amira Dowidar",
+                    "homepage": "https://www.drupal.org/user/3092603"
+                },
+                {
+                    "name": "mahmoud-zayed",
+                    "homepage": "https://www.drupal.org/user/2947001"
+                },
+                {
+                    "name": "rajab natshah",
+                    "homepage": "https://www.drupal.org/user/1414312"
+                }
+            ],
+            "description": "Add a plugins builder and a collection of reusable plugins to the Layout Builder module.",
+            "homepage": "https://www.drupal.org/project/bootstrap_styles",
+            "keywords": [
+                "Bootstrap",
+                "Drupal",
+                "Grid",
+                "Layout Builder"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/bootstrap_styles"
             }
         },
         {
@@ -3603,6 +3710,65 @@
             }
         },
         {
+            "name": "drupal/layout_builder_blocks",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_blocks.git",
+                "reference": "1.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_blocks-1.1.2.zip",
+                "reference": "1.1.2",
+                "shasum": "c6a662e731cc5680b8f4dc4e7347689ef5199ad6"
+            },
+            "require": {
+                "drupal/bootstrap_styles": "^1.1 || ^2.0",
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.2",
+                    "datestamp": "1726509193",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Amira Dowidar",
+                    "homepage": "https://www.drupal.org/user/3092603"
+                },
+                {
+                    "name": "mahmoud-zayed",
+                    "homepage": "https://www.drupal.org/user/2947001"
+                },
+                {
+                    "name": "rajab natshah",
+                    "homepage": "https://www.drupal.org/user/1414312"
+                }
+            ],
+            "description": "Add UI styles support to blocks from Layout Builder module.",
+            "homepage": "https://www.drupal.org/project/layout_builder_blocks",
+            "keywords": [
+                "Drupal",
+                "Layout Builder",
+                "UI",
+                "style"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_blocks"
+            }
+        },
+        {
             "name": "drupal/leaflet",
             "version": "10.3.1",
             "source": {
@@ -4195,6 +4361,50 @@
             "homepage": "https://www.drupal.org/project/registration_role",
             "support": {
                 "source": "https://git.drupalcode.org/project/registration_role"
+            }
+        },
+        {
+            "name": "drupal/search_autocomplete",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_autocomplete.git",
+                "reference": "4.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_autocomplete-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "04711fd220cead1c14c66f36e00c60d9b1ea50d0"
+            },
+            "require": {
+                "drupal/core": ">=10.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0",
+                    "datestamp": "1743757558",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "dom.",
+                    "homepage": "https://www.drupal.org/user/801982"
+                }
+            ],
+            "description": "Provides autocompletion feature for fields in your Drupal site. This module ships with pre-existing autocompletion configurations.",
+            "homepage": "https://www.drupal.org/project/search_autocomplete",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_autocomplete"
             }
         },
         {
