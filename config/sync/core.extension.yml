@@ -11,7 +11,6 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
-  bootstrap_styles: 0
   breakpoint: 0
   ckeditor5: 0
   color_field: 0
@@ -43,7 +42,6 @@ module:
   honeypot: 0
   image: 0
   layout_builder: 0
-  layout_builder_blocks: 0
   layout_discovery: 0
   leaflet: 0
   leaflet_markercluster: 0
