@@ -42,6 +42,8 @@ module:
   honeypot: 0
   image: 0
   layout_builder: 0
+  layout_builder_admin_theme: 0
+  layout_builder_modal: 0
   layout_discovery: 0
   leaflet: 0
   leaflet_markercluster: 0
@@ -55,6 +57,10 @@ module:
   media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_source_csv: 0
+  migrate_tools: 0
   mysql: 0
   node: 0
   options: 0

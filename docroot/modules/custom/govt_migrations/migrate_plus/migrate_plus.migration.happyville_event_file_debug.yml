@@ -1,0 +1,29 @@
+id: happyville_event_file_debug
+label: Debug Happyville File Paths
+migration_group: happyville_events
+
+source:
+  plugin: csv
+  path: modules/custom/govt_migrations/sources/happyville_event_images_csv_with_id.csv
+  source_base_path: modules/custom/govt_migrations/sources/happyville/
+  header_offset: 0
+  ids:
+    - id
+  fields:
+    - name: id
+    - name: media_name
+    - name: filename
+
+process:
+  debug_path:
+    plugin: callback
+    source:
+      - constants/source_path
+      - filename
+    callable: var_dump
+
+constants:
+  source_path: 'modules/custom/govt_migrations/sources/happyville/'
+
+destination:
+  plugin: null_plugin
