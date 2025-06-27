@@ -11,7 +11,7 @@ id: node.meeting_minute_agenda.field_upload_document
 field_name: field_upload_document
 entity_type: node
 bundle: meeting_minute_agenda
-label: 'Upload document'
+label: Document
 description: 'Upload a minute or an agenda.'
 required: false
 translatable: false

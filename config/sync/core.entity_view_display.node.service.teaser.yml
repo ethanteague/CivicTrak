@@ -5,8 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.service.body
+    - field.field.node.service.field_address
     - field.field.node.service.field_geofield
-    - field.field.node.service.field_location
     - field.field.node.service.field_type_of_service
     - node.type.service
   module:
@@ -25,19 +25,12 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_location:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_address: true
   field_geofield: true
   field_type_of_service: true

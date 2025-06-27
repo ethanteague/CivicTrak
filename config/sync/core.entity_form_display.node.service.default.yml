@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.service.body
+    - field.field.node.service.field_address
     - field.field.node.service.field_geofield
-    - field.field.node.service.field_location
     - field.field.node.service.field_type_of_service
     - node.type.service
   module:
+    - address
     - geofield
     - hide_revision_field
     - path
@@ -34,20 +35,19 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 11
+    region: content
+    settings:
+      wrapper_type: fieldset
+    third_party_settings: {  }
   field_geofield:
     type: geofield_latlon
     weight: 123
     region: content
     settings:
       html5_geolocation: false
-    third_party_settings: {  }
-  field_location:
-    type: string_textfield
-    weight: 11
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_type_of_service:
     type: entity_reference_autocomplete

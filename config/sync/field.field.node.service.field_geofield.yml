@@ -12,7 +12,7 @@ third_party_settings:
   geocoder_field:
     method: geocode
     weight: 0
-    field: field_location
+    field: field_address
     skip_not_empty_value: true
     disabled: true
     hidden: false

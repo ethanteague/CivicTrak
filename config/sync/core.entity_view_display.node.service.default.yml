@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.service.body
+    - field.field.node.service.field_address
     - field.field.node.service.field_geofield
-    - field.field.node.service.field_location
     - field.field.node.service.field_type_of_service
     - node.type.service
   module:
+    - address
     - leaflet
     - text
     - user
@@ -23,6 +24,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
     region: content
   field_geofield:
     type: leaflet_formatter_default
@@ -129,14 +137,6 @@ content:
         snapping: true
     third_party_settings: {  }
     weight: 103
-    region: content
-  field_location:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 0
     region: content
   field_type_of_service:
     type: entity_reference_label
