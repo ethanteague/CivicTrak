@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9df422791b16a0f8a4d3deef0f4077b5",
+    "content-hash": "697d12718d54244d2c837dd3835f3666",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -2042,6 +2042,80 @@
             }
         },
         {
+            "name": "drupal/better_exposed_filters",
+            "version": "7.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
+                "reference": "7.0.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-7.0.5.zip",
+                "reference": "7.0.5",
+                "shasum": "a215444c39a6ae384710a6c707caf593f6dd1e2d"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/nouislider_js": "^15.8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "7.0.5",
+                    "datestamp": "1738353781",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Keran",
+                    "homepage": "https://www.drupal.org/u/mikeker"
+                },
+                {
+                    "name": "Martin Keereman",
+                    "homepage": "https://www.drupal.org/u/etroid"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto"
+                },
+                {
+                    "name": "mikeker",
+                    "homepage": "https://www.drupal.org/user/192273"
+                },
+                {
+                    "name": "neslee canil pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                },
+                {
+                    "name": "podarok",
+                    "homepage": "https://www.drupal.org/user/116002"
+                },
+                {
+                    "name": "rlhawk",
+                    "homepage": "https://www.drupal.org/user/352283"
+                },
+                {
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
+                }
+            ],
+            "description": "Replaces the Views default single- or multi-select boxes with more advanced options.",
+            "homepage": "https://www.drupal.org/project/better_exposed_filters",
+            "support": {
+                "source": "https://git.drupalcode.org/project/better_exposed_filters",
+                "issues": "https://www.drupal.org/project/issues/better_exposed_filters"
+            }
+        },
+        {
             "name": "drupal/bootstrap",
             "version": "5.0.2",
             "source": {
@@ -3827,6 +3901,116 @@
             }
         },
         {
+            "name": "drupal/layout_builder_styles",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_styles.git",
+                "reference": "2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_builder_styles-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "9b121f90db07cd3645607d68a868921e48db9b2d"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0",
+                    "datestamp": "1727124682",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bkosborne",
+                    "homepage": "https://www.drupal.org/user/788032"
+                },
+                {
+                    "name": "gravelpot",
+                    "homepage": "https://www.drupal.org/user/748208"
+                },
+                {
+                    "name": "Jeff Cardwell",
+                    "homepage": "https://www.drupal.org/user/2913129"
+                },
+                {
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "twfahey",
+                    "homepage": "https://www.drupal.org/user/3403722"
+                }
+            ],
+            "description": "Apply styles to blocks in Layout Builder.",
+            "homepage": "https://www.drupal.org/project/layout_builder_styles",
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_styles"
+            }
+        },
+        {
+            "name": "drupal/layout_custom_section_classes",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_custom_section_classes.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/layout_custom_section_classes-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "70e61174343e99f2309ccdd10498597e828ae5f4"
+            },
+            "require": {
+                "drupal/core": "^9.5|^10|^11",
+                "neilime/php-css-lint": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1718132899",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "kaszarobert",
+                    "homepage": "https://www.drupal.org/user/3578328"
+                }
+            ],
+            "description": "Allows editors to add HTML attributes to Layout Builder sections and its regions",
+            "homepage": "https://drupal.org/project/layout_custom_section_classes",
+            "support": {
+                "source": "https://cgit.drupalcode.org/layout_custom_section_classes",
+                "issues": "https://drupal.org/project/issues/layout_custom_section_classes"
+            }
+        },
+        {
             "name": "drupal/leaflet",
             "version": "10.3.1",
             "source": {
@@ -4014,6 +4198,58 @@
             "homepage": "https://www.drupal.org/project/leaflet_more_markers",
             "support": {
                 "source": "https://git.drupalcode.org/project/leaflet_more_markers"
+            }
+        },
+        {
+            "name": "drupal/link_attributes",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/link_attributes.git",
+                "reference": "2.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/link_attributes-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "fc71571fc41adeda6b39ccefd3c8e21955c0d96f"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "drupal/linkit": "~6 || ~7"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.1",
+                    "datestamp": "1721366572",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Provides a widget to allow settings of link attributes for menu links.",
+            "homepage": "https://www.drupal.org/project/link_attributes",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/link_attributes",
+                "issues": "https://www.drupal.org/project/issues/link_attributes"
             }
         },
         {
@@ -4470,6 +4706,35 @@
             }
         },
         {
+            "name": "drupal/nouislider_js",
+            "version": "15.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/nouislider_js.git",
+                "reference": "b5610d5842784581e4c766cd1c3852ca0b355ed5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://git.drupalcode.org/api/v4/projects/project%2Fnouislider_js/repository/archive.zip?sha=b5610d5842784581e4c766cd1c3852ca0b355ed5",
+                "reference": "b5610d5842784581e4c766cd1c3852ca0b355ed5",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "nouislider"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "description": "Mirror of the noUiSlider javascript library tagged as a Drupal library.",
+            "homepage": "https://github.com/leongersen/noUiSlider",
+            "support": {
+                "source": "https://git.drupalcode.org/project/nouislider_js/-/tree/15.8.0"
+            },
+            "time": "2025-01-03T10:53:20+00:00"
+        },
+        {
             "name": "drupal/pathauto",
             "version": "1.13.0",
             "source": {
@@ -4538,58 +4803,6 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
-            }
-        },
-        {
-            "name": "drupal/person",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/person.git",
-                "reference": "1.0.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/person-1.0.3.zip",
-                "reference": "1.0.3",
-                "shasum": "a7e1f943997fbc048cdf92a10a849cc3c6b91fcd"
-            },
-            "require": {
-                "drupal/add_content_by_bundle": "^1.0",
-                "drupal/auto_entitylabel": "^3.1",
-                "drupal/core": "^9 || ^10 || ^11",
-                "drupal/token": "^1.14"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.3",
-                    "datestamp": "1717753095",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "chrislynch42",
-                    "homepage": "https://www.drupal.org/user/42169"
-                },
-                {
-                    "name": "mandclu",
-                    "homepage": "https://www.drupal.org/user/52136"
-                }
-            ],
-            "description": "Initial configuration to provide a system for displaying people on your website",
-            "homepage": "https://www.drupal.org/project/person",
-            "support": {
-                "source": "https://git.drupalcode.org/project/person",
-                "issues": "https://www.drupal.org/project/issues/person"
             }
         },
         {
@@ -6218,6 +6431,80 @@
                 "source": "https://github.com/mck89/peast/tree/v1.17.0"
             },
             "time": "2025-03-07T19:44:14+00:00"
+        },
+        {
+            "name": "neilime/php-css-lint",
+            "version": "v3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neilime/php-css-lint.git",
+                "reference": "08adc7b55af6ae5bf671ac5b105620dc6e6c55c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neilime/php-css-lint/zipball/08adc7b55af6ae5bf671ac5b105620dc6e6c55c0",
+                "reference": "08adc7b55af6ae5bf671ac5b105620dc6e6c55c0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "pcov/clobber": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^9.5.27",
+                "slam/phpstan-laminas-framework": "^0.12",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "bin": [
+                "scripts/php-css-lint"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CssLint\\": "src/CssLint"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Neilime",
+                    "homepage": "https://github.com/neilime",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Powerful & memory efficient CSS linter for PHP",
+            "homepage": "https://neilime.github.io/php-css-lint/",
+            "keywords": [
+                "css",
+                "lint",
+                "linter",
+                "syntax",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/neilime/php-css-lint/issues",
+                "source": "https://github.com/neilime/php-css-lint/tree/v3.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/neilime",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-06-19T16:35:21+00:00"
         },
         {
             "name": "nikic/php-parser",

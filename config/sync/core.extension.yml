@@ -8,6 +8,7 @@ module:
   alerts_format: 0
   announcements_feed: 0
   automated_cron: 0
+  better_exposed_filters: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -44,6 +45,8 @@ module:
   layout_builder: 0
   layout_builder_admin_theme: 0
   layout_builder_modal: 0
+  layout_builder_styles: 0
+  layout_custom_section_classes: 0
   layout_discovery: 0
   leaflet: 0
   leaflet_markercluster: 0
@@ -67,7 +70,6 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  person: 0
   registration_role: 0
   search: 0
   search_autocomplete: 0

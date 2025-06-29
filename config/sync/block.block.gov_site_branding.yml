@@ -10,7 +10,7 @@ _core:
   default_config_hash: b_FvNq5ywK6D5UhBWEF86b3mFn0IMf5Ej3CFOnmwC1k
 id: gov_site_branding
 theme: gov
-region: top_header
+region: header
 weight: -5
 provider: null
 plugin: system_branding_block
