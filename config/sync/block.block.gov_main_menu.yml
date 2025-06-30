@@ -12,7 +12,7 @@ _core:
   default_config_hash: BX9POOEqxiOsMOBOc8c6rYeBtpIizQQBEMN3_oXHCd0
 id: gov_main_menu
 theme: gov
-region: header_form
+region: primary_menu
 weight: -5
 provider: null
 plugin: 'system_menu_block:main'

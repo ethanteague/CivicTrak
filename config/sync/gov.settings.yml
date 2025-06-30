@@ -25,8 +25,8 @@ bootstrap_checkbox: switch
 bootstrap_select: custom
 bootstrap_file: custom
 bootstrap_system_messages: messages_light
-bootstrap_table_hover: 1
-bootstrap_table_style: table-striped
+bootstrap_table_hover: 0
+bootstrap_table_style: ''
 features:
   node_user_picture: 1
   comment_user_picture: 1
@@ -39,13 +39,13 @@ favicon:
   use_default: 1
 bootstrap_source: '0'
 bootstrap_enable_color: 1
-bootstrap_base_primary_color: '#9c3041'
-bootstrap_base_secondary_color: '#2b8a82'
+bootstrap_base_primary_color: '#2f4f90'
+bootstrap_base_secondary_color: '#f2b134'
 bootstrap_body_color: gray-800
 bootstrap_body_bg_color: white
-bootstrap_h1_color: base
-bootstrap_h2_color: base
-bootstrap_h3_color: base
+bootstrap_h1_color: primary
+bootstrap_h2_color: secondary
+bootstrap_h3_color: secondary
 bootstrap_table_head: ''
 bootstrap_container: container
 bootstrap_region_clean_top_header: 1
@@ -121,7 +121,7 @@ bootstrap_sidebar_collapse: 0
 bootstrap_hide_node_label: 0
 bootstrap_breadcrumb_divider: ''
 bootstrap_button_type: primary
-bootstrap_image_fluid: 0
+bootstrap_image_fluid: 1
 bootstrap_navbar_top_navbar: 1
 bootstrap_navbar_top_class: ''
 bootstrap_navbar_class: ''

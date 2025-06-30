@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.person.body
+    - field.field.node.person.field_department
+    - field.field.node.person.field_email
     - field.field.node.person.field_first_name
     - field.field.node.person.field_image
     - field.field.node.person.field_job_title
     - field.field.node.person.field_last_name
+    - field.field.node.person.field_phone_number
     - field.field.node.person.layout_builder__layout
     - node.type.person
   module:
@@ -47,8 +50,8 @@ third_party_settings:
         layout_id: layout_twocol_section
         layout_settings:
           label: ''
-          column_widths: 67-33
           context_mapping: {  }
+          column_widths: 67-33
           custom_id: ''
           custom_classes: ''
           custom_class_choose: {  }
@@ -107,6 +110,62 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             weight: 0
+            additional: {  }
+          81f1526f-ed84-4126-99eb-673f3609ce98:
+            uuid: 81f1526f-ed84-4126-99eb-673f3609ce98
+            region: second
+            configuration:
+              id: 'field_block:node:person:field_phone_number'
+              label: Phone
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: telephone_link
+                label: inline
+                settings:
+                  title: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          c6270519-444e-46f2-ad21-c93458af17be:
+            uuid: c6270519-444e-46f2-ad21-c93458af17be
+            region: second
+            configuration:
+              id: 'field_block:node:person:field_email'
+              label: Email
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          acb45495-3b98-4689-8a0b-091b44c655cc:
+            uuid: acb45495-3b98-4689-8a0b-091b44c655cc
+            region: second
+            configuration:
+              id: 'field_block:node:person:field_department'
+              label: Department
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 3
             additional: {  }
         third_party_settings: {  }
 _core:

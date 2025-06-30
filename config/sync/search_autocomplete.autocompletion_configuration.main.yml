@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: main
 label: Main
-selector: '#views-exposed-form-content-search-search-block-with-autocomplete #edit-title'
+selector: '#views-exposed-form-content-search-search-block-with-autocomplete #edit-title-for-autocomplete'
 minChar: 2
 autoSubmit: true
 autoRedirect: true

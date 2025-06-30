@@ -1,132 +1,90 @@
-// ------------------------------
-// Prominent Full-Width Top Nav
-// ------------------------------
-
-#navbar-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1rem;
-  background-color: var(--bs-primary);
-
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-    font-size: 1.75rem;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-
-    img {
-      height: 40px;
-      margin-right: 0.5rem;
-    }
-  }
-
-  nav#block-gov-main-menu {
-    margin: 0;
-    padding: 0;
-    width: auto;
-    display: flex;
-    background-color: transparent;
-
-    ul.navbar-nav {
-      all: unset;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: nowrap;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      max-width: 100%;
-
-      >li {
-        flex: 1 1 auto;
-        text-align: center;
-        position: relative;
-
-        >a {
-          display: block;
-          color: #fff !important;
-          font-weight: 700;
-          font-size: 1.25rem;
-          padding: 1rem;
-          text-transform: uppercase;
-          text-decoration: none;
-          white-space: nowrap;
-
-          &:hover,
-          &.is-active {
-           // background-color: darken(var(--bs-primary), 10%);
-            color: #fff;
-          }
-        }
-
-        &.dropdown:hover > .dropdown-menu {
-          display: block;
-        }
-      }
-
-      .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: none;
-        background: #fff;
-        min-width: 200px;
-        z-index: 999;
-        padding: 0.5rem 0;
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-
-        li a {
-          padding: 0.5rem 1rem;
-          display: block;
-          color: #333;
-
-          &:hover {
-            background: #f8f8f8;
-            color: var(--bs-primary);
-          }
-        }
-      }
-    }
-  }
+nav.navbar {
+  position: relative;
 }
 
-// ------------------------------
-// Mobile Handling
-// ------------------------------
+.navbar-nav .dropdown {
+  position: relative;
+}
 
+.dropdown-wrapper {
+  position: relative;
+}
+
+/* The invisible bridge */
+.dropdown-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: transparent;
+  z-index: 999;
+}
+
+/* Hover binding */
+.dropdown-wrapper:hover .mega-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbar-nav .mega-menu {
+  position: absolute;
+  top: 54px; /* your header height */
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #f8f9fa;
+  border-top: 3px solid rgba(var(--bs-primary-rgb));
+  padding: 2rem 0;
+  z-index: 998;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mega-menu .row {
+  row-gap: 1rem;
+}
+
+.mega-menu__link {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: rgba(var(--bs-link-color-rgb));
+  text-decoration: none;
+}
+
+.mega-menu__link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile override */
 @media (max-width: 991.98px) {
-  #navbar-top {
-    flex-direction: column;
-    align-items: center;
+  .navbar-nav .mega-menu {
+    position: static;
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+    transform: none;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
 
-    .navbar-brand {
-      margin: 0 0 1rem 0;
-    }
+  .mega-menu .row {
+    display: block;
+  }
 
-    nav#block-gov-main-menu {
-      width: 100%;
-
-      ul.navbar-nav {
-        flex-direction: column;
-
-        >li {
-          width: 100%;
-          text-align: center;
-
-          >a {
-            padding: 1rem;
-            font-size: 1.1rem;
-          }
-        }
-      }
-    }
+  .mega-menu__link {
+    padding: 0.75rem 1rem;
+    display: block;
+    border-top: 1px solid #e0e0e0;
   }
 }
