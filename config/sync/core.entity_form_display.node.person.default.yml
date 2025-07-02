@@ -161,3 +161,4 @@ content:
     third_party_settings: {  }
 hidden:
   layout_builder__layout: true
+  layout_selection: true

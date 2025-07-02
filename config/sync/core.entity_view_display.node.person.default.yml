@@ -207,7 +207,10 @@ content:
     weight: 0
     region: content
 hidden:
+  field_department: true
+  field_email: true
   field_first_name: true
   field_last_name: true
+  field_phone_number: true
   layout_builder__layout: true
   search_api_excerpt: true

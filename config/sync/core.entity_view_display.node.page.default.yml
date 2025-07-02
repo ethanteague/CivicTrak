@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.node.page.body
     - node.type.page
+    - system.menu.main
   module:
     - layout_builder
+    - menu_block
     - text
     - user
 third_party_settings:
@@ -15,13 +17,33 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol_section
         layout_settings:
           label: ''
+          context_mapping: {  }
+          column_widths: 75-25
+          custom_id: ''
+          custom_classes: ''
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            first:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: pe-3
+              region_styles: ''
+              region_data: ''
+            second:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
         components:
           828a6494-a337-4bba-881e-01f6d6580d74:
             uuid: 828a6494-a337-4bba-881e-01f6d6580d74
-            region: content
+            region: first
             configuration:
               id: 'field_block:node:page:body'
               label_display: '0'
@@ -34,15 +56,28 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          c779e77c-6c72-45e2-93eb-e58bb50e4751:
-            uuid: c779e77c-6c72-45e2-93eb-e58bb50e4751
-            region: content
+          5eb3181c-8950-4b02-98ad-24ba3810119b:
+            uuid: 5eb3181c-8950-4b02-98ad-24ba3810119b
+            region: second
             configuration:
-              id: 'extra_field_block:node:page:links'
+              id: 'menu_block:main'
+              label: 'Main navigation'
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 1
+              provider: menu_block
+              context_mapping: {  }
+              follow: false
+              follow_parent: child
+              display_empty: false
+              label_link: false
+              label_type: block
+              level: 1
+              depth: 0
+              expand_all_items: false
+              parent: 'main:'
+              render_parent: false
+              suggestion: main
+              hide_on_nonactive: true
+            weight: 0
             additional: {  }
         third_party_settings: {  }
 _core:
