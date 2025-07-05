@@ -1,0 +1,11 @@
+#block-gov-main-menu {
+  li.nav-item {
+    a.nav-link {
+      color: white;
+      &:hover,
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

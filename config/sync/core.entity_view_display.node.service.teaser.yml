@@ -6,7 +6,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.service.body
     - field.field.node.service.field_address
+    - field.field.node.service.field_email
     - field.field.node.service.field_geofield
+    - field.field.node.service.field_phone_number
     - field.field.node.service.field_type_of_service
     - node.type.service
   module:
@@ -32,5 +34,7 @@ content:
     region: content
 hidden:
   field_address: true
+  field_email: true
   field_geofield: true
+  field_phone_number: true
   field_type_of_service: true

@@ -1,0 +1,122 @@
+uuid: 7f4e17f5-d205-4057-b613-408244a7672f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.department.field_address
+    - field.field.taxonomy_term.department.field_department_phone
+    - field.field.taxonomy_term.department.field_email
+    - taxonomy.vocabulary.department
+    - views.view.directories
+  module:
+    - address
+    - layout_builder
+    - layout_discovery
+    - telephone
+    - text
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          54f5226b-0fb9-4e60-ac48-b03f24cb4201:
+            uuid: 54f5226b-0fb9-4e60-ac48-b03f24cb4201
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:department:field_department_phone'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: telephone_link
+                label: hidden
+                settings:
+                  title: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          6bd90a5b-6370-46ee-9d7c-7b9deb0ee00c:
+            uuid: 6bd90a5b-6370-46ee-9d7c-7b9deb0ee00c
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:department:field_address'
+              label: Address
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: address_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          0a886874-facc-4410-a15a-8e4d8e6ba7e5:
+            uuid: 0a886874-facc-4410-a15a-8e4d8e6ba7e5
+            region: content
+            configuration:
+              id: 'views_block:directories-block_2'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: null
+            weight: 5
+            additional: {  }
+          9d495ca1-5c0e-4905-b10b-dfc1f94ca63a:
+            uuid: 9d495ca1-5c0e-4905-b10b-dfc1f94ca63a
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:department:field_email'
+              label: Email
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: email_mailto
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: taxonomy_term.department.default
+targetEntityType: taxonomy_term
+bundle: department
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_department_phone:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_email: true

@@ -11,7 +11,7 @@ _core:
 id: gov_help
 theme: gov
 region: highlighted
-weight: -2
+weight: -4
 provider: null
 plugin: help_block
 settings:

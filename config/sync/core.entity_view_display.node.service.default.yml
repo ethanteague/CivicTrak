@@ -5,12 +5,15 @@ dependencies:
   config:
     - field.field.node.service.body
     - field.field.node.service.field_address
+    - field.field.node.service.field_email
     - field.field.node.service.field_geofield
+    - field.field.node.service.field_phone_number
     - field.field.node.service.field_type_of_service
     - node.type.service
   module:
     - address
     - leaflet
+    - telephone
     - text
     - user
 id: node.service.default
@@ -23,14 +26,21 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
   field_address:
     type: address_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 4
+    region: content
+  field_email:
+    type: email_mailto
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_geofield:
     type: leaflet_formatter_default
@@ -136,7 +146,15 @@ content:
         zoom_to_geojson: true
         snapping: true
     third_party_settings: {  }
-    weight: 103
+    weight: 6
+    region: content
+  field_phone_number:
+    type: telephone_link
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_type_of_service:
     type: entity_reference_label
@@ -144,11 +162,11 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 101
+    weight: 5
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
 hidden: {  }
