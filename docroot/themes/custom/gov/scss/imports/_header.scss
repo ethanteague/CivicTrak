@@ -1,7 +1,8 @@
 #block-gov-main-menu {
   li.nav-item {
-    a.nav-link {
+    a {
       color: white;
+
       &:hover,
       &.active {
         text-decoration: underline;
@@ -9,3 +10,25 @@
     }
   }
 }
+
+a.navbar-brand {
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 50px !important;
+  }
+}
+
+a span.site-name-logo {
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
