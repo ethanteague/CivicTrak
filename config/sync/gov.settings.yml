@@ -136,6 +136,6 @@ bootstrap_navbar_affix: 1
 bootstrap_sidebar_first_affix: 0
 bootstrap_sidebar_second_affix: 0
 bootstrap_scroll_spy: ''
-bootstrap_google_fonts: dosis_opensans
+bootstrap_google_fonts: ''
 bootstrap_bootstrap_icons: 0
 bootstrap_icons: ''

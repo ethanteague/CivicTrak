@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_date
     - field.storage.node.field_event_image
+    - image.style.icon
     - image.style.thumbnail
     - node.type.event
   module:
@@ -807,7 +808,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: thumbnail
+            image_style: icon
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -910,7 +911,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: "{{ title }}<br />\r\n{{ field_date }}"
             make_link: false
             path: ''
@@ -937,7 +938,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: fs-5
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -966,7 +967,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 5
       defaults:
         pager: false
         use_more: false

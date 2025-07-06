@@ -1,4 +1,19 @@
 body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 600;
+}
+
+body {
   section.full-width {
     width: auto;
     position: relative;
@@ -56,4 +71,10 @@ a span.site-name-logo {
 
 .table> :not(caption)>*>* {
   vertical-align: middle;
+}
+
+.layout--threecol-section {
+  .layout__region {
+    padding: 10px;
+  }
 }
