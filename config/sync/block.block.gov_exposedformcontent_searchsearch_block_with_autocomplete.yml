@@ -11,10 +11,10 @@ dependencies:
     - gov
 third_party_settings:
   block_classes:
-    block_class: mt-3
+    block_class: 'mt-3 m-auto'
 id: gov_exposedformcontent_searchsearch_block_with_autocomplete
 theme: gov
-region: header_form
+region: featured_top
 weight: -5
 provider: null
 plugin: 'views_exposed_filter_block:content_search-search_block_with_autocomplete'

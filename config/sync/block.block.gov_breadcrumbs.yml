@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_classes
     - system
+    - taxonomy
   theme:
     - gov
 _core:
@@ -24,3 +26,11 @@ visibility:
     id: request_path
     negate: true
     pages: '<front>'
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      department: department
+      service_type: service_type

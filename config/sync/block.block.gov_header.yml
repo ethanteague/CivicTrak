@@ -1,11 +1,10 @@
 uuid: eb4f30da-61bb-4b38-be72-8f3dd4bf73e1
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:613d6071-450b-4950-89cc-7cb7d1a9ffa3'
   module:
-    - block_classes
     - block_content
     - system
   theme:
@@ -13,7 +12,7 @@ dependencies:
 id: gov_header
 theme: gov
 region: featured_top
-weight: 0
+weight: -4
 provider: null
 plugin: 'block_content:613d6071-450b-4950-89cc-7cb7d1a9ffa3'
 settings:

@@ -1,20 +1,8 @@
-{#
-/**
- * @file
- * Theme override for an 'input' #type form element.
- *
- * Available variables:
- * - attributes: A list of HTML attributes for the input element.
- * - children: Optional additional rendered elements.
- *
- * @see template_preprocess_input()
- */
-#}
 {% if element['#id'] == 'edit-title-for-autocomplete' %}
-  <div class="input-group">
-    <input{{ attributes.addClass("form-control").removeClass("form-text") }} placeholder="Search" />
-      <i class="fas fa-search"></i>
-    </div>
-  {% else %}
-    <input{{ attributes.addClass("form-control").removeClass("form-text") }} />{{ children }}
-  {% endif %}
+  <div class="search-container">
+    <input{{ attributes.addClass('form-control ps-5').removeClass('form-text') }} placeholder="Search..." />
+    <span class="search-icon"><i class="fas fa-search"></i></span>
+  </div>
+{% else %}
+  <input{{ attributes.addClass("form-control").removeClass("form-text") }} />{{ children }}
+{% endif %}
