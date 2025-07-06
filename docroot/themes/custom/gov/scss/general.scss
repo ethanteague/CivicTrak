@@ -78,3 +78,12 @@ a span.site-name-logo {
     padding: 10px;
   }
 }
+
+.region-with-bg {
+  background-image: url('../images/region-bg/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* optional */
+  padding: 4rem 0; /* optional spacing */
+}
