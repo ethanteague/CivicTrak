@@ -37,13 +37,13 @@ third_party_settings:
             first:
               region_id: ''
               region_class_choose: {  }
-              region_classes: pe-4
+              region_classes: 'pe-4 pb-4'
               region_styles: ''
               region_data: ''
             second:
               region_id: ''
               region_class_choose: {  }
-              region_classes: pe-4
+              region_classes: 'pe-4 pb-4'
               region_styles: ''
               region_data: ''
         components:
