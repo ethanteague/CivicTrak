@@ -8,7 +8,25 @@ id: nodes
 label: Nodes
 type: 'canonical_entities:node'
 pattern: '[node:content-type:name]/[node:title]'
-selection_criteria: {  }
+selection_criteria:
+  1e482333-824e-418e-9b91-3f1f61b7a582:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 1e482333-824e-418e-9b91-3f1f61b7a582
+    context_mapping:
+      node: node
+    bundles:
+      alert: alert
+      event: event
+      job_listing: job_listing
+      location: location
+      meeting_minute_agenda: meeting_minute_agenda
+      news_and_announcements: news_and_announcements
+      notices: notices
+      ordinances: ordinances
+      page: page
+      person: person
+      service: service
 selection_logic: and
 weight: 0
 relationships: {  }

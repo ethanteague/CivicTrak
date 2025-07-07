@@ -1,9 +1,0 @@
-name: 'Govt Migrations'
-type: module
-description: 'Migrations for the site.'
-package: govt
-core_version_requirement: ^10.3 || ^11
-dependencies:
-  - drupal:migrate
-  - drupal:migrate_plus
-  - drupal:migrate_tools

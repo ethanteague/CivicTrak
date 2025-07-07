@@ -24,6 +24,7 @@
     "drupal/better_exposed_filters": "^7.0",
     "drupal/block_classes": "^1.0",
     "drupal/bootstrap": "^5.0",
+    "drupal/config_inspector": "^2.1",
     "drupal/core": "~10.4 || >= 11.1",
     "drupal/core-composer-scaffold": "^11.2",
     "drupal/core-project-message": "^11.2",
