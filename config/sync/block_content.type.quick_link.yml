@@ -1,0 +1,8 @@
+uuid: 2830805f-3c4f-452a-8399-c75fcd6610d1
+langcode: en
+status: true
+dependencies: {  }
+id: quick_link
+label: 'Quick Link'
+revision: false
+description: 'Used for homepage quick links'

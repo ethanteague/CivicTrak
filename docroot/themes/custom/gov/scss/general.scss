@@ -192,3 +192,24 @@ a span.site-name-logo {
 .ui-menu-item:last-child {
   border-bottom: none;
 }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-success:hover,
+.btn-success:focus {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+a.quicklink {
+  transition: all 0.2s ease-in-out;
+  border-radius: 0 !important; /* remove Bootstrap rounding */
+}
+a.quicklink:hover {
+  background-color: var(--bs-secondary); /* or your theme's hover tone */
+  box-shadow: none; /* if you want a flat look */
+  color: white !important;
+  transform: translateY(-1px);
+}
