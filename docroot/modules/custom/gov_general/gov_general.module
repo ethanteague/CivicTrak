@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Gov general module.
+ */
+
+/**
+ * Implements hook_config_schema_info_alter().
+ */

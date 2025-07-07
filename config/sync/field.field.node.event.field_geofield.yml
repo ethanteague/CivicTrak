@@ -1,0 +1,38 @@
+uuid: 8d46335f-c1b5-4906-ab7d-7309397cfaa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geofield
+    - node.type.event
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: geocode
+    weight: 0
+    field: field_address
+    skip_not_empty_value: true
+    disabled: true
+    hidden: true
+    providers:
+      - openstreetmap
+    dumper: wkt
+    delta_handling: default
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+id: node.event.field_geofield
+field_name: field_geofield
+entity_type: node
+bundle: event
+label: Geofield
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield
