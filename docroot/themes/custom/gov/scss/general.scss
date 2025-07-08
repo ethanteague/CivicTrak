@@ -73,12 +73,6 @@ a span.site-name-logo {
   vertical-align: middle;
 }
 
-.layout--threecol-section {
-  .layout__region {
-    padding: 10px;
-  }
-}
-
 #views-exposed-form-content-search-search-block-with-autocomplete {
   .d-flex.flex-wrap {
     margin: auto;
@@ -212,4 +206,8 @@ a.quicklink:hover {
   box-shadow: none; /* if you want a flat look */
   color: white !important;
   transform: translateY(-1px);
+}
+
+tr:last-child {
+  border-bottom: 0 transparent !important;
 }
