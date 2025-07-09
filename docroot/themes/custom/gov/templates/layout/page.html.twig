@@ -155,17 +155,23 @@
       {% block footer %}
         <div class="{{ container }}">
           {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-            <div class="site-footer__top clearfix">
-              {{ page.footer_first }}
-              {{ page.footer_second }}
-              {{ page.footer_third }}
-              {{ page.footer_fourth }}
+            <div class="site-footer__top clearfix row">
+              <div class="col-12 col-md-4">{{ page.footer_first }}</div>
+              <div class="col-12 col-md-4">{{ page.footer_second }}</div>
+              <div class="col-12 col-md-4">{{ page.footer_third }}</div>
+
+
             </div>
           {% endif %}
-          {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
+          {% if page.footer_fourth or page.footer_fifth %}
+          <div class="{{ container }}">
+            <div class="site-footer__bottom row border-top pt-2 mt-4">
+              <div class="col-12">
+              {{ page.footer_fourth }}
               {{ page.footer_fifth }}
+              </div>
             </div>
+          </div>
           {% endif %}
         </div>
       {% endblock %}

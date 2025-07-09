@@ -211,3 +211,11 @@ a.quicklink:hover {
 tr:last-child {
   border-bottom: 0 transparent !important;
 }
+
+footer.site-footer {
+  background: var(--bs-dark);
+  color: white;
+  a {
+    color: white;
+  }
+}

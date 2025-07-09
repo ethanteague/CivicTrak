@@ -3,16 +3,14 @@
  * Global utilities.
  *
  */
-(function($, Drupal) {
-
-  'use strict';
-
+((Drupal) => {
   Drupal.behaviors.gov = {
     attach: function(context, settings) {
-
-      // Custom code here
-
+      const yearElement = document.getElementById("year");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear().toString();
+      }
     }
   };
 
-})(jQuery, Drupal);
+})(Drupal);
