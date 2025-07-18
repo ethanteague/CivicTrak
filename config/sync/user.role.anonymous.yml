@@ -5,10 +5,10 @@ dependencies:
   config:
     - filter.format.restricted_html
   module:
-    - contact
     - filter
     - media
     - search
+    - search_autocomplete
     - sitewide_alert
     - system
 _core:
@@ -19,9 +19,9 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'access site-wide contact form'
   - 'access user profiles'
   - 'search content'
+  - 'use search autocomplete'
   - 'use text format restricted_html'
   - 'view media'
   - 'view published sitewide alert entities'
