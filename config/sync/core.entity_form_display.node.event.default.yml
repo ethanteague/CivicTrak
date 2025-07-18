@@ -3,16 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_general
     - field.field.node.event.body
     - field.field.node.event.field_address
     - field.field.node.event.field_date
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_geofield
     - node.type.event
   module:
     - address
+    - entity_browser
     - hide_revision_field
-    - media_library
     - path
     - smart_date
     - text
@@ -65,11 +67,18 @@ content:
       separator: to
     third_party_settings: {  }
   field_event_image:
-    type: media_library_widget
+    type: entity_browser_entity_reference
     weight: 7
     region: content
     settings:
-      media_types: {  }
+      entity_browser: media_general
+      field_widget_display: label
+      field_widget_edit: false
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+      selection_mode: selection_append
     third_party_settings: {  }
   field_event_type:
     type: options_select
@@ -141,4 +150,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_geofield: true

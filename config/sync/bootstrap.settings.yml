@@ -10,7 +10,7 @@ features:
 logo:
   path: 'public://civictrak_logo_resized_300px.png'
   use_default: false
-bootstrap_source: bootstrap/bootswatch_sandstone
+bootstrap_source: '0'
 bootstrap_fluid_container: 0
 bootstrap_container: container
 bootstrap_region_clean_top_header: 1

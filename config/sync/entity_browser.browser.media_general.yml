@@ -1,0 +1,31 @@
+uuid: b225431b-6feb-4a9b-9608-d4c4e366a11d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_picker
+  module:
+    - views
+name: media_general
+label: 'Media general'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  7023cc8c-3f5b-4760-af6b-cd50092057f1:
+    id: view
+    uuid: 7023cc8c-3f5b-4760-af6b-cd50092057f1
+    label: View
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: media_picker
+      view_display: entity_browser_1

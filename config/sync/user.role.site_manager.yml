@@ -7,6 +7,7 @@ dependencies:
     - block_content.type.quick_link
     - core.entity_view_display.node.page.default
     - core.entity_view_display.taxonomy_term.service_type.default
+    - filter.format.full_html
     - media.type.audio
     - media.type.document
     - media.type.image
@@ -15,7 +16,6 @@ dependencies:
     - node.type.downloadable_form
     - node.type.event
     - node.type.job_listing
-    - node.type.location
     - node.type.meeting_minute_agenda
     - node.type.news_and_announcements
     - node.type.notices
@@ -29,12 +29,14 @@ dependencies:
   module:
     - block_content
     - content_moderation
+    - contextual
+    - file
+    - filter
     - layout_builder
-    - layout_builder_modal
-    - layout_builder_styles
-    - layout_custom_section_classes
     - media
+    - navigation
     - node
+    - paragraphs
     - path
     - search_autocomplete
     - sitewide_alert
@@ -49,17 +51,18 @@ is_admin: false
 permissions:
   - 'access administration pages'
   - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
   - 'access media overview'
+  - 'access navigation'
   - 'access own webform configuration'
   - 'access toolbar'
   - 'access webform submission user'
   - 'add sitewide alert entities'
-  - 'administer layout builder modal'
-  - 'administer layout builder section attributes'
-  - 'administer layout builder section classes module settings'
-  - 'administer layout builder sections region attributes'
+  - 'administer block content'
   - 'administer users'
   - 'administer webform submission'
+  - 'bypass node access'
   - 'cancel account'
   - 'change own username'
   - 'configure all page node layout overrides'
@@ -75,7 +78,6 @@ permissions:
   - 'create event content'
   - 'create image media'
   - 'create job_listing content'
-  - 'create location content'
   - 'create media'
   - 'create meeting_minute_agenda content'
   - 'create news_and_announcements content'
@@ -91,6 +93,7 @@ permissions:
   - 'create url aliases'
   - 'create video media'
   - 'create webform'
+  - 'delete all revisions'
   - 'delete all sitewide alert revisions'
   - 'delete any audio media'
   - 'delete any audio media revisions'
@@ -100,10 +103,10 @@ permissions:
   - 'delete any document media revisions'
   - 'delete any downloadable_form content'
   - 'delete any event content'
+  - 'delete any file'
   - 'delete any image media'
   - 'delete any image media revisions'
   - 'delete any job_listing content'
-  - 'delete any location content'
   - 'delete any media'
   - 'delete any meeting_minute_agenda content'
   - 'delete any news_and_announcements content'
@@ -123,7 +126,6 @@ permissions:
   - 'delete downloadable_form revisions'
   - 'delete event revisions'
   - 'delete job_listing revisions'
-  - 'delete location revisions'
   - 'delete media'
   - 'delete meeting_minute_agenda revisions'
   - 'delete news_and_announcements revisions'
@@ -135,7 +137,6 @@ permissions:
   - 'delete own event content'
   - 'delete own image media'
   - 'delete own job_listing content'
-  - 'delete own location content'
   - 'delete own meeting_minute_agenda content'
   - 'delete own news_and_announcements content'
   - 'delete own notices content'
@@ -163,7 +164,6 @@ permissions:
   - 'edit any event content'
   - 'edit any image media'
   - 'edit any job_listing content'
-  - 'edit any location content'
   - 'edit any meeting_minute_agenda content'
   - 'edit any news_and_announcements content'
   - 'edit any notices content'
@@ -182,7 +182,6 @@ permissions:
   - 'edit own event content'
   - 'edit own image media'
   - 'edit own job_listing content'
-  - 'edit own location content'
   - 'edit own meeting_minute_agenda content'
   - 'edit own news_and_announcements content'
   - 'edit own notices content'
@@ -196,8 +195,7 @@ permissions:
   - 'edit sitewide alert entities'
   - 'edit terms in department'
   - 'edit terms in service_type'
-  - 'manage layout builder style groups'
-  - 'manage layout builder styles'
+  - 'revert all revisions'
   - 'revert all sitewide alert revisions'
   - 'revert any audio media revisions'
   - 'revert any basic block content revisions'
@@ -209,7 +207,6 @@ permissions:
   - 'revert downloadable_form revisions'
   - 'revert event revisions'
   - 'revert job_listing revisions'
-  - 'revert location revisions'
   - 'revert meeting_minute_agenda revisions'
   - 'revert news_and_announcements revisions'
   - 'revert notices revisions'
@@ -220,8 +217,12 @@ permissions:
   - 'revert term revisions in department'
   - 'revert term revisions in service_type'
   - 'select account cancellation method'
+  - 'update any media'
   - 'update media'
   - 'use search autocomplete'
+  - 'use text format full_html'
+  - 'view all media revisions'
+  - 'view all revisions'
   - 'view all sitewide alert revisions'
   - 'view any audio media revisions'
   - 'view any basic block content history'
@@ -236,11 +237,11 @@ permissions:
   - 'view event revisions'
   - 'view job_listing revisions'
   - 'view latest version'
-  - 'view location revisions'
   - 'view meeting_minute_agenda revisions'
   - 'view news_and_announcements revisions'
   - 'view notices revisions'
   - 'view ordinances revisions'
+  - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view own webform submission'
   - 'view page revisions'
@@ -249,5 +250,6 @@ permissions:
   - 'view term revisions in department'
   - 'view term revisions in service_type'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'
   - 'view unpublished sitewide alert entities'
   - 'view user email addresses'

@@ -131,8 +131,8 @@ bootstrap_navbar_slide: 0
 bootstrap_tabs_style: ''
 bootstrap_messages_widget_toast_delay: '10000'
 bootstrap_float_label: 0
-bootstrap_navbar_top_affix: 1
-bootstrap_navbar_affix: 1
+bootstrap_navbar_top_affix: 0
+bootstrap_navbar_affix: 0
 bootstrap_sidebar_first_affix: 0
 bootstrap_sidebar_second_affix: 0
 bootstrap_scroll_spy: ''

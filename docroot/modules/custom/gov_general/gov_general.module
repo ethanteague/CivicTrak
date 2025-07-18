@@ -15,3 +15,10 @@ function gov_general_form_node_form_alter(&$form, FormStateInterface $form_state
     $form['path']['widget'][0]['automatic']['#default_value'] = 1;
   }
 }
+
+/**
+ * Implements hook_page_attachments().
+ */
+function gov_general_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'gov_general/gin-global';
+}
