@@ -6,4 +6,6 @@
     default_ttl: 300
   redirects:
     paths:
-      "^http://": "https://{default}/"
+      "^http://":
+        to: "https://{default}/"
+        status: 301

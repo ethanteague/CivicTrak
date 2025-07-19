@@ -16,7 +16,6 @@ runtime:
     - mbstring
     - gd
     - curl
-    - json
     - xml
 
 web:
