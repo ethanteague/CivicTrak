@@ -39,8 +39,8 @@ favicon:
   use_default: 1
 bootstrap_source: '0'
 bootstrap_enable_color: 1
-bootstrap_base_primary_color: '#f2b134'
-bootstrap_base_secondary_color: '#2f4f90'
+bootstrap_base_primary_color: '#22543d'
+bootstrap_base_secondary_color: '#4a90e2'
 bootstrap_body_color: gray-800
 bootstrap_body_bg_color: white
 bootstrap_h1_color: primary
