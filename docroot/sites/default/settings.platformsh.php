@@ -13,19 +13,23 @@ if (file_exists(__DIR__ . '/settings.platformsh.generated.php')) {
 }
 
 // Safely decode PLATFORM_RELATIONSHIPS manually.
-$relationships = getenv('PLATFORM_RELATIONSHIPS') ? json_decode(base64_decode(getenv('PLATFORM_RELATIONSHIPS')), true) : [];
+$relationships = getenv('PLATFORM_RELATIONSHIPS') ? json_decode(base64_decode(getenv('PLATFORM_RELATIONSHIPS')), TRUE) : [];
 
 if (!empty($relationships)) {
 
-  // Configure Redis if available and the PHP extension + module exists.
-  if (!empty($relationships['redis'][0]) && extension_loaded('redis') && class_exists(PhpRedis::class)) {
+  // Configure Redis if available.
+  if (
+    !empty($relationships['redis'][0]) &&
+    extension_loaded('redis') &&
+    class_exists(PhpRedis::class)
+  ) {
     $redis = $relationships['redis'][0];
 
     $settings['redis.connection']['interface'] = 'PhpRedis';
     $settings['redis.connection']['host'] = $redis['host'];
     $settings['redis.connection']['port'] = $redis['port'];
 
-    // Only override default cache if redis module is available.
+    // Only override default cache if Redis module is present.
     $settings['cache']['default'] = 'cache.backend.redis';
 
     // Optional: speed up other bins.
@@ -34,7 +38,7 @@ if (!empty($relationships)) {
     $settings['cache']['bins']['config'] = 'cache.backend.chainedfast';
   }
 
-  // Configure MySQL if available.
+  // Configure database.
   if (!empty($relationships['database'][0])) {
     $db = $relationships['database'][0];
 
@@ -48,7 +52,7 @@ if (!empty($relationships)) {
       'pdo' => [PDO::MYSQL_ATTR_COMPRESS => TRUE],
     ];
 
-    // Useful for debugging on deploy hooks.
+    // Debug output for deploy logging.
     error_log('DB host: ' . $db['host']);
   }
 }
