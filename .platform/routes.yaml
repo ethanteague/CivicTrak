@@ -4,7 +4,3 @@
   cache:
     enabled: true
     default_ttl: 300
-  redirects:
-    paths:
-      "^/.*":
-        to: "https://{default}/"
