@@ -45,9 +45,9 @@ hooks:
     composer install --prefer-dist --no-dev -o
 
   deploy: |
-    drush updatedb -y
-    drush config-import -y
-    drush cache-rebuild
+    ./vendor/bin/drush updatedb -y
+    ./vendor/bin/drush config-import -y
+    ./vendor/bin/drush cache-rebuild
 
 variables:
   php:
