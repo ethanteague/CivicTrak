@@ -1,6 +1,6 @@
 "https://{default}/":
   type: upstream
-  upstream: "civictrak"
+  upstream: "civictrak:http"
   cache:
     enabled: true
     default_ttl: 300
