@@ -45,13 +45,13 @@ hooks:
     composer install --prefer-dist --no-dev -o
 
   deploy: |
-    ./vendor/bin/drush updatedb -y
-    ./vendor/bin/drush config-import -y
-    ./vendor/bin/drush cache-rebuild
+    ./vendor/bin/drush --uri="${DRUSH_OPTIONS_URI}" updatedb -y
+    ./vendor/bin/drush --uri="${DRUSH_OPTIONS_URI}" config-import -y
+    ./vendor/bin/drush --uri="${DRUSH_OPTIONS_URI}" cache-rebuild
 
 variables:
   php:
     memory_limit: 512M
   env:
-    DRUSH_OPTIONS_URI: 'https://{default}/'
-    PLATFORM_DRUPAL_ENVIRONMENT: 'true'
+    DRUSH_OPTIONS_URI: "https://{default}/"
+    PLATFORM_DRUPAL_ENVIRONMENT: "true"
