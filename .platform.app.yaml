@@ -45,9 +45,11 @@ hooks:
     composer install --prefer-dist --no-dev -o
 
   deploy: |
-    ./vendor/bin/drush --uri="${DRUSH_OPTIONS_URI}" updatedb -y
-    ./vendor/bin/drush --uri="${DRUSH_OPTIONS_URI}" config-import -y
-    ./vendor/bin/drush --uri="${DRUSH_OPTIONS_URI}" cache-rebuild
+    if [ -f docroot/core/lib/Drupal.php ]; then
+      ./vendor/bin/drush --root=docroot --uri=https://main-bvxea6i-aix7krbcuwq3u.us-2.platformsh.site/ updatedb -y || true
+      ./vendor/bin/drush --root=docroot --uri=https://main-bvxea6i-aix7krbcuwq3u.us-2.platformsh.site/ config-import -y || true
+      ./vendor/bin/drush --root=docroot --uri=https://main-bvxea6i-aix7krbcuwq3u.us-2.platformsh.site/ cache-rebuild || true
+    fi
 
 variables:
   php:
