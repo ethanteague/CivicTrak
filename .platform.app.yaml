@@ -29,6 +29,10 @@ mounts:
     source: local
     source_path: 'sites/default/files'
 
+  '/shared':
+    source: local
+    source_path: shared
+
 relationships:
   mariadb: 'mariadb:mysql'
   redis: 'redis:redis'
