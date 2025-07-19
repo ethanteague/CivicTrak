@@ -45,12 +45,13 @@ crons:
     cmd: 'drush cron -q'
 
 hooks:
-  build:
-    - 'composer install --prefer-dist --no-dev -o'
-  deploy:
-    - 'drush updatedb -y'
-    - 'drush config-import -y'
-    - 'drush cache-rebuild'
+  build: |
+    composer install --prefer-dist --no-dev -o
+
+  deploy: |
+    drush updatedb -y
+    drush config-import -y
+    drush cache-rebuild
 
 variables:
   php:
