@@ -20,8 +20,6 @@ web:
       root: 'docroot'
       index:
         - index.php
-      scripts:
-        php: true
       allow: true
       expires: 1h
       passthru: '/index.php'
@@ -32,7 +30,7 @@ mounts:
     source_path: 'sites/default/files'
 
 relationships:
-  database: 'mariadb:mysql'
+  mariadb: 'mariadb:mysql'
   redis: 'redis:redis'
 
 crons:
