@@ -883,19 +883,6 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
  if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
    include $app_root . '/' . $site_path . '/settings.platformsh.php';
  }
- if (getenv('PLATFORM_RELATIONSHIPS') && extension_loaded('redis')) {
-  $config = new \Platformsh\ConfigReader\Config();
-  $redis = $config->credentials('redis');
-  $settings['redis.connection']['interface'] = 'PhpRedis';
-  $settings['redis.connection']['host'] = $redis['host'];
-  $settings['redis.connection']['port'] = $redis['port'];
-
-  $settings['cache']['default'] = 'cache.backend.redis';
-  $settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
-  $settings['cache']['bins']['discovery'] = 'cache.backend.chainedfast';
-  $settings['cache']['bins']['config'] = 'cache.backend.chainedfast';
-}
-
 
  if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
