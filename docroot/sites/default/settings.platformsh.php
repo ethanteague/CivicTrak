@@ -13,10 +13,12 @@ if (file_exists(__DIR__ . '/settings.platformsh.generated.php')) {
 
 if (getenv('PLATFORM_RELATIONSHIPS') && class_exists(Config::class)) {
   $plat_config = new Config();
+  error_log('DB host: ' . $database['host']);
 
   // Redis configuration.
   if ($plat_config->hasRelationship('redis') && extension_loaded('redis')) {
-    $redis = $plat_config->credentials('redis')[0]; // ✅ FIXED
+    // ✅ FIXED
+    $redis = $plat_config->credentials('redis')[0];
 
     $settings['redis.connection']['interface'] = 'PhpRedis';
     $settings['redis.connection']['host'] = $redis['host'];
@@ -30,7 +32,8 @@ if (getenv('PLATFORM_RELATIONSHIPS') && class_exists(Config::class)) {
 
   // Database configuration.
   if ($plat_config->hasRelationship('database')) {
-    $database = $plat_config->credentials('database')[0]; // ✅ FIXED
+    // ✅ FIXED
+    $database = $plat_config->credentials('database')[0];
 
     $databases['default']['default'] = [
       'driver' => 'mysql',
