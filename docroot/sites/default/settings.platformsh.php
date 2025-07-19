@@ -12,7 +12,7 @@ if (file_exists(__DIR__ . '/settings.platformsh.generated.php')) {
 
 if (getenv('PLATFORM_RELATIONSHIPS') && extension_loaded('redis')) {
   $config = new Config();
-  $redis = $config->credentials('redis');
+  $redis = $config->credentials('redis')[0]; // ← FIX: use [0]
   $settings['redis.connection']['interface'] = 'PhpRedis';
   $settings['redis.connection']['host'] = $redis['host'];
   $settings['redis.connection']['port'] = $redis['port'];
@@ -23,12 +23,11 @@ if (getenv('PLATFORM_RELATIONSHIPS') && extension_loaded('redis')) {
   $settings['cache']['bins']['config'] = 'cache.backend.chainedfast';
 }
 
-
 if (getenv('PLATFORM_RELATIONSHIPS') && class_exists(Config::class) && (new Config())->isValidPlatform()) {
   $config = new Config();
 
   if ($config->hasRelationship('database')) {
-    $credentials = $config->credentials('database');
+    $credentials = $config->credentials('database')[0]; // ← FIX: use [0]
 
     $databases['default']['default'] = [
       'driver' => 'mysql',
