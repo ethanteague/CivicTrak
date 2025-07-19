@@ -7,6 +7,12 @@ if (file_exists(__DIR__ . '/settings.platformsh.generated.php')) {
   include __DIR__ . '/settings.platformsh.generated.php';
 }
 
+if (isset($_SERVER['HTTP_HOST'])) {
+  $settings['trusted_host_patterns'] = [
+    '^' . preg_quote($_SERVER['HTTP_HOST']) . '$',
+  ];
+}
+
 $relationships = getenv('PLATFORM_RELATIONSHIPS') ? json_decode(base64_decode(getenv('PLATFORM_RELATIONSHIPS')), TRUE) : [];
 
 if (!empty($relationships)) {
