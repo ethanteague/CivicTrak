@@ -1,5 +1,6 @@
 name: civictrak
 type: 'php:8.3'
+disk: 2048
 build:
   flavor: composer
 
