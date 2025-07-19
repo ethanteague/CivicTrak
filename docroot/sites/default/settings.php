@@ -875,7 +875,8 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
 
-// Automatically generated include for settings managed by ddev.
+$settings['hash_salt'] = getenv('PLATFORM_PROJECT_ENTROPY') ?: 'psdke342qkmw1m1mmww12m22~~1@!';
+
 if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev.php')) {
   include __DIR__ . '/settings.ddev.php';
 }
