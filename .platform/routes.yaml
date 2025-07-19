@@ -8,4 +8,3 @@
     paths:
       "^http://":
         to: "https://{default}/"
-        status: 301
