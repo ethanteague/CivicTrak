@@ -4,10 +4,6 @@ disk: 2048
 build:
   flavor: composer
 
-dependencies:
-  php:
-    redis: '*'
-
 runtime:
   extensions:
     - redis
