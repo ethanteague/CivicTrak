@@ -65,6 +65,7 @@
     "drupal/webform": "^6.3@beta",
     "drush/drush": "^13.6",
     "geocoder-php/nominatim-provider": "^5.7",
+    "platformsh/config-reader": "^3.0",
     "twbs/bootstrap-icons": "^1.13"
   },
   "conflict": {
