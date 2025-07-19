@@ -46,9 +46,10 @@ hooks:
 
   deploy: |
     if [ -f docroot/core/lib/Drupal.php ]; then
-      ./vendor/bin/drush --root=docroot --uri=https://main-bvxea6i-aix7krbcuwq3u.us-2.platformsh.site/ updatedb -y || true
-      ./vendor/bin/drush --root=docroot --uri=https://main-bvxea6i-aix7krbcuwq3u.us-2.platformsh.site/ config-import -y || true
-      ./vendor/bin/drush --root=docroot --uri=https://main-bvxea6i-aix7krbcuwq3u.us-2.platformsh.site/ cache-rebuild || true
+      ./vendor/bin/drush --root=docroot en redis -y || true
+      ./vendor/bin/drush --root=docroot updatedb -y || true
+      ./vendor/bin/drush --root=docroot config-import -y || true
+      ./vendor/bin/drush --root=docroot cache-rebuild || true
     fi
 
 variables:
