@@ -16,7 +16,7 @@ if (getenv('PLATFORM_RELATIONSHIPS') && class_exists(Config::class)) {
 
   // Redis configuration.
   if ($plat_config->hasRelationship('redis') && extension_loaded('redis')) {
-    $redis = $plat_config->relationships['redis'][0];
+    $redis = $plat_config->credentials('redis');
 
     $settings['redis.connection']['interface'] = 'PhpRedis';
     $settings['redis.connection']['host'] = $redis['host'];
@@ -30,7 +30,7 @@ if (getenv('PLATFORM_RELATIONSHIPS') && class_exists(Config::class)) {
 
   // Database configuration.
   if ($plat_config->hasRelationship('database')) {
-    $database = $plat_config->relationships['database'][0];
+    $database = $plat_config->credentials('database');
 
     $databases['default']['default'] = [
       'driver' => 'mysql',
@@ -42,7 +42,7 @@ if (getenv('PLATFORM_RELATIONSHIPS') && class_exists(Config::class)) {
       'pdo' => [PDO::MYSQL_ATTR_COMPRESS => TRUE],
     ];
 
-    // Only log the DB host after it's defined.
+    // Log DB host to verify it's being picked up.
     error_log('DB host: ' . $database['host']);
   }
 }
