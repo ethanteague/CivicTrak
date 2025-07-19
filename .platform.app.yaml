@@ -36,8 +36,8 @@ mounts:
     source_path: 'sites/default/files'
 
 relationships:
-  database: 'mariadb:mariadb'
-  redis: 'redis:redis'
+  database: 'mariadb'
+  redis: 'redis'
 
 crons:
   cron:
