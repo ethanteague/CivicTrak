@@ -6,50 +6,49 @@
  */
 
 use Drupal\redis\Cache\PhpRedis;
-use Platformsh\ConfigReader\Config;
 
+// Always include the generated settings first.
 if (file_exists(__DIR__ . '/settings.platformsh.generated.php')) {
   include __DIR__ . '/settings.platformsh.generated.php';
 }
 
-if (getenv('PLATFORM_RELATIONSHIPS') && class_exists(Config::class)) {
-  $plat_config = new Config();
+// Safely decode PLATFORM_RELATIONSHIPS manually.
+$relationships = getenv('PLATFORM_RELATIONSHIPS') ? json_decode(base64_decode(getenv('PLATFORM_RELATIONSHIPS')), true) : [];
 
-  // Redis configuration.
-  if (
-    $plat_config->hasRelationship('redis') &&
-    extension_loaded('redis') &&
-    class_exists(PhpRedis::class)
-  ) {
-    $redis = $plat_config->credentials('redis')[0];
+if (!empty($relationships)) {
+
+  // Configure Redis if available and the PHP extension + module exists.
+  if (!empty($relationships['redis'][0]) && extension_loaded('redis') && class_exists(PhpRedis::class)) {
+    $redis = $relationships['redis'][0];
 
     $settings['redis.connection']['interface'] = 'PhpRedis';
     $settings['redis.connection']['host'] = $redis['host'];
     $settings['redis.connection']['port'] = $redis['port'];
 
-    // Only override default cache if redis module is installed.
+    // Only override default cache if redis module is available.
     $settings['cache']['default'] = 'cache.backend.redis';
 
-    // Optional: improve performance of other bins.
+    // Optional: speed up other bins.
     $settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
     $settings['cache']['bins']['discovery'] = 'cache.backend.chainedfast';
     $settings['cache']['bins']['config'] = 'cache.backend.chainedfast';
   }
 
-  // Database configuration.
-  if ($plat_config->hasRelationship('database')) {
-    $database = $plat_config->credentials('database')[0];
+  // Configure MySQL if available.
+  if (!empty($relationships['database'][0])) {
+    $db = $relationships['database'][0];
 
     $databases['default']['default'] = [
       'driver' => 'mysql',
-      'database' => $database['path'],
-      'username' => $database['username'],
-      'password' => $database['password'],
-      'host' => $database['host'],
-      'port' => $database['port'],
+      'database' => $db['path'],
+      'username' => $db['username'],
+      'password' => $db['password'],
+      'host' => $db['host'],
+      'port' => $db['port'],
       'pdo' => [PDO::MYSQL_ATTR_COMPRESS => TRUE],
     ];
 
-    error_log('DB host: ' . $database['host']);
+    // Useful for debugging on deploy hooks.
+    error_log('DB host: ' . $db['host']);
   }
 }
