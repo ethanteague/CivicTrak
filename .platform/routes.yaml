@@ -6,5 +6,5 @@
     default_ttl: 300
   redirects:
     paths:
-      "^http://":
+      "^/.*":
         to: "https://{default}/"
