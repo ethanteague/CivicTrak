@@ -1,0 +1,8 @@
+"https://{default}/":
+  type: upstream
+  upstream: "civictrak"
+  cache:
+    enabled: true
+    default_ttl: 300
+  redirects:
+    insecure: https

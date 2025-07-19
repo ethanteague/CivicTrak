@@ -1,0 +1,60 @@
+name: civictrak
+type: 'php:8.3'
+build:
+  flavor: composer
+
+dependencies:
+  php:
+    redis: '*'
+
+runtime:
+  extensions:
+    - redis
+    - pdo_mysql
+    - opcache
+    - mbstring
+    - gd
+    - curl
+    - json
+    - xml
+
+web:
+  locations:
+    '/':
+      root: 'docroot'
+      index:
+        - index.php
+      scripts:
+        php: true
+      allow: true
+      expires: 1h
+      passthru: '/index.php'
+
+mounts:
+  'docroot/sites/default/files':
+    source: local
+    source_path: 'sites/default/files'
+
+relationships:
+  database: 'mariadb:mariadb'
+  redis: 'redis:redis'
+
+crons:
+  cron:
+    spec: '*/15 * * * *'
+    cmd: 'drush cron -q'
+
+hooks:
+  build:
+    - 'composer install --prefer-dist --no-dev -o'
+  deploy:
+    - 'drush updatedb -y'
+    - 'drush config-import -y'
+    - 'drush cache-rebuild'
+
+variables:
+  php:
+    memory_limit: 512M
+  env:
+    DRUSH_OPTIONS_URI: 'https://{default}/'
+    PLATFORM_DRUPAL_ENVIRONMENT: 'true'

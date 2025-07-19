@@ -392,7 +392,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: '.d-none .d-lg-table-cell'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false

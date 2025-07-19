@@ -42,6 +42,7 @@ dependencies:
     - sitewide_alert
     - system
     - taxonomy
+    - theme_permission
     - toolbar
     - webform
 id: site_manager
@@ -60,6 +61,8 @@ permissions:
   - 'access webform submission user'
   - 'add sitewide alert entities'
   - 'administer block content'
+  - 'administer themes'
+  - 'administer themes gov'
   - 'administer users'
   - 'administer webform submission'
   - 'bypass node access'

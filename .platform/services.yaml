@@ -1,0 +1,6 @@
+mariadb:
+  type: mariadb:11.4
+  disk: 512
+
+redis:
+  type: redis:7.2
