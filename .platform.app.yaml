@@ -48,11 +48,10 @@ hooks:
 
   deploy: |
     if [ -f docroot/core/lib/Drupal.php ]; then
-      URI="https://$(platform route:get --primary --pipe)"
-      ./vendor/bin/drush --root=docroot --uri="$URI" en redis -y || true
-      ./vendor/bin/drush --root=docroot --uri="$URI" updatedb -y || true
-      ./vendor/bin/drush --root=docroot --uri="$URI" config-import -y || true
-      ./vendor/bin/drush --root=docroot --uri="$URI" cache-rebuild || true
+      ./vendor/bin/drush --root=docroot en redis -y || true
+      ./vendor/bin/drush --root=docroot updatedb -y || true
+      ./vendor/bin/drush --root=docroot config-import -y || true
+      ./vendor/bin/drush --root=docroot cache-rebuild || true
     fi
 
 variables:
