@@ -1,0 +1,24 @@
+uuid: 8d2e1f3a-7c9b-0d1e-5a6b-3a2f1e0d9c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.feature_comparison
+  module:
+    - text
+id: node.feature_comparison.body
+field_name: body
+entity_type: node
+bundle: feature_comparison
+label: 'Detailed Comparison'
+description: 'Detailed explanation of the comparison with context and analysis'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

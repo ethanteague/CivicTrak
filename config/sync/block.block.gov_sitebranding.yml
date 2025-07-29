@@ -1,0 +1,23 @@
+uuid: 55f7d487-a4d8-4296-9660-1b0a42869943
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gov
+id: gov_sitebranding
+theme: gov
+region: footer_fourth
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

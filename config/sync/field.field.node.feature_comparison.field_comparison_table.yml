@@ -1,0 +1,22 @@
+uuid: 5a9b8c0d-4f6e-7a8b-2d3e-0d9c8b7a6f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comparison_table
+    - node.type.feature_comparison
+  module:
+    - text
+id: node.feature_comparison.field_comparison_table
+field_name: field_comparison_table
+entity_type: node
+bundle: feature_comparison
+label: 'Comparison Table'
+description: 'HTML table or formatted comparison chart'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

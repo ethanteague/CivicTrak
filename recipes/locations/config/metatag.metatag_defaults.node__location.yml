@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__location
+label: 'Content: location'
+tags:
+  description: '[node:summary]'
+  keywords: ''
+  og_description: '[node:summary]'
+  og_image: ''
+  og_title: '[node:title]'
+  og_type: location
+  og_url: '[node:url:absolute]'
+  schema_location_address: 'a:6:{s:5:"@type";s:13:"PostalAddress";s:13:"streetAddress";s:82:"[node:field_location_address:address_line1], [node:field_location_address:address_line2]";s:15:"addressLocality";s:35:"[node:field_location_address:locality]";s:13:"addressRegion";s:46:"[node:field_location_address:administrative_area]";s:10:"postalCode";s:38:"[node:field_location_address:postal_code]";s:14:"addressCountry";s:39:"[node:field_location_address:country_name]";}'
+  schema_location_description: '[node:summary]'
+  schema_location_image: ''
+  schema_location_name: '[node:title]'
+  schema_location_type: location
+  schema_location_telephone: '[node:field_location_telephone]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: ''
+  twitter_cards_title: '[node:title]'
+  twitter_cards_type: summary_large_image
+  twitter_cards_page_url: '[node:url:absolute]'

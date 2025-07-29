@@ -1,0 +1,20 @@
+uuid: 3449d9aa-cbda-4db2-8b8e-0443c4925ddf
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gov
+_core:
+  default_config_hash: DCdeF-CNqoTGZApbMI1_uySIwrT25-l9NxcJ_OjQdRk
+id: gov_primary_admin_actions
+theme: gov
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

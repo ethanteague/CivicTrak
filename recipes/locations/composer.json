@@ -1,0 +1,45 @@
+{
+    "name": "drupal/locations",
+    "description": "Provides a location content type and related configuration.",
+    "license": "GPL-2.0-or-later",
+    "type": "drupal-recipe",
+    "require": {
+        "drupal/add_content_by_bundle": "^1.2",
+        "drupal/address": "^1.11 || ^2.0",
+        "drupal/core": "~10.4 || >= 11.1",
+        "drupal/geocoder": "^4.10",
+        "drupal/geofield": "^1.47",
+        "drupal/leaflet": "^10.2",
+        "drupal/metatag": "^1.25 || ^2.0",
+        "drupal/pathauto": "^1.13",
+        "geocoder-php/nominatim-provider": "^5.7"
+    },
+    "repositories": {
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
+    "minimum-stability": "RC",
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "ergebnis/composer-normalize": true,
+            "oomphinc/composer-installers-extender": true,
+            "phpro/grumphp-shim": true,
+            "webdriver-binary/binary-chromedriver": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "1.x-dev"
+        }
+    }
+}

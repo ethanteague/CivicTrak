@@ -1,0 +1,258 @@
+uuid: ae5cfcbd-d51b-4d1f-9d53-08b9a303953d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - block_content.type.quick_link
+    - core.entity_view_display.node.page.default
+    - core.entity_view_display.taxonomy_term.service_type.default
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.downloadable_form
+    - node.type.event
+    - node.type.job_listing
+    - node.type.meeting_minute_agenda
+    - node.type.news_and_announcements
+    - node.type.notices
+    - node.type.ordinances
+    - node.type.page
+    - node.type.person
+    - node.type.service
+    - taxonomy.vocabulary.alert_severity
+    - taxonomy.vocabulary.department
+    - taxonomy.vocabulary.service_type
+  module:
+    - block_content
+    - content_moderation
+    - contextual
+    - file
+    - filter
+    - layout_builder
+    - media
+    - navigation
+    - node
+    - paragraphs
+    - path
+    - search_autocomplete
+    - sitewide_alert
+    - system
+    - taxonomy
+    - theme_permission
+    - toolbar
+    - webform
+id: site_manager
+label: 'Site Manager'
+weight: 4
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access navigation'
+  - 'access own webform configuration'
+  - 'access toolbar'
+  - 'access webform submission user'
+  - 'add sitewide alert entities'
+  - 'administer block content'
+  - 'administer themes'
+  - 'administer themes gov'
+  - 'administer users'
+  - 'administer webform submission'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'configure all page node layout overrides'
+  - 'configure all service_type taxonomy_term layout overrides'
+  - 'configure any layout'
+  - 'configure editable page node layout overrides'
+  - 'configure editable service_type taxonomy_term layout overrides'
+  - 'create and edit custom blocks'
+  - 'create audio media'
+  - 'create basic block content'
+  - 'create document media'
+  - 'create downloadable_form content'
+  - 'create event content'
+  - 'create image media'
+  - 'create job_listing content'
+  - 'create media'
+  - 'create meeting_minute_agenda content'
+  - 'create news_and_announcements content'
+  - 'create notices content'
+  - 'create ordinances content'
+  - 'create page content'
+  - 'create person content'
+  - 'create quick_link block content'
+  - 'create remote_video media'
+  - 'create service content'
+  - 'create terms in department'
+  - 'create terms in service_type'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create webform'
+  - 'delete all revisions'
+  - 'delete all sitewide alert revisions'
+  - 'delete any audio media'
+  - 'delete any audio media revisions'
+  - 'delete any basic block content'
+  - 'delete any basic block content revisions'
+  - 'delete any document media'
+  - 'delete any document media revisions'
+  - 'delete any downloadable_form content'
+  - 'delete any event content'
+  - 'delete any file'
+  - 'delete any image media'
+  - 'delete any image media revisions'
+  - 'delete any job_listing content'
+  - 'delete any media'
+  - 'delete any meeting_minute_agenda content'
+  - 'delete any news_and_announcements content'
+  - 'delete any notices content'
+  - 'delete any ordinances content'
+  - 'delete any page content'
+  - 'delete any person content'
+  - 'delete any quick_link block content'
+  - 'delete any quick_link block content revisions'
+  - 'delete any remote_video media'
+  - 'delete any remote_video media revisions'
+  - 'delete any service content'
+  - 'delete any video media'
+  - 'delete any video media revisions'
+  - 'delete any webform'
+  - 'delete any webform submission'
+  - 'delete downloadable_form revisions'
+  - 'delete event revisions'
+  - 'delete job_listing revisions'
+  - 'delete media'
+  - 'delete meeting_minute_agenda revisions'
+  - 'delete news_and_announcements revisions'
+  - 'delete notices revisions'
+  - 'delete ordinances revisions'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own downloadable_form content'
+  - 'delete own event content'
+  - 'delete own image media'
+  - 'delete own job_listing content'
+  - 'delete own meeting_minute_agenda content'
+  - 'delete own news_and_announcements content'
+  - 'delete own notices content'
+  - 'delete own ordinances content'
+  - 'delete own page content'
+  - 'delete own person content'
+  - 'delete own remote_video media'
+  - 'delete own service content'
+  - 'delete own video media'
+  - 'delete own webform'
+  - 'delete own webform submission'
+  - 'delete page revisions'
+  - 'delete person revisions'
+  - 'delete service revisions'
+  - 'delete sitewide alert entities'
+  - 'delete term revisions in alert_severity'
+  - 'delete term revisions in department'
+  - 'delete term revisions in service_type'
+  - 'delete terms in department'
+  - 'delete terms in service_type'
+  - 'edit any audio media'
+  - 'edit any basic block content'
+  - 'edit any document media'
+  - 'edit any downloadable_form content'
+  - 'edit any event content'
+  - 'edit any image media'
+  - 'edit any job_listing content'
+  - 'edit any meeting_minute_agenda content'
+  - 'edit any news_and_announcements content'
+  - 'edit any notices content'
+  - 'edit any ordinances content'
+  - 'edit any page content'
+  - 'edit any person content'
+  - 'edit any quick_link block content'
+  - 'edit any remote_video media'
+  - 'edit any service content'
+  - 'edit any video media'
+  - 'edit any webform'
+  - 'edit any webform submission'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own downloadable_form content'
+  - 'edit own event content'
+  - 'edit own image media'
+  - 'edit own job_listing content'
+  - 'edit own meeting_minute_agenda content'
+  - 'edit own news_and_announcements content'
+  - 'edit own notices content'
+  - 'edit own ordinances content'
+  - 'edit own page content'
+  - 'edit own person content'
+  - 'edit own remote_video media'
+  - 'edit own service content'
+  - 'edit own video media'
+  - 'edit own webform'
+  - 'edit sitewide alert entities'
+  - 'edit terms in department'
+  - 'edit terms in service_type'
+  - 'revert all revisions'
+  - 'revert all sitewide alert revisions'
+  - 'revert any audio media revisions'
+  - 'revert any basic block content revisions'
+  - 'revert any document media revisions'
+  - 'revert any image media revisions'
+  - 'revert any quick_link block content revisions'
+  - 'revert any remote_video media revisions'
+  - 'revert any video media revisions'
+  - 'revert downloadable_form revisions'
+  - 'revert event revisions'
+  - 'revert job_listing revisions'
+  - 'revert meeting_minute_agenda revisions'
+  - 'revert news_and_announcements revisions'
+  - 'revert notices revisions'
+  - 'revert ordinances revisions'
+  - 'revert page revisions'
+  - 'revert person revisions'
+  - 'revert service revisions'
+  - 'revert term revisions in department'
+  - 'revert term revisions in service_type'
+  - 'select account cancellation method'
+  - 'update any media'
+  - 'update media'
+  - 'use search autocomplete'
+  - 'use text format full_html'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view all sitewide alert revisions'
+  - 'view any audio media revisions'
+  - 'view any basic block content history'
+  - 'view any document media revisions'
+  - 'view any image media revisions'
+  - 'view any quick_link block content history'
+  - 'view any remote_video media revisions'
+  - 'view any unpublished content'
+  - 'view any video media revisions'
+  - 'view any webform submission'
+  - 'view downloadable_form revisions'
+  - 'view event revisions'
+  - 'view job_listing revisions'
+  - 'view latest version'
+  - 'view meeting_minute_agenda revisions'
+  - 'view news_and_announcements revisions'
+  - 'view notices revisions'
+  - 'view ordinances revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own webform submission'
+  - 'view page revisions'
+  - 'view person revisions'
+  - 'view service revisions'
+  - 'view term revisions in department'
+  - 'view term revisions in service_type'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view unpublished sitewide alert entities'
+  - 'view user email addresses'

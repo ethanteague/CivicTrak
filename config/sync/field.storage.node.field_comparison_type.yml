@@ -1,0 +1,33 @@
+uuid: 2d6e5f7a-1c3b-4d5e-9a0b-7a6f5e4d3c2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_comparison_type
+field_name: field_comparison_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: vs_legacy
+      label: 'CivicTrak vs Legacy Systems'
+    -
+      value: vs_competitors
+      label: 'CivicTrak vs Competitors'
+    -
+      value: vs_manual
+      label: 'CivicTrak vs Manual Processes'
+    -
+      value: before_after
+      label: 'Before & After CivicTrak'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

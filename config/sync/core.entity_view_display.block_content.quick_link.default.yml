@@ -1,0 +1,27 @@
+uuid: f6119d77-8679-4544-af1c-ef1ecb1e8090
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.quick_link
+    - field.field.block_content.quick_link.field_link
+  module:
+    - link
+id: block_content.quick_link.default
+targetEntityType: block_content
+bundle: quick_link
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 120
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

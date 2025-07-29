@@ -1,0 +1,27 @@
+uuid: 3c81985f-93a5-489c-96af-7752df6569a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_color
+    - taxonomy.vocabulary.alert_severity
+  module:
+    - color_field
+_core:
+  default_config_hash: 5sDzzTD2mO3gSFac3heq9iuuJgup0pkajGC8crIcofU
+id: taxonomy_term.alert_severity.field_color
+field_name: field_color
+entity_type: taxonomy_term
+bundle: alert_severity
+label: Color
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#000000'
+    opacity: 1.0
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

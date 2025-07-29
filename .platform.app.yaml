@@ -1,0 +1,62 @@
+name: civictrak
+type: 'php:8.3'
+disk: 2048
+build:
+  flavor: composer
+
+runtime:
+  extensions:
+    - redis
+    - pdo_mysql
+    - opcache
+    - mbstring
+    - gd
+    - curl
+    - xml
+
+web:
+  locations:
+    '/':
+      root: 'docroot'
+      index:
+        - index.php
+      allow: true
+      expires: 1h
+      passthru: '/index.php'
+
+mounts:
+  'docroot/sites/default/files':
+    source: local
+    source_path: 'sites/default/files'
+
+  '/shared':
+    source: local
+    source_path: shared
+
+relationships:
+  database: 'mariadb:mysql'
+  redis: 'redis:redis'
+
+crons:
+  cron:
+    spec: '*/15 * * * *'
+    cmd: 'drush cron -q'
+
+hooks:
+  build: |
+    composer install --prefer-dist --no-dev -o
+
+  deploy: |
+    if [ -f docroot/core/lib/Drupal.php ]; then
+      ./vendor/bin/drush --root=docroot en redis -y || true
+      ./vendor/bin/drush --root=docroot updatedb -y || true
+      ./vendor/bin/drush --root=docroot config-import -y || true
+      ./vendor/bin/drush --root=docroot cache-rebuild || true
+    fi
+
+variables:
+  php:
+    memory_limit: 512M
+  env:
+    DRUSH_OPTIONS_URI: "https://{default}/"
+    PLATFORM_DRUPAL_ENVIRONMENT: "true"

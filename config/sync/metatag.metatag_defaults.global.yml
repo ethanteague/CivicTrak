@@ -1,0 +1,23 @@
+uuid: 8d8c99a7-acfa-4f92-b5b5-ca3bfcd64868
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | CivicTrak - Municipal Government Software'
+  description: 'CivicTrak provides comprehensive digital government solutions for municipalities. Streamline citizen services, manage public records, and enhance community engagement with our government website platform.'
+  keywords: 'municipal government software, civic technology, government website, public administration, citizen services, municipal management, local government solutions'
+  author: CivicTrak
+  og_site_name: CivicTrak
+  og_type: website
+  og_title: '[current-page:title] | CivicTrak'
+  og_description: '[metatag:description]'
+  og_url: '[current-page:url]'
+  twitter_cards_type: summary
+  twitter_cards_title: '[metatag:title]'
+  twitter_cards_description: '[metatag:description]'
+  robots: 'index, follow'

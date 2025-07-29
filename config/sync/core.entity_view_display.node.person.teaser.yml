@@ -1,0 +1,59 @@
+uuid: 229629b4-2ef1-4fe6-ba3d-13da3c820c5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.person.body
+    - field.field.node.person.field_department
+    - field.field.node.person.field_email
+    - field.field.node.person.field_first_name
+    - field.field.node.person.field_image
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_last_name
+    - field.field.node.person.field_phone_number
+    - field.field.node.person.layout_builder__layout
+    - node.type.person
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: KwX8gybDdv6jy8skdCl66btdgjR51rEoLqRTMyr2yFk
+id: node.person.teaser
+targetEntityType: node
+bundle: person
+mode: teaser
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  body: true
+  field_department: true
+  field_email: true
+  field_first_name: true
+  field_last_name: true
+  field_phone_number: true
+  layout_builder__layout: true
+  search_api_excerpt: true

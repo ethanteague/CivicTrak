@@ -1,0 +1,19 @@
+uuid: 4ef1ee13-922e-4d55-988d-0b7e3b38944c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: 2owtq6OMoWbjnvbOBTsGM0UBcSjl4wt7A1Xd9_RWRfA
+name: 'Department contact'
+type: person
+description: 'Contact information for department or office.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,16 @@
+uuid: 2a4c8d7e-1b3f-4e5a-9c8d-7f6e5d4c3b2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.service
+  module:
+    - node
+id: node__service
+label: 'Content: Service'
+tags:
+  title: '[node:title] - Government Service | [site:name]'
+  description: '[node:summary] Access this essential government service online. Contact information, office hours, and service details for [node:title].'
+  keywords: 'government service, municipal service, [node:title], public service, citizen service, local government'
+  og_title: '[node:title] - Government Service'
+  og_description: '[node:summary]'

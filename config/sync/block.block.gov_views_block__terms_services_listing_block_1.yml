@@ -1,0 +1,24 @@
+uuid: c8b74f4d-c3e2-46a5-b326-6a9ba920ca44
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.terms_services_listing
+  module:
+    - views
+  theme:
+    - gov
+id: gov_views_block__terms_services_listing_block_1
+theme: gov
+region: footer_third
+weight: -8
+provider: null
+plugin: 'views_block:terms_services_listing-block_1'
+settings:
+  id: 'views_block:terms_services_listing-block_1'
+  label: Services
+  label_display: visible
+  provider: views
+  views_label: Services
+  items_per_page: null
+visibility: {  }

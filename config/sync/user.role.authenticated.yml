@@ -1,0 +1,33 @@
+uuid: 3d2bf5ff-87c8-427c-934c-dc78849cfff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.webform_default
+  module:
+    - file
+    - filter
+    - media
+    - search
+    - search_autocomplete
+    - shortcut
+    - sitewide_alert
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'access user profiles'
+  - 'delete own files'
+  - 'search content'
+  - 'use search autocomplete'
+  - 'use text format basic_html'
+  - 'use text format webform_default'
+  - 'view media'
+  - 'view published sitewide alert entities'

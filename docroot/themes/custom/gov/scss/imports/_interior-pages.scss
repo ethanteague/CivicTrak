@@ -1,0 +1,932 @@
+/* INTERIOR PAGES STYLING */
+
+// Enhanced page headers with more visual impact
+.page-header {
+  background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+  color: white;
+  padding: 3rem 0 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  
+  // Add subtle pattern overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    
+    // Add subtle animation
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .page-subtitle,
+  .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .breadcrumb {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-flex;
+    margin-bottom: 0;
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    
+    a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: white;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+    }
+    
+    .breadcrumb-item + .breadcrumb-item::before {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Enhanced content areas with better typography and spacing
+.node-content,
+.page-content {
+  .field--name-body {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #2c3e50;
+    
+    p {
+      margin-bottom: 1.5rem;
+      
+      &:first-child {
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: #34495e;
+        margin-bottom: 2rem;
+      }
+    }
+    
+    h2, h3, h4, h5, h6 {
+      color: $primary;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 3rem;
+        height: 3px;
+        background: linear-gradient(90deg, $primary, $primary-dark);
+        border-radius: 2px;
+      }
+    }
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+    }
+    
+    h4 {
+      font-size: 1.25rem;
+    }
+    
+    // Enhanced lists
+    ul, ol {
+      margin: 1.5rem 0;
+      padding-left: 0;
+      
+      li {
+        margin-bottom: 0.75rem;
+        position: relative;
+        padding-left: 1.5rem;
+        
+        &::before {
+          content: '→';
+          position: absolute;
+          left: 0;
+          color: $primary;
+          font-weight: 600;
+        }
+      }
+    }
+    
+    ol li::before {
+      content: counter(list-item) '.';
+      counter-increment: list-item;
+    }
+    
+    // Enhanced blockquotes
+    blockquote {
+      border-left: 4px solid $primary;
+      background: #f8f9fa;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    // Enhanced tables
+    table {
+      width: 100%;
+      margin: 2rem 0;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      
+      th {
+        background: $primary;
+        color: white;
+        font-weight: 600;
+        padding: 1rem;
+        border: none;
+      }
+      
+      td {
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        
+        &:not(:last-child) {
+          border-right: 1px solid #e9ecef;
+        }
+      }
+      
+      tr:last-child td {
+        border-bottom: none;
+      }
+      
+      tr:nth-child(even) {
+        background: #f8f9fa;
+      }
+    }
+  }
+}
+
+// Enhanced cards for listings with more visual appeal
+.view-content {
+  .views-row {
+    margin-bottom: 2rem;
+    
+    .card {
+      border: none;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      overflow: hidden;
+      position: relative;
+      
+      // Add subtle gradient border effect
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, $primary, $primary-dark, $primary);
+        border-radius: 12px 12px 0 0;
+      }
+      
+      &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        
+        .card-title a {
+          color: $primary-dark;
+        }
+      }
+      
+      .card-body {
+        padding: 2rem 1.5rem 1.5rem;
+        position: relative;
+        
+        // Add subtle background pattern
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 60px;
+          height: 60px;
+          background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23#{str-slice(#{$primary}, 2)}' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='15'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          pointer-events: none;
+        }
+      }
+      
+      .card-title {
+        color: $primary;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+        line-height: 1.3;
+        position: relative;
+        z-index: 2;
+        
+        a {
+          color: $primary;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          
+          &:hover {
+            color: $primary-dark;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+      
+      .card-text {
+        color: #5a6c7d;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+      }
+      
+      // Enhanced meta information styling
+      .card-meta {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e9ecef;
+        font-size: 0.9rem;
+        color: #6c757d;
+        position: relative;
+        z-index: 2;
+        
+        .meta-item {
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+          
+          &::before {
+            font-weight: 600;
+            color: $primary;
+          }
+        }
+        
+        .date::before {
+          content: '📅';
+        }
+        
+        .category::before {
+          content: '🏷️';
+        }
+        
+        .location::before {
+          content: '📍';
+        }
+      }
+    }
+  }
+  
+  // Grid layout improvements
+  &.view-display-id-page {
+    .views-row {
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        .card-body {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .card-text {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+// Enhanced department listings with modern directory styling
+.view-directories,
+.view-terms-department-listing {
+  margin: 2rem 0;
+  
+  .views-row {
+    margin-bottom: 1.5rem;
+    
+    .card {
+      background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
+      border: none;
+      border-radius: 12px;
+      border-left: 5px solid $primary;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      overflow: hidden;
+      
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        border-left-color: $primary-dark;
+      }
+      
+      .card-body {
+        padding: 2rem;
+        position: relative;
+        
+        // Add department icon
+        &::before {
+          content: '🏢';
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          font-size: 2rem;
+          opacity: 0.1;
+        }
+        
+        .field--name-name {
+          font-weight: 700;
+          color: $primary;
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+          display: block;
+          line-height: 1.3;
+        }
+        
+        .field--name-description {
+          color: #5a6c7d;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+        
+        .field--name-field-phone {
+          color: $text-muted;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          
+          &::before {
+            content: '📞';
+            font-size: 1.1rem;
+          }
+        }
+        
+        .field--name-field-email {
+          color: $primary;
+          font-size: 1rem;
+          margin-top: 0.75rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          
+          &::before {
+            content: '✉️';
+            font-size: 1.1rem;
+          }
+          
+          a {
+            color: $primary;
+            text-decoration: none;
+            
+            &:hover {
+              color: $primary-dark;
+              text-decoration: underline;
+            }
+          }
+        }
+        
+        .field--name-field-address {
+          color: #6c757d;
+          font-size: 0.95rem;
+          margin-top: 0.75rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 0.5rem;
+          
+          &::before {
+            content: '📍';
+            font-size: 1rem;
+            margin-top: 0.1rem;
+          }
+        }
+      }
+    }
+  }
+  
+  // Grid layout for larger screens
+  @media (min-width: 768px) {
+    .views-row {
+      .card {
+        .card-body {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 2rem;
+          align-items: start;
+          
+          .field--name-name {
+            grid-column: 1 / -1;
+            margin-bottom: 1rem;
+          }
+          
+          .field--name-description {
+            grid-column: 1;
+          }
+          
+          .contact-info {
+            grid-column: 2;
+            
+            .field--name-field-phone,
+            .field--name-field-email,
+            .field--name-field-address {
+              margin-top: 0;
+              margin-bottom: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Enhanced directory/person listings - targeting grid structure
+.view-directories {
+  .views-view-responsive-grid {
+    gap: 1.5rem !important;
+    
+    .views-row {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border-top: 4px solid $primary;
+      padding: 0;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+      
+      .field--name-field-image {
+        margin-bottom: 1.5rem;
+        
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 0;
+        }
+      }
+      
+      .field--name-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: $primary;
+        margin-bottom: 0.5rem;
+        padding: 0 1.5rem;
+        
+        a {
+          color: $primary;
+          text-decoration: none;
+          
+          &:hover {
+            color: $primary-dark;
+          }
+        }
+      }
+      
+      .field--name-field-department {
+        color: #6c757d;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+        padding: 0 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .field--name-field-phone-number {
+        padding: 0 1.5rem 0.5rem;
+        color: $text-muted;
+        font-size: 0.9rem;
+        
+        &::before {
+          content: '📞 ';
+          margin-right: 0.25rem;
+        }
+      }
+      
+      .field--name-field-email {
+        padding: 0 1.5rem 1.5rem;
+        
+        a {
+          color: $primary;
+          text-decoration: none;
+          font-size: 0.9rem;
+          
+          &::before {
+            content: '✉️ ';
+            margin-right: 0.25rem;
+          }
+          
+          &:hover {
+            color: $primary-dark;
+            text-decoration: underline;
+          }
+        }
+      }
+      
+      // Remove default field margins
+      .views-field {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Page header enhancement for directory page  
+.path-information .path-directory {
+  .page-header {
+    background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+    
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 10l5 5h10v20H5V10h15zm-5 0v5H5v20h30V15H25l-5-5H15z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+}
+
+// Enhanced events listings with modern design
+.view-events {
+  margin: 2rem 0;
+  
+  .views-row {
+    margin-bottom: 2rem;
+    
+    &:hover {
+      .event-card {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+  
+  .event-card {
+    display: flex;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-left: 5px solid $primary;
+    position: relative;
+    
+    // Add subtle pattern overlay
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 100px;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23#{str-slice(#{$primary}, 2)}' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    
+    .event-image {
+      flex-shrink: 0;
+      width: 120px;
+      height: 120px;
+      position: relative;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      // Date overlay on image
+      .event-date-overlay {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.8rem;
+        line-height: 1.2;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        
+        .month {
+          display: block;
+          text-transform: uppercase;
+          font-size: 0.7rem;
+          letter-spacing: 0.5px;
+        }
+        
+        .day {
+          display: block;
+          font-size: 1.2rem;
+          font-weight: 800;
+        }
+      }
+    }
+    
+    .event-content {
+      flex: 1;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      
+      .event-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $primary;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+        
+        a {
+          color: $primary;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          
+          &:hover {
+            color: $primary-dark;
+          }
+        }
+      }
+      
+      .event-description {
+        color: #5a6c7d;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        flex: 1;
+      }
+      
+      .event-meta {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        font-size: 0.9rem;
+        color: #6c757d;
+        
+        .event-time {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          
+          &::before {
+            content: '🕐';
+            font-size: 1rem;
+          }
+        }
+        
+        .event-location {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          
+          &::before {
+            content: '📍';
+            font-size: 1rem;
+          }
+        }
+        
+        .event-cost {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-weight: 600;
+          color: $success;
+          
+          &::before {
+            content: '💰';
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .event-card {
+      flex-direction: column;
+      
+      .event-image {
+        width: 100%;
+        height: 180px;
+        
+        .event-date-overlay {
+          top: 15px;
+          right: 15px;
+          left: auto;
+        }
+      }
+      
+      .event-content {
+        padding: 1.5rem;
+        
+        .event-meta {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+// Enhanced page header for events
+.path-information.path-events {
+  .page-header {
+    background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+    
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M10 5h20v3H10zM8 10h24v2H8zM12 15h16v2H12zM10 20h20v2H10zM14 25h12v2H14z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+}
+
+// Enhanced job listings
+.view-latest-jobs {
+  .views-row {
+    .card {
+      .job-badge {
+        background: $success;
+        color: white;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      
+      .job-title {
+        color: $primary;
+        font-weight: 600;
+        margin: 0.5rem 0;
+      }
+      
+      .job-department {
+        color: $text-muted;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Enhanced quick links
+.quicklinks-section {
+  .quicklink-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: $text-dark;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+      color: $text-dark;
+    }
+    
+    .icon {
+      font-size: 2.5rem;
+      color: $primary;
+      margin-bottom: 1rem;
+    }
+    
+    .title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .description {
+      font-size: 0.9rem;
+      color: $text-muted;
+    }
+  }
+}
+
+// Enhanced forms
+.webform-submission-form {
+  .form-item {
+    margin-bottom: 1.5rem;
+    
+    label {
+      font-weight: 600;
+      color: $primary;
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-control {
+      border-radius: 6px;
+      border: 2px solid #e9ecef;
+      transition: border-color 0.3s ease;
+      
+      &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+      }
+    }
+  }
+  
+  .form-actions {
+    .btn-primary {
+      background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+      border: none;
+      padding: 0.75rem 2rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba($primary, 0.3);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba($primary, 0.4);
+      }
+    }
+  }
+}
+
+// Responsive improvements
+@media (max-width: 768px) {
+  .page-header {
+    padding: 1.5rem 0;
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  .view-content .views-row .card .card-body {
+    padding: 1rem;
+  }
+}

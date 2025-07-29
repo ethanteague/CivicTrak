@@ -1,0 +1,4 @@
+gin-global:
+  css:
+    component:
+      css/gin-global.css: {}

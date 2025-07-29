@@ -1,0 +1,29 @@
+uuid: abbcccfd-8ce0-40dd-98ef-7a5da7d7d213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_category
+    - node.type.job_listing
+    - taxonomy.vocabulary.department
+id: node.job_listing.field_job_category
+field_name: field_job_category
+entity_type: node
+bundle: job_listing
+label: 'Job category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      department: department
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

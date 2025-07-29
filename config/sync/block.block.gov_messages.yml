@@ -1,0 +1,22 @@
+uuid: fac39a20-2d2e-434a-927a-50f0fb193002
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gov
+_core:
+  default_config_hash: 9y3fa1tYfXaqHXZDNWAlmvQFdJ8x7fg7fU1oBWNZZwg
+id: gov_messages
+theme: gov
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

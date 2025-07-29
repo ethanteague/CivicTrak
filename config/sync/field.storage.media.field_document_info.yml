@@ -1,0 +1,19 @@
+uuid: 18f973d6-5be4-4cb0-8476-5aebf0fc5fbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - text
+id: media.field_document_info
+field_name: field_document_info
+entity_type: media
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

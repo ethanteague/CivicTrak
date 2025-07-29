@@ -1,0 +1,39 @@
+# Claude Token-Saving Shortcuts
+
+## Ultra-Fast Commands
+cc = ddev drush cr
+scss = npx gulp styles  
+cfg = ddev drush cex
+login = ddev drush uli
+
+## File Paths (memorize these)
+THEME=/Users/ethanteague/workspace/govt/docroot/themes/custom/gov
+SCSS=/Users/ethanteague/workspace/govt/docroot/themes/custom/gov/scss
+TEMPLATES=/Users/ethanteague/workspace/govt/docroot/themes/custom/gov/templates
+CONFIG=/Users/ethanteague/workspace/govt/config/sync
+MODULE=/Users/ethanteague/workspace/govt/docroot/modules/custom/gov_general
+
+## One-Word Responses For:
+- "clear cache" → "Cleared"
+- "compile styles" → "Compiled" 
+- "export config" → "Exported"
+- "import config" → "Imported"
+
+## Batch These Always:
+- Read + Edit = MultiEdit
+- Multiple bash = Single response
+- Search + Read = Parallel calls
+- Status check + Action = Combined
+
+## Skip These:
+- TodoWrite for simple tasks
+- File descriptions unless needed
+- Progress updates
+- Code explanations
+- Tool descriptions in bash
+
+## Token Limits:
+- Grep: head_limit=5
+- Read: limit=50 for large files
+- Response: 1-2 lines max
+- Explanations: Only if asked

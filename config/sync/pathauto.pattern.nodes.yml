@@ -1,0 +1,33 @@
+uuid: b28b4098-1f22-413a-bb52-cbe4b4fe4db2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: nodes
+label: Nodes
+type: 'canonical_entities:node'
+pattern: 'government/[node:content-type:name]/[node:title]'
+selection_criteria:
+  9b9d0e42-65b4-4f67-9c20-196c8f20e50c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 9b9d0e42-65b4-4f67-9c20-196c8f20e50c
+    context_mapping:
+      node: node
+    bundles:
+      alert: alert
+      downloadable_form: downloadable_form
+      event: event
+      job_listing: job_listing
+      location: location
+      meeting_minute_agenda: meeting_minute_agenda
+      news_and_announcements: news_and_announcements
+      notices: notices
+      ordinances: ordinances
+      page: page
+      person: person
+      service: service
+selection_logic: and
+weight: 0
+relationships: {  }

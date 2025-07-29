@@ -1,0 +1,27 @@
+uuid: 4de36f89-8b5c-49a4-b88a-a5448f8ebbf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: meeting_minute
+      label: 'Meeting Minute'
+    -
+      value: agenda
+      label: Agenda
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

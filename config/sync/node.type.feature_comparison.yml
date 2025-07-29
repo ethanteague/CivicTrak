@@ -1,0 +1,18 @@
+uuid: 1c5d4e6f-0b2a-3c4d-8f9a-6f5e4d3c2b1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: ''
+name: 'Feature Comparison'
+type: feature_comparison
+description: 'Compare CivicTrak features against legacy systems and competitors'
+help: 'Create feature comparison charts showing how CivicTrak outperforms legacy government systems and competitors.'
+new_revision: true
+preview_mode: 1
+display_submitted: true

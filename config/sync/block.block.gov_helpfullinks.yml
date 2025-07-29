@@ -1,0 +1,25 @@
+uuid: e9c03d37-0962-4f55-a964-3401d58480e3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d81639d8-fdf8-4d82-aa0c-e7ebd2027268'
+  module:
+    - block_content
+  theme:
+    - gov
+id: gov_helpfullinks
+theme: gov
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:d81639d8-fdf8-4d82-aa0c-e7ebd2027268'
+settings:
+  id: 'block_content:d81639d8-fdf8-4d82-aa0c-e7ebd2027268'
+  label: 'Helpful Links'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

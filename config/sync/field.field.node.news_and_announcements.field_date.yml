@@ -1,0 +1,28 @@
+uuid: 2fb5a236-20ec-4d9d-beed-412b49f29243
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.news_and_announcements
+  module:
+    - smart_date
+id: node.news_and_announcements.field_date
+field_name: field_date
+entity_type: node
+bundle: news_and_announcements
+label: Date
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_duration: 60
+    default_duration_increments: "30\r\n60|1 hour\r\n90\r\n120|2 hours\r\ncustom"
+    default_date_type: ''
+    default_date: ''
+    min: ''
+    max: ''
+default_value_callback: ''
+settings: {  }
+field_type: smartdate

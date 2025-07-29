@@ -1,0 +1,21 @@
+uuid: 84d7fd57-452d-43d7-bc91-4464430bc8d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_department_phone
+    - taxonomy.vocabulary.department
+  module:
+    - telephone
+id: taxonomy_term.department.field_department_phone
+field_name: field_department_phone
+entity_type: taxonomy_term
+bundle: department
+label: 'Department Phone'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

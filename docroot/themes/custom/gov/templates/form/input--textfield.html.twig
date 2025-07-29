@@ -1,0 +1,8 @@
+{% if element['#id'] == 'edit-title-for-autocomplete' %}
+  <div class="search-container">
+    <input{{ attributes.addClass('form-control ps-5').removeClass('form-text') }} placeholder="Search..." />
+    <span class="search-icon"><i class="fas fa-search"></i></span>
+  </div>
+{% else %}
+  <input{{ attributes.addClass("form-control").removeClass("form-text") }} />{{ children }}
+{% endif %}

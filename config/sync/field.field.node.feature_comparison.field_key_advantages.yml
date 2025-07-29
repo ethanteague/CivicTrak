@@ -1,0 +1,22 @@
+uuid: 7c1d0e2f-6b8a-9c0d-4f5a-2f1e0d9c8b7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_key_advantages
+    - node.type.feature_comparison
+  module:
+    - text
+id: node.feature_comparison.field_key_advantages
+field_name: field_key_advantages
+entity_type: node
+bundle: feature_comparison
+label: 'Key Advantages'
+description: 'List of key advantages CivicTrak has over the competition'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

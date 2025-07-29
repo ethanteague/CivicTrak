@@ -1,0 +1,23 @@
+uuid: e5471f8f-105a-4acf-b76a-cbd31d2d2731
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.meeting_minute_agenda
+  module:
+    - options
+id: node.meeting_minute_agenda.field_type
+field_name: field_type
+entity_type: node
+bundle: meeting_minute_agenda
+label: Type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: meeting_minute
+default_value_callback: ''
+settings: {  }
+field_type: list_string

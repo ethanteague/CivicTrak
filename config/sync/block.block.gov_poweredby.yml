@@ -1,0 +1,25 @@
+uuid: c167e296-c53c-410e-9414-af5f0f949230
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:56695dd4-89bc-4300-ad49-39de1af4f22a'
+  module:
+    - block_content
+  theme:
+    - gov
+id: gov_poweredby
+theme: gov
+region: footer_fourth
+weight: -7
+provider: null
+plugin: 'block_content:56695dd4-89bc-4300-ad49-39de1af4f22a'
+settings:
+  id: 'block_content:56695dd4-89bc-4300-ad49-39de1af4f22a'
+  label: 'Powered by'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

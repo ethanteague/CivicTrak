@@ -1,0 +1,21 @@
+uuid: 3e7f6a8b-2d4c-5e6f-0b1c-8b7a6f5e4d3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comparison_type
+    - node.type.feature_comparison
+  module:
+    - options
+id: node.feature_comparison.field_comparison_type
+field_name: field_comparison_type
+entity_type: node
+bundle: feature_comparison
+label: 'Comparison Type'
+description: 'What is being compared against CivicTrak?'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

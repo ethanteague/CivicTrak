@@ -1,0 +1,16 @@
+uuid: f7a3c460-06d3-4d05-8999-20a0ce83cf15
+langcode: en
+status: true
+dependencies: {  }
+id: openstreetmap
+label: OpenStreetMap
+plugin: openstreetmap
+configuration:
+  throttle:
+    period: 2
+    limit: 1
+  geocoder:
+    locale: ''
+  rootUrl: 'https://nominatim.openstreetmap.org'
+  userAgent: 'https://govt.ddev.site'
+  referer: 'https://govt.ddev.site'

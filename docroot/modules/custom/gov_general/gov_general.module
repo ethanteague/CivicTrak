@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Gov general module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for the node form.
+ */
+function gov_general_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['path']) && isset($form['path']['widget'][0]['automatic'])) {
+    $form['path']['widget'][0]['automatic']['#default_value'] = 1;
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function gov_general_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'gov_general/gin-global';
+}

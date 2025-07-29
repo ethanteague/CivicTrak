@@ -1,0 +1,26 @@
+uuid: af3256b4-a25b-4dc0-b740-68b974f6bbc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.downloadable_form.field_file
+    - node.type.downloadable_form
+  module:
+    - entity_reference_revisions
+    - user
+id: node.downloadable_form.default
+targetEntityType: node
+bundle: downloadable_form
+mode: default
+content:
+  field_file:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  links: true

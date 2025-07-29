@@ -1,0 +1,16 @@
+uuid: 3b5d9e8f-2c4a-5f6b-0d9e-8g7f6e5d4c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - node
+id: node__event
+label: 'Content: Event'
+tags:
+  title: '[node:title] - Community Event | [site:name]'
+  description: '[node:summary] Join us for this community event. Date: [node:field_date]. Location and event details.'
+  keywords: 'community event, public meeting, municipal event, [node:title], local government event'
+  og_title: '[node:title] - Community Event'
+  og_description: '[node:summary]'

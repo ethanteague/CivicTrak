@@ -1,0 +1,17 @@
+uuid: 5d9e8f6a-4c0b-7d9e-3f5a-9e8d7c6b5a4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.feature_comparison
+  module:
+    - node
+id: node__feature_comparison
+label: 'Content: Feature Comparison'
+tags:
+  title: '[node:title] - Government Software Comparison | CivicTrak'
+  description: '[node:summary] Compare CivicTrak municipal government software features against legacy systems and competitors.'
+  keywords: 'government software comparison, municipal software features, civic technology comparison, CivicTrak vs competitors'
+  og_title: '[node:title] - Software Comparison'
+  og_description: '[node:summary]'
+  og_type: article

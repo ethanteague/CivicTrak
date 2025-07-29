@@ -1,0 +1,21 @@
+uuid: b6d92cbf-7bc3-4ce3-95ca-d2dccc83f485
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notice_date
+    - node.type.notices
+  module:
+    - datetime
+id: node.notices.field_notice_date
+field_name: field_notice_date
+entity_type: node
+bundle: notices
+label: 'Notice date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,11 @@
+uuid: 0e89dff4-6f7c-4141-89e1-464539a35128
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MdmbHzXHvx0TSQ6dIljDjEgMJaQR93uQcORxSS6rCbo
+name: 'Alert Severity'
+vid: alert_severity
+description: ''
+weight: 0
+new_revision: false

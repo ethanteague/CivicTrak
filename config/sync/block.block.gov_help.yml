@@ -1,0 +1,22 @@
+uuid: 1157df97-5937-4f92-91e8-a2d4c79486c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gov
+_core:
+  default_config_hash: Y7sdBboTQiqGA0kCHRZFFJ1VOUDFWrNk_YqRI2MGSrE
+id: gov_help
+theme: gov
+region: highlighted
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

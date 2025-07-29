@@ -1,0 +1,27 @@
+uuid: 14810490-7ee5-42b5-bc60-2dfa6588bf2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ordinance_document
+    - node.type.ordinances
+  module:
+    - file
+id: node.ordinances.field_ordinance_document
+field_name: field_ordinance_document
+entity_type: node
+bundle: ordinances
+label: 'Ordinance document'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc docx xls xlsx html'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,16 @@
+uuid: 82d4b700-1e7e-469e-8721-49dccda764ae
+langcode: en
+status: true
+dependencies: {  }
+id: nominatim
+label: Nominatim
+plugin: nominatim
+configuration:
+  throttle:
+    period: 2
+    limit: 1
+  geocoder:
+    locale: ''
+  rootUrl: 'https://nominatim.openstreetmap.org'
+  userAgent: 'https://govt.ddev.site'
+  referer: 'https://govt.ddev.site'

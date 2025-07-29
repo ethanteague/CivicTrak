@@ -1,0 +1,21 @@
+# Redirect all HTTP traffic to HTTPS
+"http://civictrak.com/":
+  type: redirect
+  to: "https://www.civictrak.com/"
+
+"http://www.civictrak.com/":
+  type: redirect
+  to: "https://www.civictrak.com/"
+
+# Redirect apex HTTPS to www
+"https://civictrak.com/":
+  type: redirect
+  to: "https://www.civictrak.com/"
+
+# Main site on www with HTTPS
+"https://www.civictrak.com/":
+  type: upstream
+  upstream: "civictrak:http"
+  cache:
+    enabled: true
+    default_ttl: 300
