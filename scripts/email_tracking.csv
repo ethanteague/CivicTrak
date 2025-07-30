@@ -1,0 +1,4 @@
+Date,Municipality,State,Email,Template,Status,Response_Date,Response_Type,Notes,Demo_Scheduled
+2025-07-29 18:55,"California City, CA",California,city@californiacity.ca.gov,initial,bounced,2025-07-29 19:03,undeliverable,Email bounced back as undeliverable,No
+2025-07-29 18:57,"Canyon, TX",Texas,city@canyon-tx.com,initial,bounced,2025-07-29 18:57,undeliverable,Email bounced back as undeliverable,No
+2025-07-29 19:00,"West University Place, TX",Texas,city@westutx.gov,initial,bounced,2025-07-29 19:03,undeliverable,Email bounced back as undeliverable,No

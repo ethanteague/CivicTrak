@@ -1,0 +1,228 @@
+uuid: null
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: business_license_application
+title: 'Business License Application'
+description: 'Apply for a business license to operate within city limits. Required for all commercial activities.'
+categories:
+  - permits
+elements: |
+  business_information:
+    '#type': fieldset
+    '#title': 'Business Information'
+    business_name:
+      '#type': textfield
+      '#title': 'Business Name'
+      '#required': true
+    dba_name:
+      '#type': textfield
+      '#title': 'DBA (Doing Business As) Name'
+      '#description': 'If different from business name'
+    business_type:
+      '#type': select
+      '#title': 'Type of Business'
+      '#required': true
+      '#options':
+        sole_proprietorship: 'Sole Proprietorship'
+        partnership: 'Partnership'
+        corporation: 'Corporation'
+        llc: 'Limited Liability Company (LLC)'
+        nonprofit: 'Non-Profit Organization'
+    business_category:
+      '#type': select
+      '#title': 'Business Category'
+      '#required': true
+      '#options':
+        retail: 'Retail Store'
+        restaurant: 'Restaurant/Food Service'
+        professional: 'Professional Services'
+        healthcare: 'Healthcare Services'
+        construction: 'Construction/Contractor'
+        automotive: 'Automotive Services'
+        beauty: 'Beauty/Personal Care'
+        entertainment: 'Entertainment/Recreation'
+        home_based: 'Home-Based Business'
+        other: 'Other'
+    business_description:
+      '#type': textarea
+      '#title': 'Description of Business Activities'
+      '#required': true
+      '#rows': 3
+    
+  location_information:
+    '#type': fieldset
+    '#title': 'Business Location'
+    business_address:
+      '#type': textfield
+      '#title': 'Business Address'
+      '#required': true
+    suite_unit:
+      '#type': textfield
+      '#title': 'Suite/Unit Number'
+    city:
+      '#type': textfield
+      '#title': 'City'
+      '#required': true
+    state:
+      '#type': textfield
+      '#title': 'State'
+      '#required': true
+      '#default_value': 'CA'
+    zip_code:
+      '#type': textfield
+      '#title': 'ZIP Code'
+      '#required': true
+    phone:
+      '#type': tel
+      '#title': 'Business Phone Number'
+      '#required': true
+    email:
+      '#type': email
+      '#title': 'Business Email Address'
+      '#required': true
+    website:
+      '#type': url
+      '#title': 'Website URL'
+    
+  owner_information:
+    '#type': fieldset
+    '#title': 'Owner/Contact Information'
+    owner_name:
+      '#type': textfield
+      '#title': 'Owner/Manager Name'
+      '#required': true
+    owner_title:
+      '#type': textfield
+      '#title': 'Title/Position'
+      '#required': true
+    owner_address:
+      '#type': textarea
+      '#title': 'Owner Mailing Address'
+      '#required': true
+      '#rows': 3
+    owner_phone:
+      '#type': tel
+      '#title': 'Owner Phone Number'
+      '#required': true
+    owner_email:
+      '#type': email
+      '#title': 'Owner Email Address'
+      '#required': true
+    
+  operation_details:
+    '#type': fieldset
+    '#title': 'Operation Details'
+    employees:
+      '#type': number
+      '#title': 'Number of Employees'
+      '#required': true
+      '#min': 0
+    operating_hours:
+      '#type': textarea
+      '#title': 'Hours of Operation'
+      '#required': true
+      '#rows': 3
+      '#placeholder': 'Monday - Friday: 9:00 AM - 5:00 PM'
+    start_date:
+      '#type': date
+      '#title': 'Proposed Start Date'
+      '#required': true
+    sales_tax_permit:
+      '#type': radios
+      '#title': 'Do you have a state sales tax permit?'
+      '#options':
+        yes: 'Yes'
+        no: 'No'
+        not_applicable: 'Not Applicable'
+      '#required': true
+    sales_tax_number:
+      '#type': textfield
+      '#title': 'Sales Tax Permit Number'
+      '#states':
+        visible:
+          ':input[name="sales_tax_permit"]':
+            value: 'yes'
+        required:
+          ':input[name="sales_tax_permit"]':
+            value: 'yes'
+    
+  documents:
+    '#type': fieldset
+    '#title': 'Required Documents'
+    certificate_of_formation:
+      '#type': managed_file
+      '#title': 'Certificate of Formation/Incorporation'
+      '#description': 'Required for corporations and LLCs'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#max_filesize': '5 MB'
+    fictitious_name:
+      '#type': managed_file
+      '#title': 'Fictitious Business Name Certificate'
+      '#description': 'Required if using DBA name'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#max_filesize': '5 MB'
+    insurance_certificate:
+      '#type': managed_file
+      '#title': 'General Liability Insurance Certificate'
+      '#description': 'Minimum $1,000,000 coverage required for most businesses'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#max_filesize': '5 MB'
+    additional_permits:
+      '#type': managed_file
+      '#title': 'Additional Required Permits'
+      '#description': 'Upload any other required permits (health dept, fire dept, etc.)'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#multiple': true
+      '#max_filesize': '5 MB'
+    
+  certification:
+    '#type': fieldset
+    '#title': 'Certification and Signature'
+    certification_text:
+      '#type': item
+      '#markup': '<p><strong>I hereby certify that:</strong></p><ul><li>The information provided in this application is true, complete, and accurate</li><li>I will comply with all applicable city ordinances and regulations</li><li>I understand that operating without a valid license is a violation of city code</li><li>I will display the business license prominently at the business location</li></ul>'
+    certification_agreement:
+      '#type': checkbox
+      '#title': 'I agree to the above certification statements'
+      '#required': true
+    digital_signature:
+      '#type': signature
+      '#title': 'Applicant Signature'
+      '#required': true
+      '#description': 'Please sign above to submit your application'
+
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  form_title: source_entity_webform
+  confirmation_type: page
+  confirmation_title: 'Business License Application Submitted'
+  confirmation_message: '<p>Thank you for submitting your business license application.</p><p><strong>Next Steps:</strong></p><ul><li>Your application will be reviewed within 5-7 business days</li><li>You will receive an invoice for the license fee</li><li>Once payment is received, your license will be processed</li><li>You will be notified when your license is ready for pickup</li></ul><p><strong>Required Fees:</strong></p><ul><li>Business License Fee: $75-$150 (based on business type)</li><li>Processing Fee: $25</li></ul><p>Questions? Contact the Business License Department at (555) 123-4567.</p><p><strong>Application ID:</strong> [webform_submission:serial]</p>'
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+handlers:
+  email_notification:
+    id: email
+    handler_id: email_notification
+    label: 'Email Notification'
+    status: true
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: 'business@example.gov'
+      subject: 'New Business License Application - [webform_submission:serial]'
+      body: '<p>A new business license application has been submitted.</p><p><strong>Business:</strong> [webform_submission:values:business_name]<br><strong>Type:</strong> [webform_submission:values:business_category]<br><strong>Owner:</strong> [webform_submission:values:owner_name]</p><p><strong>Full Application:</strong></p>[webform_submission:values]<p><strong>Application ID:</strong> [webform_submission:serial]</p>'
+variants: {  }

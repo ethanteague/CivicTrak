@@ -1,0 +1,234 @@
+{#
+/**
+ * @file
+ * CivicTrak Demo Page Template
+ * Special template for the demo page with custom styling
+ */
+#}
+<div id="page-wrapper">
+  <div id="page">
+    {% block head %}
+      {% if page.header or page.primary_menu or page.header_form %}
+        {% include "@gov/includes/header-overrides.html.twig" %}
+      {% endif %}
+    {% endblock %}
+
+    <!-- Demo Page Hero Section -->
+    <section class="demo-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h1 class="display-4 fw-bold mb-4">Modern Government Website in 5 Days</h1>
+            <p class="lead mb-4">Professional government websites that citizens actually want to use.<br>
+            No technical skills required. Ready in 5 days. $699/month.</p>
+            
+            <div class="demo-stats row justify-content-center mb-4">
+              <div class="col-md-3 text-center">
+                <h3 class="text-warning">200+</h3>
+                <small>Municipalities Served</small>
+              </div>
+              <div class="col-md-3 text-center">
+                <h3 class="text-warning">300%</h3>
+                <small>Avg. Online Engagement Increase</small>
+              </div>
+              <div class="col-md-3 text-center">
+                <h3 class="text-warning">5 Days</h3>
+                <small>Setup Time</small>
+              </div>
+            </div>
+            
+            <a href="#demo-form" class="btn btn-warning btn-lg px-5">Get Your Free Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="demo-problem py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="mb-4">Is Your Current Website Driving Citizens Away?</h2>
+            <ul class="list-unstyled">
+              <li class="mb-3">❌ Citizens calling instead of finding info online</li>
+              <li class="mb-3">❌ Website doesn't work on mobile phones</li>
+              <li class="mb-3">❌ No online bill payment options</li>
+              <li class="mb-3">❌ Difficult to update content</li>
+              <li class="mb-3">❌ Not ADA compliant</li>
+              <li class="mb-3">❌ Looks outdated and unprofessional</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="text-center">
+              <h4 class="text-danger mb-3">Before CivicTrak</h4>
+              <div class="border p-3 bg-light demo-before-box">
+                <small class="text-muted">Typical old government website:</small><br>
+                <em>"Last updated: 2019"<br>
+                "For more information, call City Hall"<br>
+                "This site is best viewed in Internet Explorer"</em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="demo-features py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Everything You Need for Modern Government</h2>
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="card demo-feature-card h-100">
+              <div class="card-body text-center">
+                <div class="display-4 text-primary mb-3">📱</div>
+                <h5>Mobile-First Design</h5>
+                <p>70% of citizens visit on phones. Your site will look perfect on every device.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card demo-feature-card h-100">
+              <div class="card-body text-center">
+                <div class="display-4 text-primary mb-3">💳</div>
+                <h5>Online Payments</h5>
+                <p>Citizens can pay bills, fees, and fines online 24/7. Reduce office visits by 50%.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card demo-feature-card h-100">
+              <div class="card-body text-center">
+                <div class="display-4 text-primary mb-3">📝</div>
+                <h5>Service Requests</h5>
+                <p>Citizens submit requests online with photos. Track status automatically.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card demo-feature-card h-100">
+              <div class="card-body text-center">
+                <div class="display-4 text-primary mb-3">✏️</div>
+                <h5>Easy Content Updates</h5>
+                <p>Update content like editing a Word document. No technical skills needed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card demo-feature-card h-100">
+              <div class="card-body text-center">
+                <div class="display-4 text-primary mb-3">♿</div>
+                <h5>ADA Compliant</h5>
+                <p>Built-in accessibility features ensure compliance with federal requirements.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="card demo-feature-card h-100">
+              <div class="card-body text-center">
+                <div class="display-4 text-primary mb-3">📅</div>
+                <h5>Events & Meetings</h5>
+                <p>Automatic calendar updates, meeting agendas, and public notice management.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="demo-testimonials py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">What Government Officials Say</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="demo-testimonial">
+              <p><em>"CivicTrak cut our phone calls in half. Citizens can now find everything online."</em></p>
+              <strong>- Sarah M., City Clerk<br>Millerville, NC</strong>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="demo-testimonial">
+              <p><em>"Setup was incredibly easy. We were live in 3 days, not 3 months."</em></p>
+              <strong>- Mike R., City Manager<br>Pine Valley, TX</strong>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="demo-testimonial">
+              <p><em>"Our citizens love the online payment system. Collections are up 40%."</em></p>
+              <strong>- Lisa K., Finance Director<br>Riverside, CA</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="demo-pricing py-5 bg-primary text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">Simple, Transparent Pricing</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="card bg-white text-dark demo-pricing-card">
+              <div class="card-body p-5">
+                <h3 class="text-primary">Complete Government Website</h3>
+                <div class="display-3 text-primary mb-3">$699<small class="fs-6">/month</small></div>
+                <ul class="list-unstyled mb-4">
+                  <li>✅ Professional design & setup</li>
+                  <li>✅ Mobile-responsive</li>
+                  <li>✅ Online payments</li>
+                  <li>✅ Service request portal</li>  
+                  <li>✅ ADA compliance</li>
+                  <li>✅ Unlimited updates</li>
+                  <li>✅ 24/7 support</li>
+                  <li>✅ Ready in 5 days</li>
+                </ul>
+                <p class="text-success mb-3"><strong>No setup fees • No contracts • Cancel anytime</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+      {% block content %}
+        <div id="main" class="{{ container }}">
+          <div class="row row-offcanvas row-offcanvas-left clearfix">
+              <main{{ content_attributes }}>
+                <section class="section" id="demo-form">
+                  <a href="#main-content" id="main-content" tabindex="-1"></a>
+                  {{ page.content }}
+                </section>
+              </main>
+          </div>
+        </div>
+      {% endblock %}
+    </div>
+
+    <footer class="site-footer">
+      {% block footer %}
+        <div class="{{ container }}">
+          {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+            <div class="site-footer__top clearfix row">
+              <div class="col-12 col-md-4">{{ page.footer_first }}</div>
+              <div class="col-12 col-md-4">{{ page.footer_second }}</div>
+              <div class="col-12 col-md-4">{{ page.footer_third }}</div>
+            </div>
+          {% endif %}
+          {% if page.footer_fourth or page.footer_fifth %}
+          <div class="{{ container }}">
+            <div class="site-footer__bottom row border-top pt-2 mt-4">
+              <div class="col-12">
+              {{ page.footer_fourth }}
+              {{ page.footer_fifth }}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      {% endblock %}
+    </footer>
+  </div>
+</div>

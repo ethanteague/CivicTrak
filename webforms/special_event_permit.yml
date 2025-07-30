@@ -1,0 +1,278 @@
+uuid: null
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: special_event_permit
+title: 'Special Event Permit Application'
+description: 'Apply for permits for special events, festivals, parades, and public gatherings.'
+categories:
+  - permits
+elements: |
+  applicant_information:
+    '#type': fieldset
+    '#title': 'Applicant Information'
+    organization_name:
+      '#type': textfield
+      '#title': 'Organization/Company Name'
+      '#required': true
+    contact_person:
+      '#type': textfield
+      '#title': 'Primary Contact Person'
+      '#required': true
+    title:
+      '#type': textfield
+      '#title': 'Title/Position'
+    mailing_address:
+      '#type': textarea
+      '#title': 'Mailing Address'
+      '#required': true
+      '#rows': 3
+    phone:
+      '#type': tel
+      '#title': 'Phone Number'
+      '#required': true
+    email:
+      '#type': email
+      '#title': 'Email Address'
+      '#required': true
+    
+  event_details:
+    '#type': fieldset
+    '#title': 'Event Information'
+    event_name:
+      '#type': textfield
+      '#title': 'Event Name'
+      '#required': true
+    event_type:
+      '#type': select
+      '#title': 'Type of Event'
+      '#required': true
+      '#options':
+        festival: 'Festival/Fair'
+        parade: 'Parade/March'
+        concert: 'Concert/Performance'
+        sports: 'Sports Event/Race'
+        fundraiser: 'Fundraiser/Charity Event'
+        block_party: 'Block Party/Street Closure'
+        farmers_market: 'Farmers Market'
+        art_show: 'Art Show/Exhibition'
+        religious: 'Religious Gathering'
+        other: 'Other'
+    event_description:
+      '#type': textarea
+      '#title': 'Event Description'
+      '#required': true
+      '#rows': 4
+      '#description': 'Describe the nature and purpose of the event'
+    expected_attendance:
+      '#type': number
+      '#title': 'Expected Attendance'
+      '#required': true
+      '#min': 1
+    
+  date_time:
+    '#type': fieldset
+    '#title': 'Date and Time'
+    event_date:
+      '#type': date
+      '#title': 'Event Date'
+      '#required': true
+    setup_date:
+      '#type': date
+      '#title': 'Setup Date'
+      '#description': 'If different from event date'
+    start_time:
+      '#type': time
+      '#title': 'Start Time'
+      '#required': true
+    end_time:
+      '#type': time
+      '#title': 'End Time'
+      '#required': true
+    cleanup_time:
+      '#type': time
+      '#title': 'Expected Cleanup Completion'
+      '#required': true
+    rain_date:
+      '#type': date
+      '#title': 'Rain Date (if applicable)'
+    
+  location:
+    '#type': fieldset
+    '#title': 'Event Location'
+    venue_type:
+      '#type': radios
+      '#title': 'Venue Type'
+      '#required': true
+      '#options':
+        public_park: 'Public Park'
+        city_property: 'Other City Property'
+        street_closure: 'Street/Road Closure Required'
+        private_property: 'Private Property (affecting public areas)'
+    venue_address:
+      '#type': textfield
+      '#title': 'Venue Address/Location'
+      '#required': true
+    specific_area:
+      '#type': textarea
+      '#title': 'Specific Area Description'
+      '#rows': 3
+      '#description': 'Describe the exact areas to be used'
+    
+  services_needed:
+    '#type': fieldset
+    '#title': 'City Services Required'
+    services:
+      '#type': checkboxes
+      '#title': 'Check all services needed:'
+      '#options':
+        police: 'Police Services'
+        fire_safety: 'Fire Department Safety Review'
+        traffic_control: 'Traffic Control'
+        barricades: 'Barricades/Barriers'
+        cleanup: 'City Cleanup Services'
+        utilities: 'Electrical/Water Hookups'
+        parking: 'Parking Coordination'
+        permits: 'Additional Permits (alcohol, food, etc.)'
+    police_details:
+      '#type': textarea
+      '#title': 'Police Services Details'
+      '#rows': 2
+      '#states':
+        visible:
+          ':input[name="services[police]"]':
+            checked: true
+    traffic_details:
+      '#type': textarea
+      '#title': 'Traffic Control Details'
+      '#rows': 2
+      '#states':
+        visible:
+          ':input[name="services[traffic_control]"]':
+            checked: true
+    
+  safety_plan:
+    '#type': fieldset
+    '#title': 'Safety and Security'
+    security_plan:
+      '#type': textarea
+      '#title': 'Security Plan'
+      '#required': true
+      '#rows': 3
+      '#description': 'Describe how you will provide security and crowd control'
+    emergency_plan:
+      '#type': textarea
+      '#title': 'Emergency Plan'
+      '#required': true
+      '#rows': 3
+      '#description': 'Describe emergency procedures and evacuation plans'
+    first_aid:
+      '#type': radios
+      '#title': 'First Aid Coverage'
+      '#required': true
+      '#options':
+        provided: 'We will provide first aid personnel'
+        request: 'Request city EMS standby'
+        not_needed: 'Not needed for this event'
+    
+  insurance:
+    '#type': fieldset
+    '#title': 'Insurance and Liability'
+    insurance_coverage:
+      '#type': radios
+      '#title': 'Do you have liability insurance?'
+      '#required': true
+      '#options':
+        yes: 'Yes, we have coverage'
+        will_obtain: 'Will obtain before event'
+        city_coverage: 'Request city coverage information'
+    insurance_amount:
+      '#type': select
+      '#title': 'Insurance Coverage Amount'
+      '#states':
+        visible:
+          ':input[name="insurance_coverage"]':
+            value: 'yes'
+      '#options':
+        '500000': '$500,000'
+        '1000000': '$1,000,000'
+        '2000000': '$2,000,000'
+        'other': 'Other amount'
+    
+  documents:
+    '#type': fieldset
+    '#title': 'Required Documents'
+    event_plan:
+      '#type': managed_file
+      '#title': 'Event Site Plan/Layout'
+      '#description': 'Upload a diagram showing event layout, vendor locations, etc.'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#max_filesize': '10 MB'
+    insurance_certificate:
+      '#type': managed_file
+      '#title': 'Insurance Certificate'
+      '#description': 'Certificate of liability insurance naming the city as additional insured'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#max_filesize': '5 MB'
+    additional_permits:
+      '#type': managed_file
+      '#title': 'Other Required Permits'
+      '#description': 'Upload any other permits (health department, alcohol, etc.)'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#multiple': true
+      '#max_filesize': '5 MB'
+    
+  certification:
+    '#type': fieldset
+    '#title': 'Certification'
+    hold_harmless:
+      '#type': checkbox
+      '#title': 'I agree to hold harmless and indemnify the city against any claims arising from this event'
+      '#required': true
+    compliance:
+      '#type': checkbox
+      '#title': 'I agree to comply with all applicable city ordinances and permit conditions'
+      '#required': true
+    accuracy:
+      '#type': checkbox
+      '#title': 'I certify that all information provided is true and accurate'
+      '#required': true
+    digital_signature:
+      '#type': signature
+      '#title': 'Applicant Signature'
+      '#required': true
+
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  form_title: source_entity_webform
+  confirmation_type: page
+  confirmation_title: 'Special Event Permit Application Submitted'
+  confirmation_message: '<p>Thank you for submitting your special event permit application.</p><p><strong>Application Review Process:</strong></p><ul><li>Initial review within 5 business days</li><li>Coordination with police, fire, and other departments as needed</li><li>You will be contacted with any questions or requirements</li><li>Final approval typically within 14 days of complete application</li></ul><p><strong>Important Notes:</strong></p><ul><li>Submit applications at least 30 days before your event</li><li>Some events may require additional permits or approvals</li><li>Permit fees will be calculated based on services required</li></ul><p>Questions? Contact the Special Events Coordinator at (555) 123-4567.</p><p><strong>Application ID:</strong> [webform_submission:serial]</p>'
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+handlers:
+  email_notification:
+    id: email
+    handler_id: email_notification
+    label: 'Email Notification'
+    status: true
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: 'events@example.gov'
+      subject: 'New Special Event Permit Application - [webform_submission:values:event_name]'
+      body: '<p>A new special event permit application has been submitted.</p><p><strong>Event:</strong> [webform_submission:values:event_name]<br><strong>Date:</strong> [webform_submission:values:event_date]<br><strong>Type:</strong> [webform_submission:values:event_type]<br><strong>Expected Attendance:</strong> [webform_submission:values:expected_attendance]<br><strong>Location:</strong> [webform_submission:values:venue_address]</p><p><strong>Organizer:</strong> [webform_submission:values:organization_name]<br><strong>Contact:</strong> [webform_submission:values:contact_person]<br><strong>Phone:</strong> [webform_submission:values:phone]</p><p><strong>Full Application:</strong></p>[webform_submission:values]</p>'
+variants: {  }

@@ -22,3 +22,17 @@ function gov_general_form_node_form_alter(&$form, FormStateInterface $form_state
 function gov_general_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'gov_general/gin-global';
 }
+
+/**
+ * Implements hook_theme().
+ */
+function gov_general_theme() {
+  return [
+    'permits_forms_block' => [
+      'variables' => [
+        'forms' => [],
+      ],
+      'template' => 'permits-forms-block',
+    ],
+  ];
+}

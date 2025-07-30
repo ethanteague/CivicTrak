@@ -1,0 +1,258 @@
+uuid: null
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: parking_permit
+title: 'Residential Parking Permit'
+description: 'Apply for residential parking permits for restricted parking zones.'
+categories:
+  - permits
+elements: |
+  applicant_information:
+    '#type': fieldset
+    '#title': 'Applicant Information'
+    first_name:
+      '#type': textfield
+      '#title': 'First Name'
+      '#required': true
+    last_name:
+      '#type': textfield
+      '#title': 'Last Name'
+      '#required': true
+    phone:
+      '#type': tel
+      '#title': 'Phone Number'
+      '#required': true
+    email:
+      '#type': email
+      '#title': 'Email Address'
+      '#required': true
+    
+  residence_information:
+    '#type': fieldset
+    '#title': 'Residence Information'
+    street_address:
+      '#type': textfield
+      '#title': 'Street Address'
+      '#required': true
+    apartment_unit:
+      '#type': textfield
+      '#title': 'Apartment/Unit Number'
+    city:
+      '#type': textfield
+      '#title': 'City'
+      '#required': true
+    zip_code:
+      '#type': textfield
+      '#title': 'ZIP Code'
+      '#required': true
+    residency_status:
+      '#type': radios
+      '#title': 'Residency Status'
+      '#required': true
+      '#options':
+        owner: 'Property Owner'
+        tenant: 'Tenant/Renter'
+        other: 'Other'
+    move_in_date:
+      '#type': date
+      '#title': 'Move-in Date'
+      '#required': true
+    
+  vehicle_information:
+    '#type': fieldset
+    '#title': 'Vehicle Information'
+    '#description': 'Primary vehicle for permit'
+    make:
+      '#type': textfield
+      '#title': 'Vehicle Make'
+      '#required': true
+      '#placeholder': 'Toyota, Ford, Honda, etc.'
+    model:
+      '#type': textfield
+      '#title': 'Vehicle Model'
+      '#required': true
+      '#placeholder': 'Camry, F-150, Civic, etc.'
+    year:
+      '#type': number
+      '#title': 'Vehicle Year'
+      '#required': true
+      '#min': 1950
+      '#max': 2025
+    color:
+      '#type': textfield
+      '#title': 'Vehicle Color'
+      '#required': true
+    license_plate:
+      '#type': textfield
+      '#title': 'License Plate Number'
+      '#required': true
+    state_registered:
+      '#type': textfield
+      '#title': 'State of Registration'
+      '#required': true
+      '#default_value': 'CA'
+    
+  additional_vehicles:
+    '#type': fieldset
+    '#title': 'Additional Vehicles (Optional)'
+    '#description': 'List any additional vehicles that may need permits'
+    vehicle_2:
+      '#type': details
+      '#title': 'Second Vehicle'
+      '#open': false
+      make_2:
+        '#type': textfield
+        '#title': 'Make'
+      model_2:
+        '#type': textfield
+        '#title': 'Model'
+      year_2:
+        '#type': number
+        '#title': 'Year'
+        '#min': 1950
+        '#max': 2025
+      color_2:
+        '#type': textfield
+        '#title': 'Color'
+      license_plate_2:
+        '#type': textfield
+        '#title': 'License Plate'
+    
+  permit_details:
+    '#type': fieldset
+    '#title': 'Permit Details'
+    permit_type:
+      '#type': radios
+      '#title': 'Permit Type'
+      '#required': true
+      '#options':
+        annual: 'Annual Permit ($25/year)'
+        monthly: 'Monthly Permit ($5/month)'
+        temporary: 'Temporary Permit (up to 30 days, $1/day)'
+    permit_zone:
+      '#type': select
+      '#title': 'Parking Zone'
+      '#required': true
+      '#options':
+        zone_a: 'Zone A - Downtown Residential'
+        zone_b: 'Zone B - University District'
+        zone_c: 'Zone C - Historic District'
+        zone_d: 'Zone D - Business District'
+        zone_e: 'Zone E - Waterfront'
+      '#description': 'Select the zone where you need parking privileges'
+    special_needs:
+      '#type': textarea
+      '#title': 'Special Circumstances'
+      '#rows': 3
+      '#description': 'Describe any special parking needs or circumstances'
+    
+  temporary_permit_details:
+    '#type': fieldset
+    '#title': 'Temporary Permit Details'
+    '#states':
+      visible:
+        ':input[name="permit_type"]':
+          value: 'temporary'
+    start_date:
+      '#type': date
+      '#title': 'Start Date'
+      '#states':
+        required:
+          ':input[name="permit_type"]':
+            value: 'temporary'
+    end_date:
+      '#type': date
+      '#title': 'End Date'
+      '#states':
+        required:
+          ':input[name="permit_type"]':
+            value: 'temporary'
+    reason:
+      '#type': select
+      '#title': 'Reason for Temporary Permit'
+      '#states':
+        required:
+          ':input[name="permit_type"]':
+            value: 'temporary'
+      '#options':
+        moving: 'Moving/Relocation'
+        visitor: 'Extended Visitor'
+        construction: 'Home Construction/Renovation'
+        medical: 'Medical Needs'
+        other: 'Other'
+    
+  documents:
+    '#type': fieldset
+    '#title': 'Required Documents'
+    proof_of_residency:
+      '#type': managed_file
+      '#title': 'Proof of Residency'
+      '#required': true
+      '#description': 'Upload utility bill, lease agreement, or property deed (dated within last 60 days)'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#max_filesize': '5 MB'
+    vehicle_registration:
+      '#type': managed_file
+      '#title': 'Vehicle Registration'
+      '#required': true
+      '#description': 'Current vehicle registration for primary vehicle'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#max_filesize': '5 MB'
+    drivers_license:
+      '#type': managed_file
+      '#title': 'Driver\'s License'
+      '#required': true
+      '#description': 'Copy of valid driver\'s license'
+      '#file_extensions': 'pdf png jpg jpeg'
+      '#max_filesize': '5 MB'
+    
+  agreement:
+    '#type': fieldset
+    '#title': 'Permit Agreement'
+    terms_text:
+      '#type': item
+      '#markup': '<p><strong>By applying for a residential parking permit, I agree to:</strong></p><ul><li>Display the permit properly in my vehicle</li><li>Use the permit only for the registered vehicle and address</li><li>Notify the city of any changes to vehicle or address information</li><li>Pay all applicable fees and fines</li><li>Understand that permits are non-transferable and non-refundable</li><li>Replace lost or stolen permits at my own expense ($10 replacement fee)</li></ul>'
+    terms_agreement:
+      '#type': checkbox
+      '#title': 'I agree to the permit terms and conditions'
+      '#required': true
+    accuracy_certification:
+      '#type': checkbox
+      '#title': 'I certify that all information provided is true and accurate'
+      '#required': true
+
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  form_title: source_entity_webform
+  confirmation_type: page
+  confirmation_title: 'Parking Permit Application Submitted'
+  confirmation_message: '<p>Thank you for submitting your residential parking permit application.</p><p><strong>Next Steps:</strong></p><ul><li>Your application will be reviewed within 3-5 business days</li><li>You will receive an email with payment instructions</li><li>Once payment is received, your permit will be mailed to you</li><li>Allow 5-7 business days for permit delivery</li></ul><p><strong>Permit Fees:</strong></p><ul><li>Annual Permit: $25/year</li><li>Monthly Permit: $5/month</li><li>Temporary Permit: $1/day</li><li>Processing Fee: $5</li></ul><p><strong>Permit Pickup:</strong><br>Permits can also be picked up at City Hall during business hours with ID and payment receipt.</p><p>Questions? Contact Parking Services at (555) 123-4567.</p><p><strong>Application ID:</strong> [webform_submission:serial]</p>'
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+handlers:
+  email_notification:
+    id: email
+    handler_id: email_notification
+    label: 'Email Notification'
+    status: true
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: 'parking@example.gov'
+      subject: 'New Parking Permit Application - [webform_submission:serial]'
+      body: '<p>A new residential parking permit application has been submitted.</p><p><strong>Applicant:</strong> [webform_submission:values:first_name] [webform_submission:values:last_name]<br><strong>Address:</strong> [webform_submission:values:street_address]<br><strong>Vehicle:</strong> [webform_submission:values:year] [webform_submission:values:make] [webform_submission:values:model]<br><strong>License:</strong> [webform_submission:values:license_plate]<br><strong>Permit Type:</strong> [webform_submission:values:permit_type]<br><strong>Zone:</strong> [webform_submission:values:permit_zone]</p><p><strong>Full Application:</strong></p>[webform_submission:values]</p>'
+variants: {  }

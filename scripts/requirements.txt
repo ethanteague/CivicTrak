@@ -1,0 +1,11 @@
+# Government Contact Database Requirements
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+sqlite3  # Built into Python
+csv      # Built into Python
+json     # Built into Python
+re       # Built into Python
+urllib   # Built into Python
+logging  # Built into Python
+time     # Built into Python
+dataclasses  # Built into Python 3.7+

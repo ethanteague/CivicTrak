@@ -1,0 +1,222 @@
+// CivicTrak Demo Page Styles
+
+.demo-hero {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  padding: 80px 0;
+  margin-top: -20px; // Offset default spacing
+
+  .display-4 {
+    font-weight: 700;
+  }
+
+  .lead {
+    font-size: 1.3rem;
+    opacity: 0.95;
+  }
+
+  .demo-stats {
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    small {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  }
+
+  .btn-warning {
+    font-weight: 600;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+  }
+}
+
+.demo-problem {
+  background: white;
+
+  h2 {
+    color: #2c3e50;
+    font-weight: 600;
+  }
+
+  ul li {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .demo-before-box {
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    background: #f8f9fa !important;
+    border: 2px dashed #dee2e6 !important;
+  }
+}
+
+.demo-features {
+  .demo-feature-card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card-body {
+      padding: 2rem;
+    }
+
+    h5 {
+      color: #2c3e50;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+}
+
+.demo-testimonials {
+  background: #f8f9fa;
+
+  .demo-testimonial {
+    background: white;
+    border-left: 4px solid #3498db;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    strong {
+      color: #2c3e50;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.demo-pricing {
+  .demo-pricing-card {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    .card-body {
+      h3 {
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .display-3 {
+        font-weight: 700;
+      }
+
+      ul li {
+        padding: 0.5rem 0;
+        font-size: 1.05rem;
+      }
+    }
+  }
+}
+
+// Demo form styling
+#demo-form {
+  background: #f8f9fa;
+  padding: 60px 0;
+
+  .demo-form-container {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    h2 {
+      color: #2c3e50;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+      border-radius: 8px;
+      border: 2px solid #e9ecef;
+      padding: 12px 15px;
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+      }
+    }
+
+    .btn-primary {
+      background: #3498db;
+      border: none;
+      padding: 15px 40px;
+      font-weight: 600;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+
+      &:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .demo-hero {
+    padding: 60px 0;
+
+    .display-4 {
+      font-size: 2.2rem;
+    }
+
+    .demo-stats {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .demo-problem {
+    .demo-before-box {
+      margin-top: 2rem;
+    }
+  }
+
+  .demo-features {
+    .demo-feature-card {
+      margin-bottom: 2rem;
+    }
+  }
+}

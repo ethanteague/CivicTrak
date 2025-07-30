@@ -1,0 +1,199 @@
+uuid: null
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: service_request
+title: 'Citizen Service Request'
+description: 'Report issues or request city services. Track your request online after submission.'
+categories:
+  - services
+elements: |
+  contact_information:
+    '#type': fieldset
+    '#title': 'Contact Information'
+    first_name:
+      '#type': textfield
+      '#title': 'First Name'
+      '#required': true
+    last_name:
+      '#type': textfield
+      '#title': 'Last Name'
+      '#required': true
+    email:
+      '#type': email
+      '#title': 'Email Address'
+      '#required': true
+      '#description': 'We will use this to send updates about your request'
+    phone:
+      '#type': tel
+      '#title': 'Phone Number'
+      '#required': true
+    address:
+      '#type': textfield
+      '#title': 'Your Address'
+      '#placeholder': '123 Main Street'
+    
+  request_details:
+    '#type': fieldset
+    '#title': 'Service Request Details'
+    request_type:
+      '#type': select
+      '#title': 'Type of Request'
+      '#required': true
+      '#options':
+        pothole: 'Pothole Repair'
+        streetlight: 'Street Light Issue'
+        traffic_sign: 'Traffic Sign Problem'
+        sidewalk: 'Sidewalk Repair'
+        tree_maintenance: 'Tree Maintenance'
+        graffiti: 'Graffiti Removal'
+        park_maintenance: 'Park/Recreation Issue'
+        water_sewer: 'Water/Sewer Problem'
+        trash_recycling: 'Trash/Recycling Issue'
+        animal_control: 'Animal Control'
+        noise_complaint: 'Noise Complaint'
+        code_violation: 'Code Violation Report'
+        other: 'Other'
+    priority:
+      '#type': radios
+      '#title': 'Priority Level'
+      '#required': true
+      '#options':
+        emergency: 'Emergency - Immediate safety hazard'
+        urgent: 'Urgent - Needs attention within 24 hours'
+        normal: 'Normal - Standard processing time'
+        low: 'Low - Not time sensitive'
+    
+  location_information:
+    '#type': fieldset
+    '#title': 'Location of Issue'
+    issue_address:
+      '#type': textfield
+      '#title': 'Address/Location of Issue'
+      '#required': true
+      '#placeholder': 'Street address or nearest intersection'
+    landmark:
+      '#type': textfield
+      '#title': 'Nearby Landmark'
+      '#description': 'Help us locate the issue (e.g., "near City Hall", "in front of grocery store")'
+    
+  description:
+    '#type': fieldset
+    '#title': 'Detailed Description'
+    issue_description:
+      '#type': textarea
+      '#title': 'Describe the Issue'
+      '#required': true
+      '#rows': 4
+      '#placeholder': 'Please provide as much detail as possible about the problem'
+    previous_reports:
+      '#type': radios
+      '#title': 'Have you reported this issue before?'
+      '#options':
+        yes: 'Yes'
+        no: 'No'
+      '#required': true
+    previous_ticket:
+      '#type': textfield
+      '#title': 'Previous Ticket Number'
+      '#states':
+        visible:
+          ':input[name="previous_reports"]':
+            value: 'yes'
+    
+  photos:
+    '#type': fieldset
+    '#title': 'Photos (Optional but Helpful)'
+    photo_upload:
+      '#type': managed_file
+      '#title': 'Upload Photos'
+      '#description': 'Photos help us understand and prioritize your request'
+      '#file_extensions': 'png jpg jpeg'
+      '#multiple': true
+      '#max_filesize': '5 MB'
+    
+  follow_up:
+    '#type': fieldset
+    '#title': 'Follow-up Preferences'
+    notification_method:
+      '#type': checkboxes
+      '#title': 'How would you like to receive updates?'
+      '#options':
+        email: 'Email notifications'
+        phone: 'Phone call for urgent matters'
+        text: 'Text message updates'
+      '#required': true
+    best_contact_time:
+      '#type': select
+      '#title': 'Best time to contact you'
+      '#options':
+        morning: 'Morning (8 AM - 12 PM)'
+        afternoon: 'Afternoon (12 PM - 5 PM)'
+        evening: 'Evening (5 PM - 8 PM)'
+        anytime: 'Anytime'
+    
+  additional_info:
+    '#type': fieldset
+    '#title': 'Additional Information'
+    safety_concern:
+      '#type': checkbox
+      '#title': 'This is a safety concern requiring immediate attention'
+    public_property:
+      '#type': radios
+      '#title': 'Is this issue on public or private property?'
+      '#options':
+        public: 'Public property'
+        private: 'Private property'
+        unsure: 'Not sure'
+      '#required': true
+    additional_comments:
+      '#type': textarea
+      '#title': 'Additional Comments or Information'
+      '#rows': 3
+
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  form_title: source_entity_webform
+  confirmation_type: page
+  confirmation_title: 'Service Request Submitted'
+  confirmation_message: '<p><strong>Thank you for your service request!</strong></p><p>Your request has been received and assigned ticket number: <strong>[webform_submission:serial]</strong></p><p><strong>What happens next:</strong></p><ul><li>Your request will be reviewed and assigned to the appropriate department</li><li>You will receive email updates as your request is processed</li><li>Emergency requests are handled within 4 hours</li><li>Standard requests are typically addressed within 3-5 business days</li></ul><p><strong>Track your request:</strong><br>Keep this ticket number for your records: <strong>[webform_submission:serial]</strong></p><p>For emergency situations, please call (555) 911-CITY</p>'
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+handlers:
+  email_confirmation:
+    id: email
+    handler_id: email_confirmation
+    label: 'Confirmation Email'
+    status: true
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email]'
+      subject: 'Service Request Confirmation - Ticket #[webform_submission:serial]'
+      body: '<p>Dear [webform_submission:values:first_name] [webform_submission:values:last_name],</p><p>Thank you for submitting a service request. Here are the details:</p><p><strong>Ticket Number:</strong> [webform_submission:serial]<br><strong>Request Type:</strong> [webform_submission:values:request_type]<br><strong>Priority:</strong> [webform_submission:values:priority]<br><strong>Location:</strong> [webform_submission:values:issue_address]</p><p><strong>Description:</strong><br>[webform_submission:values:issue_description]</p><p>We will keep you updated on the progress of your request.</p><p>City Service Department<br>(555) 123-4567</p>'
+  staff_notification:
+    id: email
+    handler_id: staff_notification
+    label: 'Staff Notification'
+    status: true
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: 'services@example.gov'
+      subject: 'New Service Request - [webform_submission:values:request_type] - Ticket #[webform_submission:serial]'
+      body: '<p>A new service request has been submitted.</p><p><strong>Priority:</strong> [webform_submission:values:priority]<br><strong>Type:</strong> [webform_submission:values:request_type]<br><strong>Location:</strong> [webform_submission:values:issue_address]</p><p><strong>Submitted by:</strong> [webform_submission:values:first_name] [webform_submission:values:last_name]<br><strong>Phone:</strong> [webform_submission:values:phone]<br><strong>Email:</strong> [webform_submission:values:email]</p><p><strong>Description:</strong><br>[webform_submission:values:issue_description]</p><p><strong>Full Details:</strong></p>[webform_submission:values]<p><strong>Ticket Number:</strong> [webform_submission:serial]</p>'
+variants: {  }

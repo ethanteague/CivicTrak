@@ -1,0 +1,369 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the gov_general module.
+ */
+
+use Drupal\webform\Entity\Webform;
+
+/**
+ * Create municipal webforms.
+ */
+function gov_general_update_9001() {
+  // Create Building Permit Application webform
+  $building_permit = Webform::create([
+    'id' => 'building_permit_application',
+    'title' => 'Building Permit Application',
+    'description' => 'Apply for a building permit for new construction, additions, renovations, or repairs.',
+    'status' => 'open',
+    'elements' => _gov_general_get_building_permit_elements(),
+    'settings' => [
+      'confirmation_type' => 'page',
+      'confirmation_title' => 'Building Permit Application Submitted',
+      'confirmation_message' => '<p>Thank you for submitting your building permit application.</p><p><strong>What happens next:</strong></p><ul><li>Your application will be reviewed within 3-5 business days</li><li>You will be contacted with fee information and payment instructions</li><li>Once fees are paid, your permit will be processed</li><li>An inspection schedule will be provided upon permit approval</li></ul><p>If you have questions, please contact the Building Department at (555) 123-4567.</p><p><strong>Application ID:</strong> [webform_submission:serial]</p>',
+    ],
+  ]);
+  $building_permit->save();
+
+  // Create Business License Application webform
+  $business_license = Webform::create([
+    'id' => 'business_license_application',
+    'title' => 'Business License Application',
+    'description' => 'Apply for a business license to operate within city limits.',
+    'status' => 'open',
+    'elements' => _gov_general_get_business_license_elements(),
+    'settings' => [
+      'confirmation_type' => 'page',
+      'confirmation_title' => 'Business License Application Submitted',
+      'confirmation_message' => '<p>Thank you for submitting your business license application.</p><p><strong>Next Steps:</strong></p><ul><li>Your application will be reviewed within 5-7 business days</li><li>You will receive an invoice for the license fee</li><li>Once payment is received, your license will be processed</li></ul><p>Questions? Contact the Business License Department at (555) 123-4567.</p>',
+    ],
+  ]);
+  $business_license->save();
+
+  // Create Service Request webform
+  $service_request = Webform::create([
+    'id' => 'service_request',
+    'title' => 'Citizen Service Request',
+    'description' => 'Report issues or request city services. Track your request online after submission.',
+    'status' => 'open',
+    'elements' => _gov_general_get_service_request_elements(),
+    'settings' => [
+      'confirmation_type' => 'page',
+      'confirmation_title' => 'Service Request Submitted',
+      'confirmation_message' => '<p><strong>Thank you for your service request!</strong></p><p>Your request has been received and assigned ticket number: <strong>[webform_submission:serial]</strong></p><p>You will receive email updates as your request is processed.</p>',
+    ],
+  ]);
+  $service_request->save();
+
+  // Create Special Event Permit webform
+  $event_permit = Webform::create([
+    'id' => 'special_event_permit',
+    'title' => 'Special Event Permit Application',
+    'description' => 'Apply for permits for special events, festivals, parades, and public gatherings.',
+    'status' => 'open',
+    'elements' => _gov_general_get_event_permit_elements(),
+    'settings' => [
+      'confirmation_type' => 'page',
+      'confirmation_title' => 'Special Event Permit Application Submitted',
+      'confirmation_message' => '<p>Thank you for submitting your special event permit application.</p><p>Your application will be reviewed within 14 days. Please submit applications at least 30 days before your event.</p>',
+    ],
+  ]);
+  $event_permit->save();
+
+  // Create Parking Permit webform
+  $parking_permit = Webform::create([
+    'id' => 'parking_permit',
+    'title' => 'Residential Parking Permit',
+    'description' => 'Apply for residential parking permits for restricted parking zones.',
+    'status' => 'open',
+    'elements' => _gov_general_get_parking_permit_elements(),
+    'settings' => [
+      'confirmation_type' => 'page',
+      'confirmation_title' => 'Parking Permit Application Submitted',
+      'confirmation_message' => '<p>Thank you for submitting your parking permit application.</p><p>Your application will be reviewed within 3-5 business days and your permit will be mailed to you.</p>',
+    ],
+  ]);
+  $parking_permit->save();
+
+  return 'Municipal webforms have been created successfully.';
+}
+
+/**
+ * Helper function to get building permit form elements.
+ */
+function _gov_general_get_building_permit_elements() {
+  return <<<YAML
+property_information:
+  '#type': fieldset
+  '#title': 'Property Information'
+  property_address:
+    '#type': textfield
+    '#title': 'Property Address'
+    '#required': true
+  property_owner:
+    '#type': textfield
+    '#title': 'Property Owner Name'
+    '#required': true
+  owner_phone:
+    '#type': tel
+    '#title': 'Owner Phone Number'
+    '#required': true
+  owner_email:
+    '#type': email
+    '#title': 'Owner Email Address'
+    '#required': true
+
+project_details:
+  '#type': fieldset
+  '#title': 'Project Details'
+  project_type:
+    '#type': select
+    '#title': 'Type of Work'
+    '#required': true
+    '#options':
+      new_construction: 'New Construction'
+      addition: 'Addition'
+      renovation: 'Renovation/Remodel'
+      repair: 'Repair'
+      other: 'Other'
+  project_description:
+    '#type': textarea
+    '#title': 'Project Description'
+    '#required': true
+    '#rows': 4
+  estimated_cost:
+    '#type': number
+    '#title': 'Estimated Project Cost'
+    '#required': true
+    '#field_prefix': '$'
+
+certification:
+  '#type': fieldset
+  '#title': 'Certification'
+  certification_statement:
+    '#type': checkbox
+    '#title': 'I certify that the information provided is true and accurate'
+    '#required': true
+YAML;
+}
+
+/**
+ * Helper function to get business license form elements.
+ */
+function _gov_general_get_business_license_elements() {
+  return <<<YAML
+business_information:
+  '#type': fieldset
+  '#title': 'Business Information'
+  business_name:
+    '#type': textfield
+    '#title': 'Business Name'
+    '#required': true
+  business_type:
+    '#type': select
+    '#title': 'Type of Business'
+    '#required': true
+    '#options':
+      retail: 'Retail Store'
+      restaurant: 'Restaurant/Food Service'
+      professional: 'Professional Services'
+      other: 'Other'
+  business_address:
+    '#type': textfield
+    '#title': 'Business Address'
+    '#required': true
+  owner_name:
+    '#type': textfield
+    '#title': 'Owner Name'
+    '#required': true
+  owner_phone:
+    '#type': tel
+    '#title': 'Owner Phone'
+    '#required': true
+  owner_email:
+    '#type': email
+    '#title': 'Owner Email'
+    '#required': true
+
+certification:
+  '#type': fieldset
+  '#title': 'Certification'
+  certification_agreement:
+    '#type': checkbox
+    '#title': 'I agree to comply with all city ordinances'
+    '#required': true
+YAML;
+}
+
+/**
+ * Helper function to get service request form elements.
+ */
+function _gov_general_get_service_request_elements() {
+  return <<<YAML
+contact_information:
+  '#type': fieldset
+  '#title': 'Contact Information'
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+  email:
+    '#type': email
+    '#title': 'Email Address'
+    '#required': true
+  phone:
+    '#type': tel
+    '#title': 'Phone Number'
+    '#required': true
+
+request_details:
+  '#type': fieldset
+  '#title': 'Service Request Details'
+  request_type:
+    '#type': select
+    '#title': 'Type of Request'
+    '#required': true
+    '#options':
+      pothole: 'Pothole Repair'
+      streetlight: 'Street Light Issue'
+      sidewalk: 'Sidewalk Repair'
+      graffiti: 'Graffiti Removal'
+      other: 'Other'
+  priority:
+    '#type': radios
+    '#title': 'Priority Level'
+    '#required': true
+    '#options':
+      emergency: 'Emergency'
+      urgent: 'Urgent'
+      normal: 'Normal'
+  issue_address:
+    '#type': textfield
+    '#title': 'Location of Issue'
+    '#required': true
+  issue_description:
+    '#type': textarea
+    '#title': 'Describe the Issue'
+    '#required': true
+    '#rows': 4
+YAML;
+}
+
+/**
+ * Helper function to get event permit form elements.
+ */
+function _gov_general_get_event_permit_elements() {
+  return <<<YAML
+event_details:
+  '#type': fieldset
+  '#title': 'Event Information'
+  event_name:
+    '#type': textfield
+    '#title': 'Event Name'
+    '#required': true
+  event_type:
+    '#type': select
+    '#title': 'Type of Event'
+    '#required': true
+    '#options':
+      festival: 'Festival/Fair'
+      parade: 'Parade'
+      concert: 'Concert'
+      other: 'Other'
+  event_date:
+    '#type': date
+    '#title': 'Event Date'
+    '#required': true
+  expected_attendance:
+    '#type': number
+    '#title': 'Expected Attendance'
+    '#required': true
+  venue_address:
+    '#type': textfield
+    '#title': 'Event Location'
+    '#required': true
+
+contact_info:
+  '#type': fieldset
+  '#title': 'Contact Information'
+  contact_person:
+    '#type': textfield
+    '#title': 'Contact Person'
+    '#required': true
+  phone:
+    '#type': tel
+    '#title': 'Phone Number'
+    '#required': true
+  email:
+    '#type': email
+    '#title': 'Email Address'
+    '#required': true
+YAML;
+}
+
+/**
+ * Helper function to get parking permit form elements.
+ */
+function _gov_general_get_parking_permit_elements() {
+  return <<<YAML
+applicant_info:
+  '#type': fieldset
+  '#title': 'Applicant Information'
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+  phone:
+    '#type': tel
+    '#title': 'Phone Number'
+    '#required': true
+  email:
+    '#type': email
+    '#title': 'Email Address'
+    '#required': true
+  street_address:
+    '#type': textfield
+    '#title': 'Residence Address'
+    '#required': true
+
+vehicle_info:
+  '#type': fieldset
+  '#title': 'Vehicle Information'
+  make:
+    '#type': textfield
+    '#title': 'Vehicle Make'
+    '#required': true
+  model:
+    '#type': textfield
+    '#title': 'Vehicle Model'
+    '#required': true
+  year:
+    '#type': number
+    '#title': 'Vehicle Year'
+    '#required': true
+  license_plate:
+    '#type': textfield
+    '#title': 'License Plate Number'
+    '#required': true
+
+permit_details:
+  '#type': fieldset
+  '#title': 'Permit Details'
+  permit_type:
+    '#type': radios
+    '#title': 'Permit Type'
+    '#required': true
+    '#options':
+      annual: 'Annual Permit ($25/year)'
+      monthly: 'Monthly Permit ($5/month)'
+YAML;
+}
