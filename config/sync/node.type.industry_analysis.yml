@@ -1,0 +1,17 @@
+uuid: a1b2c3d4-e5f6-7890-1234-567890abcde1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Industry Analysis'
+type: industry_analysis
+description: 'Research-based analysis of municipal technology industry trends, costs, and challenges.'
+help: 'Create data-driven content analyzing real market conditions, competitor pricing, compliance issues, and industry challenges. All content must be based on verifiable research and public information.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

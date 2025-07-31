@@ -1,0 +1,23 @@
+uuid: f1g2h3i4-j5k6-7890-1234-567890fghijk
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.industry_analysis
+  module:
+    - text
+id: node.industry_analysis.body
+field_name: body
+entity_type: node
+bundle: industry_analysis
+label: 'Analysis Content'
+description: 'Complete industry analysis content with research, data, and insights'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

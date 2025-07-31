@@ -301,3 +301,10 @@ ddev drush generate:form
 **Project Version**: Drupal 11.x  
 **Environment**: DDEV + Platform.sh  
 **Theme**: Bootstrap 5 based government theme
+
+## Contact Information
+**Phone**: (941) 915-1811  
+**Email**: ethan.teague@paragonsoftwareservice.com  
+**Owner**: Ethan Teague
+
+⚠️ **NEVER use fake contact info like (555) numbers or hello@civictrak.com**

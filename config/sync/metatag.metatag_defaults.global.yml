@@ -8,9 +8,9 @@ id: global
 label: Global
 tags:
   canonical_url: '[current-page:url]'
-  title: '[current-page:title] | CivicTrak - Municipal Government Software'
-  description: 'CivicTrak provides comprehensive digital government solutions for municipalities. Streamline citizen services, manage public records, and enhance community engagement with our government website platform.'
-  keywords: 'municipal government software, civic technology, government website, public administration, citizen services, municipal management, local government solutions'
+  title: '[current-page:title] | CivicTrak - Municipal Website Solutions for Small Cities'
+  description: 'CivicTrak delivers affordable municipal website solutions for small cities. Launch your government website in 5 days for $699/month. ADA compliant, mobile-ready, designed for city managers.'
+  keywords: 'municipal website solutions, small city website, government website software, city manager technology, municipal software, affordable government websites, ADA compliant municipal sites'
   author: CivicTrak
   og_site_name: CivicTrak
   og_type: website

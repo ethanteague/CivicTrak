@@ -1,0 +1,17 @@
+uuid: b2c3d4e5-f6g7-8901-2345-678901bcdeg1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Interactive Tool'
+type: interactive_tool
+description: 'Calculators, checkers, and interactive tools that provide value to municipal professionals.'
+help: 'Create interactive tools like ROI calculators, compliance checkers, budget planners, and assessment tools. These tools should capture leads while providing genuine value to city managers and municipal staff.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

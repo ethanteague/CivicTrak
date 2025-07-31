@@ -42,3 +42,216 @@ a {
 .slick>div {
     margin: 0 15px;
 }
+
+/* INDUSTRY ANALYSIS & CALCULATOR STYLES
+--------------------------------------------------*/
+
+/* Industry Analysis Styles */
+.node--type-industry-analysis .analysis-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.node--type-industry-analysis .key-findings {
+    background: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.node--type-industry-analysis .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.node--type-industry-analysis .stat-item {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.node--type-industry-analysis .stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.node--type-industry-analysis .stat-label {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.node--type-industry-analysis table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+}
+
+.node--type-industry-analysis table th,
+.node--type-industry-analysis table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.node--type-industry-analysis table th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
+
+.node--type-industry-analysis .contact-cta {
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Calculator Styles */
+.node--type-interactive-tool .node__content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.node--type-interactive-tool .calculator-content {
+    background: none !important;
+    font-family: inherit;
+}
+
+.node--type-interactive-tool .calculator {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #e9ecef;
+}
+
+.node--type-interactive-tool .intro-text {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.node--type-interactive-tool .form-group {
+    margin-bottom: 25px;
+}
+
+.node--type-interactive-tool .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.node--type-interactive-tool .form-group input,
+.node--type-interactive-tool .form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.node--type-interactive-tool .form-group input:focus,
+.node--type-interactive-tool .form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.node--type-interactive-tool .calculate-btn {
+    background: #28a745;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.node--type-interactive-tool .calculate-btn:hover {
+    background: #218838;
+}
+
+.node--type-interactive-tool .results {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+}
+
+.node--type-interactive-tool .savings {
+    font-size: 28px;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.node--type-interactive-tool .breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.node--type-interactive-tool .breakdown-item {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.node--type-interactive-tool .breakdown-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.node--type-interactive-tool .breakdown-label {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+.node--type-interactive-tool .email-capture {
+    margin-top: 30px;
+    padding: 25px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.node--type-interactive-tool .email-capture h3 {
+    color: #856404;
+    margin-bottom: 15px;
+}
+
+.node--type-interactive-tool .disclaimer {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 25px;
+    text-align: center;
+    font-style: italic;
+}

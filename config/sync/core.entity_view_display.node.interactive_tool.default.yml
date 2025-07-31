@@ -1,0 +1,28 @@
+uuid: l7m8n9o0-p1q2-3456-7890-123456lmnopq
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.interactive_tool.body
+    - node.type.interactive_tool
+  module:
+    - text
+    - user
+id: node.interactive_tool.default
+targetEntityType: node
+bundle: interactive_tool
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

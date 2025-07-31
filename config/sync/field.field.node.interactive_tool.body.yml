@@ -1,0 +1,23 @@
+uuid: g2h3i4j5-k6l7-8901-2345-678901ghijkl
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.interactive_tool
+  module:
+    - text
+id: node.interactive_tool.body
+field_name: body
+entity_type: node
+bundle: interactive_tool
+label: 'Tool Content'
+description: 'Interactive tool content including HTML, JavaScript, and instructions'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

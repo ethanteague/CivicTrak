@@ -1,0 +1,17 @@
+uuid: c3d4e5f6-g7h8-9012-3456-789012cdefgh
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Municipal Solution Landing Page'
+type: solution_landing
+description: 'Targeted landing pages for specific municipal solutions and demographics.'
+help: 'Create optimized landing pages for different city sizes, states, or specific municipal needs. Include pricing, benefits, and clear calls-to-action.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

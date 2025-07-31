@@ -1,0 +1,17 @@
+uuid: c3d4e5f6-g7h8-9012-3456-789012cdegh1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Problem Analysis'
+type: problem_analysis
+description: 'Analysis of specific problems and challenges facing municipal governments.'
+help: 'Document real problems facing small cities, backed by research and evidence. Focus on technology challenges, budget constraints, compliance issues, and operational inefficiencies. Position solutions authentically without false claims.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,28 @@
+uuid: j5k6l7m8-n9o0-1234-5678-901234jklmno
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.industry_analysis.body
+    - node.type.industry_analysis
+  module:
+    - text
+    - user
+id: node.industry_analysis.default
+targetEntityType: node
+bundle: industry_analysis
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

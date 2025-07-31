@@ -1,0 +1,21 @@
+uuid: e2f3g4h5-i6j7-8901-2345-678901efghij
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: industry_analysis
+label: 'Industry Analysis'
+type: 'canonical_entities:node'
+pattern: '/analysis/[node:title:machine-name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    bundles:
+      industry_analysis: industry_analysis
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -5
+relationships: {  }

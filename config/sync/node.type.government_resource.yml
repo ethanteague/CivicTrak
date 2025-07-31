@@ -1,0 +1,17 @@
+uuid: b2c3d4e5-f6g7-8901-2345-678901bcdefg
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Government Resource'
+type: government_resource
+description: 'Educational resources, guides, and tools for municipal government professionals.'
+help: 'Create downloadable resources like guides, checklists, calculators, and templates that provide value to city managers, IT directors, and other municipal staff.'
+new_revision: true
+preview_mode: 1
+display_submitted: false

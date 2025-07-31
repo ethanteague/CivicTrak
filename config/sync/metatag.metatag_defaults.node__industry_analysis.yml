@@ -1,0 +1,24 @@
+uuid: d1e2f3g4-h5i6-7890-1234-567890defghi
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.industry_analysis
+id: node__industry_analysis
+label: 'Content: Industry Analysis'
+tags:
+  title: '[node:title] | CivicTrak Municipal Technology Research'
+  description: '[node:body:summary]'
+  keywords: 'municipal website analysis, government technology research, city website costs, municipal compliance, local government digital services'
+  canonical_url: '[node:url]'
+  og_site_name: CivicTrak
+  og_type: article
+  og_title: '[node:title]'
+  og_description: '[node:body:summary]'
+  og_url: '[node:url]'
+  twitter_cards_type: summary_large_image
+  twitter_cards_title: '[node:title]'
+  twitter_cards_description: '[node:body:summary]'
+  article_published_time: '[node:created:custom:c]'
+  article_modified_time: '[node:changed:custom:c]'
+  robots: 'index, follow'
