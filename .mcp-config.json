@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp"],
+      "description": "Playwright MCP server for browser automation and testing"
+    },
+    "context7": {
+      "command": "npx", 
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "description": "Context7 MCP server for up-to-date documentation and code examples"
+    }
+  }
+}

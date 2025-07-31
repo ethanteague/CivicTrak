@@ -1,0 +1,280 @@
+{
+  "subagents": {
+    "drupal-developer": {
+      "name": "Drupal Development Agent",
+      "description": "Specialized agent for Drupal module and theme development, custom functionality, and code architecture",
+      "triggers": [
+        "module development",
+        "theme customization", 
+        "custom block",
+        "plugin creation",
+        "hook implementation",
+        "service definition",
+        "form API",
+        "database schema",
+        "entity development"
+      ],
+      "expertise": [
+        "PHP/Drupal 11 development patterns",
+        "Symfony components and dependency injection",
+        "Twig templating and theme development",
+        "Database API and entity system",
+        "Plugin system and services",
+        "Form API and validation",
+        "Cache API and performance optimization",
+        "Security best practices"
+      ],
+      "tools": ["Read", "Write", "Edit", "MultiEdit", "Bash", "Grep", "Glob"],
+      "auto_use_conditions": [
+        "Creating or modifying .php files in modules/custom/",
+        "Working with .module, .install, .theme files",
+        "Implementing Drupal hooks or plugins",
+        "Custom entity or field development",
+        "Service configuration in .services.yml files"
+      ]
+    },
+    "content-manager": {
+      "name": "Content Management Agent", 
+      "description": "Specialized agent for Drupal content operations, configuration management, and site administration",
+      "triggers": [
+        "content type creation",
+        "field configuration",
+        "view creation",
+        "taxonomy management",
+        "user roles",
+        "permissions",
+        "layout builder",
+        "content migration",
+        "webform configuration"
+      ],
+      "expertise": [
+        "Drupal content architecture and modeling",
+        "Configuration management (config/sync)",
+        "Views and display configuration", 
+        "Layout Builder and block placement",
+        "User roles and permissions",
+        "Taxonomy and content relationships",
+        "Webform building and configuration",
+        "Content migration and import/export"
+      ],
+      "tools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+      "auto_use_conditions": [
+        "Working with files in config/sync/",
+        "Creating or modifying .yml configuration files",
+        "Content type, field, or view operations",
+        "Layout Builder configuration changes",
+        "Webform modifications in webforms/ directory"
+      ]
+    },
+    "frontend-developer": {
+      "name": "Frontend Development Agent",
+      "description": "Specialized agent for theme development, SCSS/JavaScript, and frontend build processes",
+      "triggers": [
+        "theme development",
+        "SCSS compilation", 
+        "JavaScript development",
+        "gulp build",
+        "responsive design",
+        "Bootstrap customization",
+        "template overrides",
+        "CSS debugging",
+        "frontend performance"
+      ],
+      "expertise": [
+        "Bootstrap 5 framework and customization",
+        "SCSS/Sass development and architecture",
+        "Gulp build process and automation",
+        "Twig templating and theme layer",
+        "JavaScript (jQuery, ES6+) and frontend libraries",
+        "Responsive web design and mobile optimization",
+        "CSS Grid, Flexbox, and modern layouts",
+        "Frontend performance optimization"
+      ],
+      "tools": ["Read", "Write", "Edit", "MultiEdit", "Bash", "Grep", "Glob"],
+      "auto_use_conditions": [
+        "Working with files in docroot/themes/custom/gov/",
+        "Modifying .scss, .css, or .js files",
+        "Template (.twig) modifications",
+        "Running npm or gulp commands",
+        "Package.json or gulpfile.js changes"
+      ]
+    },
+    "devops-automation": {
+      "name": "DevOps & Automation Agent",
+      "description": "Specialized agent for deployment, server configuration, performance optimization, and automated workflows",
+      "triggers": [
+        "deployment",
+        "server configuration",
+        "performance optimization",
+        "caching",
+        "security configuration",
+        "backup procedures",
+        "monitoring setup",
+        "CI/CD pipeline",
+        "environment configuration"
+      ],
+      "expertise": [
+        "DDEV local development environment",
+        "Platform.sh deployment and configuration",
+        "Server configuration and optimization",
+        "Caching strategies (Redis, Drupal cache)",
+        "Security hardening and compliance",
+        "Backup and disaster recovery procedures",
+        "Performance monitoring and optimization",
+        "Automated deployment pipelines"
+      ],
+      "tools": ["Bash", "Read", "Write", "Edit", "Grep", "Glob"],
+      "auto_use_conditions": [
+        "Working with files in scripts/ directory",
+        "Modifying .ddev/ configuration",
+        "Platform.sh configuration files",
+        "Server or deployment script modifications",
+        "Performance or security related tasks"
+      ]
+    },
+    "testing-qa": {
+      "name": "Testing & Quality Assurance Agent",
+      "description": "Specialized agent for automated testing, quality assurance, accessibility testing, and site validation",
+      "triggers": [
+        "automated testing",
+        "playwright testing",
+        "accessibility testing",
+        "performance testing",
+        "quality assurance",
+        "site validation",
+        "browser testing",
+        "functional testing",
+        "security testing"
+      ],
+      "expertise": [
+        "Playwright browser automation and testing",
+        "Accessibility testing and WCAG compliance",
+        "Performance testing and optimization",
+        "Security vulnerability assessment",
+        "Cross-browser compatibility testing",
+        "Mobile responsiveness validation",
+        "Form functionality and validation testing",
+        "Content workflow and approval testing"
+      ],
+      "tools": ["Bash", "Read", "Write", "Grep", "Glob", "WebFetch"],
+      "auto_use_conditions": [
+        "When 'test' or 'testing' keywords are mentioned",
+        "Working with playwright or test-related files",
+        "Quality assurance or validation requests",
+        "Accessibility or compliance checking",
+        "Cross-browser or mobile testing needs"
+      ],
+      "integrations": ["playwright_mcp", "context7_mcp"]
+    },
+    "data-migration": {
+      "name": "Data Migration Agent",
+      "description": "Specialized agent for content migration, data import/export, and database operations",
+      "triggers": [
+        "data migration",
+        "content import",
+        "database operations",
+        "CSV import",
+        "content export",
+        "migration configuration",
+        "legacy data conversion",
+        "bulk operations"
+      ],
+      "expertise": [
+        "Drupal Migration API and configuration",
+        "CSV and structured data import/export",
+        "Database operations and SQL queries",
+        "Content transformation and mapping",
+        "Legacy system integration",
+        "Bulk content operations",
+        "Data validation and cleanup",
+        "Migration troubleshooting and optimization"
+      ],
+      "tools": ["Bash", "Read", "Write", "Edit", "Grep", "Glob"],
+      "auto_use_conditions": [
+        "Working with migration configurations",
+        "CSV or data file processing",  
+        "Database import/export operations",
+        "Bulk content creation or updates",
+        "Legacy system integration tasks"
+      ]
+    }
+  },
+  "auto_selection_rules": {
+    "file_path_patterns": {
+      "docroot/modules/custom/": "drupal-developer",
+      "docroot/themes/custom/": "frontend-developer", 
+      "config/sync/": "content-manager",
+      "scripts/": "devops-automation",
+      "webforms/": "content-manager",
+      "*.scss": "frontend-developer",
+      "*.js": "frontend-developer",
+      "*.php": "drupal-developer",
+      "*.yml": "content-manager",
+      "gulpfile.js": "frontend-developer",
+      "package.json": "frontend-developer"
+    },
+    "keyword_triggers": {
+      "high_priority": {
+        "performance": "devops-automation",
+        "security": "devops-automation", 
+        "deployment": "devops-automation",
+        "testing": "testing-qa",
+        "accessibility": "testing-qa",
+        "migration": "data-migration",
+        "theme": "frontend-developer",
+        "module": "drupal-developer"
+      },
+      "medium_priority": {
+        "cache": "devops-automation",
+        "css": "frontend-developer",
+        "javascript": "frontend-developer",
+        "content type": "content-manager",
+        "field": "content-manager",
+        "view": "content-manager",
+        "form": "content-manager"
+      }
+    }
+  },
+  "integration_settings": {
+    "mcp_servers": {
+      "playwright": {
+        "preferred_agents": ["testing-qa", "frontend-developer"],
+        "auto_enable": true
+      },
+      "context7": {
+        "preferred_agents": ["drupal-developer", "content-manager"],
+        "auto_enable": true
+      }
+    },
+    "collaboration_patterns": {
+      "frontend_backend": {
+        "agents": ["frontend-developer", "drupal-developer"],
+        "trigger": "full-stack development tasks"
+      },
+      "content_development": {
+        "agents": ["content-manager", "drupal-developer"],
+        "trigger": "custom content type development"
+      },
+      "deployment_testing": {
+        "agents": ["devops-automation", "testing-qa"],
+        "trigger": "pre-deployment validation"
+      }
+    }
+  },
+  "performance_optimization": {
+    "token_saving_strategies": [
+      "Use PROJECT_REFERENCE.md for quick lookups",
+      "Leverage file path shortcuts for common locations",
+      "Batch related operations in single agent calls",
+      "Use specific agents for specialized tasks",
+      "Cache frequently accessed configuration data"
+    ],
+    "efficiency_rules": [
+      "Always clear Drupal cache after configuration changes",
+      "Use ddev drush commands instead of direct drush",
+      "Compile SCSS immediately after style changes",
+      "Export configuration after structural changes", 
+      "Test changes with appropriate agent before deployment"
+    ]
+  }
+}
