@@ -15,6 +15,5 @@ required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings:
-  text_processing: false
+settings: {  }
 field_type: string
