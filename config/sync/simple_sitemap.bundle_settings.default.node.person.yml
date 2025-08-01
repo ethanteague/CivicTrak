@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.6'
+changefreq: monthly
+include_images: false
+uuid: 8b0a4404-8f58-988b-486b-dd0d245b22a8
+status: true
+dependencies:
+  config:
+    - node.type.person
+id: default.node.person
+targetEntityType: node
+bundle: person
+sitemap_variant: default

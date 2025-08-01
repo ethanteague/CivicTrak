@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.7'
+changefreq: weekly
+include_images: false
+uuid: fed93435-44bf-6800-8fcf-2326f14975c4
+status: true
+dependencies:
+  config:
+    - node.type.job_listing
+id: default.node.job_listing
+targetEntityType: node
+bundle: job_listing
+sitemap_variant: default

@@ -1,0 +1,22 @@
+uuid: a1b2c3d4-e5f6-7890-1234-567890abcdef
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.interactive_tool
+id: node__interactive_tool
+label: 'Content: Interactive Tool'
+tags:
+  title: '[node:title] | CivicTrak Municipal ROI Calculator'
+  description: 'Calculate exactly how much your municipality can save with CivicTrak vs traditional website vendors. Free ROI calculator for city managers and municipal IT directors.'
+  keywords: 'municipal website calculator, city website ROI, government technology savings, municipal website cost comparison, city manager tools'
+  canonical_url: '[node:url]'
+  og_site_name: CivicTrak
+  og_type: website
+  og_title: '[node:title]'
+  og_description: 'Calculate exactly how much your municipality can save with CivicTrak vs traditional website vendors. Free ROI calculator for city managers.'
+  og_url: '[node:url]'
+  twitter_cards_type: summary_large_image
+  twitter_cards_title: '[node:title]'
+  twitter_cards_description: 'Calculate exactly how much your municipality can save with CivicTrak vs traditional website vendors.'
+  robots: 'index, follow'

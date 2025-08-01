@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.8'
+changefreq: weekly
+include_images: false
+uuid: dba31af0-c78c-ecf2-77ef-68f78a8f558c
+status: true
+dependencies:
+  config:
+    - node.type.news_and_announcements
+id: default.node.news_and_announcements
+targetEntityType: node
+bundle: news_and_announcements
+sitemap_variant: default

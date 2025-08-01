@@ -1,0 +1,20 @@
+uuid: g2h3i4j5-k6l7-8901-2345-678901234567
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_location
+    - node.type.municipal_solutions
+id: node.municipal_solutions.field_target_location
+field_name: field_target_location
+entity_type: node
+bundle: municipal_solutions
+label: 'Target Location'
+description: 'City, County, or State name (e.g., "Miami, FL", "Orange County, CA", "Texas")'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  text_processing: false
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 7eaa5bc3-f621-2c78-34eb-1699f8979614
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: notices
+label: 'Content: Notices'
+type: 'canonical_entities:node'
+pattern: 'government/notices/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      notices: notices
+selection_logic: and
+weight: -5
+relationships: {  }

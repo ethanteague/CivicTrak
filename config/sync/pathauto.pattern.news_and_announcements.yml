@@ -1,0 +1,21 @@
+uuid: ca12edca-0022-e413-db5a-20dbf9d987d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: news_and_announcements
+label: 'Content: News And Announcements'
+type: 'canonical_entities:node'
+pattern: 'government/news/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      news_and_announcements: news_and_announcements
+selection_logic: and
+weight: -5
+relationships: {  }

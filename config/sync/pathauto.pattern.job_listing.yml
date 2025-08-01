@@ -1,0 +1,21 @@
+uuid: 16864315-b18e-5a09-d09c-807f7fd8a360
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: job_listing
+label: 'Content: Job Listing'
+type: 'canonical_entities:node'
+pattern: 'government/jobs/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      job_listing: job_listing
+selection_logic: and
+weight: -5
+relationships: {  }

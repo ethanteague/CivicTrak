@@ -1,0 +1,21 @@
+uuid: 5b3acabf-7db3-750c-a87f-8b9e43b93eb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: person
+label: 'Content: Person'
+type: 'canonical_entities:node'
+pattern: 'government/staff/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      person: person
+selection_logic: and
+weight: -5
+relationships: {  }

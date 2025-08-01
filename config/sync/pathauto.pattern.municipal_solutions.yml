@@ -1,0 +1,21 @@
+uuid: h3i4j5k6-l7m8-9012-3456-789012345678
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: municipal_solutions
+label: 'Content: Municipal Solutions'
+type: 'canonical_entities:node'
+pattern: 'municipal-websites/[node:field_target_location:value]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      municipal_solutions: municipal_solutions
+selection_logic: and
+weight: -5
+relationships: {  }

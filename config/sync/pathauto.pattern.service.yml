@@ -1,0 +1,21 @@
+uuid: 5565d9f0-d859-712b-684c-238e49d296a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: service
+label: 'Content: Service'
+type: 'canonical_entities:node'
+pattern: 'government/services/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      service: service
+selection_logic: and
+weight: -5
+relationships: {  }

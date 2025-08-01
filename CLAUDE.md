@@ -54,11 +54,25 @@ drush en module_name
 drush pmu module_name
 ```
 
-### Platform.sh Deployment
+### Deployment
+
+**Full Deployment (Database + Files + Code):**
 ```bash
-# Deploy to Platform.sh using custom script
+# Complete deployment with database/files sync
 ./scripts/push-all.sh
 ```
+
+**Code-Only Deployment (Normal):**
+```bash
+# Just push code - triggers Platform.sh pipeline
+git push origin
+```
+
+**Deployment Process:**
+- `push-all.sh`: Does `git push origin` + `drush sql-sync` + `drush rsync` to civictrak.main
+- `git push origin`: Just triggers Platform.sh pipeline to deploy code changes
+- Use `push-all.sh` only when database/content changes need to be deployed
+- Use `git push origin` for normal code deployments (theme, config, modules)
 
 ## Content Types
 - **Page** - Basic pages with layout builder

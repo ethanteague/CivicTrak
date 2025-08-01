@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.8'
+changefreq: weekly
+include_images: false
+uuid: e1f2g3h4-i5j6-7890-1234-567890abcdef
+status: true
+dependencies:
+  config:
+    - node.type.event
+id: default.node.event
+targetEntityType: node
+bundle: event
+sitemap_variant: default

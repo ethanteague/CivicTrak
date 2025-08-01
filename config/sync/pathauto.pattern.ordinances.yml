@@ -1,0 +1,21 @@
+uuid: 635494d8-6115-363e-4185-ac9e9415bb93
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ordinances
+label: 'Content: Ordinances'
+type: 'canonical_entities:node'
+pattern: 'government/ordinances/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      ordinances: ordinances
+selection_logic: and
+weight: -5
+relationships: {  }

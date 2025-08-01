@@ -1,0 +1,19 @@
+uuid: i4j5k6l7-m8n9-0123-4567-890123456789
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.municipal_solutions
+id: node__municipal_solutions
+label: 'Content: Municipal Solutions'
+tags:
+  title: 'Municipal Website Solutions for [node:field_target_location] | CivicTrak'
+  description: 'Professional municipal website services for [node:field_target_location]. ADA compliant government websites designed for local officials. Launch in 5 days for $699/month.'
+  keywords: '[node:field_target_location] municipal website, [node:field_target_location] government website, [node:field_target_location] city website, municipal website services, local government websites'
+  canonical_url: '[node:url]'
+  og_title: 'Municipal Websites for [node:field_target_location] | CivicTrak'
+  og_description: 'Professional municipal website solutions for [node:field_target_location]. ADA compliant, mobile-ready government websites.'
+  og_url: '[node:url]'
+  twitter_cards_title: 'Municipal Websites for [node:field_target_location]'
+  twitter_cards_description: 'Professional government website services for [node:field_target_location]. Launch in 5 days.'
+  robots: 'index, follow'

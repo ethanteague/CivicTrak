@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.8'
+changefreq: monthly
+include_images: false
+uuid: j5k6l7m8-n9o0-1234-5678-901234567890
+status: true
+dependencies:
+  config:
+    - node.type.municipal_solutions
+id: default.node.municipal_solutions
+targetEntityType: node
+bundle: municipal_solutions
+sitemap_variant: default

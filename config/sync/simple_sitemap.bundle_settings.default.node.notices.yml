@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.8'
+changefreq: weekly
+include_images: false
+uuid: 2af45960-db0a-678e-d7f6-10f117b1d46e
+status: true
+dependencies:
+  config:
+    - node.type.notices
+id: default.node.notices
+targetEntityType: node
+bundle: notices
+sitemap_variant: default

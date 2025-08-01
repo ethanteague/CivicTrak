@@ -1,0 +1,37 @@
+uuid: m8n9o0p1-q2r3-4567-8901-234567890123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.municipal_solutions.body
+    - field.field.node.municipal_solutions.field_target_location
+    - node.type.municipal_solutions
+  module:
+    - text
+    - user
+id: node.municipal_solutions.default
+targetEntityType: node
+bundle: municipal_solutions
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_target_location:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

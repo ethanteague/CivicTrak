@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.7'
+changefreq: yearly
+include_images: false
+uuid: 8cabd02f-9b13-e5fe-e649-6fb028b82c8c
+status: true
+dependencies:
+  config:
+    - node.type.ordinances
+id: default.node.ordinances
+targetEntityType: node
+bundle: ordinances
+sitemap_variant: default

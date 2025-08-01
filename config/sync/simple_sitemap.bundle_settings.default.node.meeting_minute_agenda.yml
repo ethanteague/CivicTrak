@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.8'
+changefreq: monthly
+include_images: false
+uuid: 7068d016-fad3-e2c2-0ee9-01e997307829
+status: true
+dependencies:
+  config:
+    - node.type.meeting_minute_agenda
+id: default.node.meeting_minute_agenda
+targetEntityType: node
+bundle: meeting_minute_agenda
+sitemap_variant: default

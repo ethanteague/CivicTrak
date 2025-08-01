@@ -248,6 +248,78 @@ a {
     margin-bottom: 15px;
 }
 
+/* Municipal Solutions Landing Pages */
+.node--type-municipal-solutions .municipal-hero {
+    background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);
+    color: white;
+    padding: 60px 30px;
+    text-align: center;
+    margin: -30px -30px 40px -30px;
+    border-radius: 0 0 15px 15px;
+}
+
+.node--type-municipal-solutions .municipal-hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.node--type-municipal-solutions .municipal-hero .lead {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.node--type-municipal-solutions .card.bg-primary {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    border: none;
+    box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+    transform: translateY(-10px);
+}
+
+.node--type-municipal-solutions .display-4 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.node--type-municipal-solutions .display-4 small {
+    font-size: 0.4em;
+    opacity: 0.8;
+}
+
+.node--type-municipal-solutions .btn-light {
+    background: white;
+    color: #28a745;
+    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.node--type-municipal-solutions .btn-light:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.node--type-municipal-solutions .list-unstyled li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.node--type-municipal-solutions .bi-check-circle {
+    font-size: 1.2em;
+}
+
+.node--type-municipal-solutions h3 {
+    color: #2c5aa0;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 .node--type-interactive-tool .disclaimer {
     font-size: 12px;
     color: #6c757d;

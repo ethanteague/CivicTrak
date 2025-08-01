@@ -1,0 +1,21 @@
+uuid: a45f5c72-1770-835b-7c2e-e168e5863050
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: interactive_tool
+label: 'Content: Interactive Tool'
+type: 'canonical_entities:node'
+pattern: 'tools/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      interactive_tool: interactive_tool
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -70,13 +70,3 @@ Disallow: /index.php/user/login
 Disallow: /index.php/user/logout
 Disallow: /index.php/media/oembed
 Disallow: /index.php/*/media/oembed
-
-# Allow important government content
-Allow: /government/
-Allow: /services/
-Allow: /events/
-Allow: /staff/
-Allow: /news/
-
-# Sitemap location
-Sitemap: https://govt.ddev.site/sitemap.xml

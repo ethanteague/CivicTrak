@@ -11,11 +11,11 @@ pattern: '/analysis/[node:title:machine-name]'
 selection_criteria:
   -
     id: 'entity_bundle:node'
-    bundles:
-      industry_analysis: industry_analysis
     negate: false
     context_mapping:
       node: node
+    bundles:
+      industry_analysis: industry_analysis
 selection_logic: and
 weight: -5
 relationships: {  }

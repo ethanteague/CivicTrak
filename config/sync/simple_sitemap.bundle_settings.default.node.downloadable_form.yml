@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.6'
+changefreq: monthly
+include_images: false
+uuid: 0d90c72e-fe39-9e28-ecd5-d5874f088644
+status: true
+dependencies:
+  config:
+    - node.type.downloadable_form
+id: default.node.downloadable_form
+targetEntityType: node
+bundle: downloadable_form
+sitemap_variant: default

@@ -1,0 +1,23 @@
+uuid: k6l7m8n9-o0p1-2345-6789-012345678901
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.municipal_solutions
+  module:
+    - text
+id: node.municipal_solutions.body
+field_name: body
+entity_type: node
+bundle: municipal_solutions
+label: Body
+description: 'Content for the municipal solutions landing page'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

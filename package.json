@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "mcp-chrome-bridge-monorepo": "github:hangwin/mcp-chrome",
     "playwright": "^1.54.1"
   }
 }

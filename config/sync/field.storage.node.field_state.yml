@@ -11,106 +11,156 @@ entity_type: node
 type: list_string
 settings:
   allowed_values:
-    - label: Alabama
+    -
       value: AL
-    - label: Alaska
+      label: Alabama
+    -
       value: AK
-    - label: Arizona
+      label: Alaska
+    -
       value: AZ
-    - label: Arkansas
+      label: Arizona
+    -
       value: AR
-    - label: California
+      label: Arkansas
+    -
       value: CA
-    - label: Colorado
+      label: California
+    -
       value: CO
-    - label: Connecticut
+      label: Colorado
+    -
       value: CT
-    - label: Delaware
+      label: Connecticut
+    -
       value: DE
-    - label: Florida
+      label: Delaware
+    -
       value: FL
-    - label: Georgia
+      label: Florida
+    -
       value: GA
-    - label: Hawaii
+      label: Georgia
+    -
       value: HI
-    - label: Idaho
+      label: Hawaii
+    -
       value: ID
-    - label: Illinois
+      label: Idaho
+    -
       value: IL
-    - label: Indiana
+      label: Illinois
+    -
       value: IN
-    - label: Iowa
+      label: Indiana
+    -
       value: IA
-    - label: Kansas
+      label: Iowa
+    -
       value: KS
-    - label: Kentucky
+      label: Kansas
+    -
       value: KY
-    - label: Louisiana
+      label: Kentucky
+    -
       value: LA
-    - label: Maine
+      label: Louisiana
+    -
       value: ME
-    - label: Maryland
+      label: Maine
+    -
       value: MD
-    - label: Massachusetts
+      label: Maryland
+    -
       value: MA
-    - label: Michigan
+      label: Massachusetts
+    -
       value: MI
-    - label: Minnesota
+      label: Michigan
+    -
       value: MN
-    - label: Mississippi
+      label: Minnesota
+    -
       value: MS
-    - label: Missouri
+      label: Mississippi
+    -
       value: MO
-    - label: Montana
+      label: Missouri
+    -
       value: MT
-    - label: Nebraska
+      label: Montana
+    -
       value: NE
-    - label: Nevada
+      label: Nebraska
+    -
       value: NV
-    - label: New Hampshire
+      label: Nevada
+    -
       value: NH
-    - label: New Jersey
+      label: 'New Hampshire'
+    -
       value: NJ
-    - label: New Mexico
+      label: 'New Jersey'
+    -
       value: NM
-    - label: New York
+      label: 'New Mexico'
+    -
       value: NY
-    - label: North Carolina
+      label: 'New York'
+    -
       value: NC
-    - label: North Dakota
+      label: 'North Carolina'
+    -
       value: ND
-    - label: Ohio
+      label: 'North Dakota'
+    -
       value: OH
-    - label: Oklahoma
+      label: Ohio
+    -
       value: OK
-    - label: Oregon
+      label: Oklahoma
+    -
       value: OR
-    - label: Pennsylvania
+      label: Oregon
+    -
       value: PA
-    - label: Rhode Island
+      label: Pennsylvania
+    -
       value: RI
-    - label: South Carolina
+      label: 'Rhode Island'
+    -
       value: SC
-    - label: South Dakota
+      label: 'South Carolina'
+    -
       value: SD
-    - label: Tennessee
+      label: 'South Dakota'
+    -
       value: TN
-    - label: Texas
+      label: Tennessee
+    -
       value: TX
-    - label: Utah
+      label: Texas
+    -
       value: UT
-    - label: Vermont
+      label: Utah
+    -
       value: VT
-    - label: Virginia
+      label: Vermont
+    -
       value: VA
-    - label: Washington
+      label: Virginia
+    -
       value: WA
-    - label: West Virginia
+      label: Washington
+    -
       value: WV
-    - label: Wisconsin
+      label: 'West Virginia'
+    -
       value: WI
-    - label: Wyoming
+      label: Wisconsin
+    -
       value: WY
+      label: Wyoming
   allowed_values_function: ''
 module: options
 locked: false

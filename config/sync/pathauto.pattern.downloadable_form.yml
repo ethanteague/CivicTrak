@@ -1,0 +1,21 @@
+uuid: 93941c42-0416-9606-adb4-e2d167eba4fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: downloadable_form
+label: 'Content: Downloadable Form'
+type: 'canonical_entities:node'
+pattern: 'government/forms/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      downloadable_form: downloadable_form
+selection_logic: and
+weight: -5
+relationships: {  }

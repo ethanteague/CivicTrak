@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.9'
+changefreq: monthly
+include_images: false
+uuid: g3h4i5j6-k7l8-9012-3456-789012cdefgh
+status: true
+dependencies:
+  config:
+    - node.type.interactive_tool
+id: default.node.interactive_tool
+targetEntityType: node
+bundle: interactive_tool
+sitemap_variant: default

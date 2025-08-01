@@ -1,0 +1,21 @@
+uuid: e390447d-5ff9-e1f9-7002-8f449a49e4c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: meeting_minute_agenda
+label: 'Content: Meeting Minute Agenda'
+type: 'canonical_entities:node'
+pattern: 'government/meetings/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      meeting_minute_agenda: meeting_minute_agenda
+selection_logic: and
+weight: -5
+relationships: {  }

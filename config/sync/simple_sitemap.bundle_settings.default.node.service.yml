@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.8'
+changefreq: monthly
+include_images: false
+uuid: aaabf0d3-9951-f3e6-c3e8-a7911df524c2
+status: true
+dependencies:
+  config:
+    - node.type.service
+id: default.node.service
+targetEntityType: node
+bundle: service
+sitemap_variant: default

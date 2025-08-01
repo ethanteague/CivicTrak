@@ -1,0 +1,14 @@
+langcode: en
+index: true
+priority: '0.9'
+changefreq: monthly
+include_images: false
+uuid: f2g3h4i5-j6k7-8901-2345-678901bcdefg
+status: true
+dependencies:
+  config:
+    - node.type.industry_analysis
+id: default.node.industry_analysis
+targetEntityType: node
+bundle: industry_analysis
+sitemap_variant: default
