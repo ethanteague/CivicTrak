@@ -1,0 +1,13 @@
+Usage: mcp-chrome-bridge [options] [command]
+
+Mcp Chrome Bridge - Local service for communicating with Chrome extension
+
+Options:
+  -V, --version       output the version number
+  -h, --help          display help for command
+
+Commands:
+  register [options]  Register Native Messaging host
+  fix-permissions     Fix execution permissions for native host files
+  update-port <port>  Update the port number in stdio-config.json
+  help [command]      display help for command

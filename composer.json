@@ -97,6 +97,9 @@
     "drupal-scaffold": {
       "locations": {
         "web-root": "docroot/"
+      },
+      "file-mapping": {
+        "[web-root]/sites/development.services.yml": false
       }
     },
     "installer-paths": {
