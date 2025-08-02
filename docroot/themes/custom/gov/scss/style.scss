@@ -320,6 +320,155 @@ a {
     margin-bottom: 20px;
 }
 
+/* Compliance Guide Styling */
+.compliance-guide-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    margin: -30px -30px 30px -30px;
+    border-radius: 0 0 15px 15px;
+}
+
+.compliance-guide-hero h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.compliance-guide-hero .lead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.guide-meta .badge {
+    margin-right: 10px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.guide-toc {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #3b82f6;
+}
+
+.guide-toc li {
+    margin-bottom: 8px;
+}
+
+.guide-toc a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.guide-toc a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+.compliance-cta {
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.compliance-cta .pricing {
+    background: #f0f9ff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #3b82f6;
+}
+
+.compliance-checklist {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.compliance-checklist h3 {
+    color: #1e3a8a;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checklist li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 1rem;
+}
+
+.checklist li:last-child {
+    border-bottom: none;
+}
+
+.alert-warning {
+    border-left: 4px solid #f59e0b;
+    background: #fffbeb;
+    border-color: #fbbf24;
+}
+
+.alert-info {
+    border-left: 4px solid #3b82f6;
+    background: #eff6ff;
+    border-color: #60a5fa;
+}
+
+/* Site-wide spacing fixes */
+main .node__content {
+    margin-bottom: 60px;
+}
+
+/* Fix outline button contrast issues */
+.btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-outline-primary:focus {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.5);
+}
+
+.btn-outline-primary:active {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Ensure proper text contrast in cards */
+.card .btn-outline-primary {
+    color: #0d6efd;
+    background-color: #fff;
+}
+
+.card .btn-outline-primary:hover,
+.card .btn-outline-primary:focus,
+.card .btn-outline-primary:active {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
 .node--type-interactive-tool .disclaimer {
     font-size: 12px;
     color: #6c757d;
